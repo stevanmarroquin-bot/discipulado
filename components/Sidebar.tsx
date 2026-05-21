@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { Usuario } from '@/lib/mock-data'
+import { signOut } from '@/lib/auth'
 
 const NAV = [
   {
@@ -46,8 +47,8 @@ export default function Sidebar({ user }: { user: Usuario }) {
   const pathname = usePathname()
   const router = useRouter()
 
-  function handleLogout() {
-    localStorage.removeItem('discipulado_session')
+  async function handleLogout() {
+    await signOut()
     router.replace('/login')
   }
 

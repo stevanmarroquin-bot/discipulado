@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { DISCIPULOS, CONTENIDO, MODULOS, Discipulo, RegistroSemanal } from '@/lib/mock-data'
+import { CONTENIDO, MODULOS, RegistroSemanal } from '@/lib/mock-data'
 import { calcularEstadisticasDiscipulo, formatearSemana, NivelSalud } from '@/lib/utils'
-import { getRegistros } from '@/lib/storage'
+import { onAuthChange } from '@/lib/auth'
+import { getPerfil, getRegistrosDeDiscipulo, PerfilDiscipulo } from '@/lib/db'
 
 const SALUD_COLOR: Record<NivelSalud, string> = {
   verde: 'var(--green)', amarillo: 'var(--yellow)', rojo: 'var(--red)',
@@ -21,44 +22,32 @@ const SALUD_DOT: Record<NivelSalud, string> = {
 
 export default function DiscipuloPortal() {
   const router = useRouter()
-  const [discipulo, setDiscipulo] = useState<Discipulo | null>(null)
+  const [perfil, setPerfil] = useState<PerfilDiscipulo | null>(null)
   const [registros, setRegistros] = useState<RegistroSemanal[]>([])
 
   useEffect(() => {
-    const raw = localStorage.getItem('discipulado_session')
-    if (!raw) { router.replace('/login'); return }
-    const session = JSON.parse(raw)
-    if (session.tipo !== 'discipulo') { router.replace('/dashboard'); return }
-
-    // Find full discipulo data (session has all fields already)
-    setDiscipulo(session)
-
-    // Get registros from their discipulador's storage
-    // We load all registros and filter by discipuloId
-    const d = DISCIPULOS.find((x) => x.id === session.id)
-    if (d) {
-      // Try to load from all users' localStorage — for now load from 'u1' and 'u2'
-      const regs: RegistroSemanal[] = []
-      const seen = new Set<string>()
-      ;['u1', 'u2'].forEach((uid) => {
-        getRegistros(uid).filter((r) => r.discipuloId === session.id).forEach((r) => {
-          if (!seen.has(r.id)) { seen.add(r.id); regs.push(r) }
-        })
-      })
+    const unsub = onAuthChange(async (user) => {
+      if (!user) { router.replace('/login'); return }
+      const p = await getPerfil(user.uid)
+      if (!p || p.tipo !== 'discipulo') { router.replace('/dashboard'); return }
+      const regs = await getRegistrosDeDiscipulo(user.uid)
+      setPerfil(p as PerfilDiscipulo)
       setRegistros(regs)
-    }
+    })
+    return () => unsub()
   }, [router])
 
-  if (!discipulo) return null
+  if (!perfil) return null
 
-  const stats = calcularEstadisticasDiscipulo(discipulo, registros)
-  const modulo = MODULOS.find((m) => m.id === discipulo.moduloActual)
+  // Adapt PerfilDiscipulo (uid) → Discipulo (id) shape for utils
+  const discipuloAdapted = { ...perfil, id: perfil.uid, password: '' }
+  const stats = calcularEstadisticasDiscipulo(discipuloAdapted, registros)
+  const modulo = MODULOS.find((m) => m.id === perfil.moduloActual)
   const sesionesModulo = CONTENIDO.filter(
-    (c) => c.categoria === 'material-base' && c.modulo === discipulo.moduloActual
+    (c) => c.categoria === 'material-base' && c.modulo === perfil.moduloActual
   )
 
   const misRegistros = registros
-    .filter((r) => r.discipuloId === discipulo.id)
     .sort((a, b) => new Date(b.semana).getTime() - new Date(a.semana).getTime())
     .slice(0, 6)
 
@@ -74,7 +63,7 @@ export default function DiscipuloPortal() {
           {saludo}
         </p>
         <h1 style={{ fontSize: '28px', fontWeight: '900', color: 'var(--text)', marginBottom: '6px' }}>
-          {discipulo.nombre.split(' ')[0]} 👋
+          {perfil.nombre.split(' ')[0]} 👋
         </h1>
         <span style={{
           display: 'inline-block', padding: '4px 14px', borderRadius: '20px',

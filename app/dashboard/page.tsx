@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { DISCIPULOS, SEMANAS_DISPONIBLES, RegistroSemanal, Usuario } from '@/lib/mock-data'
+import { SEMANAS_DISPONIBLES } from '@/lib/mock-data'
 import {
   calcularEstadisticasDiscipulo,
   calcularSaludGrupo,
@@ -11,7 +11,9 @@ import {
   DesgloseSalud,
   formatearSemana,
 } from '@/lib/utils'
-import { getRegistros } from '@/lib/storage'
+import { onAuthChange } from '@/lib/auth'
+import { getDiscipulosDeLider, getRegistrosDeLider, PerfilDiscipulo } from '@/lib/db'
+import { RegistroSemanal } from '@/lib/mock-data'
 import Link from 'next/link'
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
@@ -29,7 +31,6 @@ const SALUD_LABEL: Record<NivelSalud, string> = {
 const SALUD_DOT: Record<NivelSalud, string> = {
   verde: '#22c55e', amarillo: '#f59e0b', rojo: '#ef4444',
 }
-
 const MAXIMOS: Record<keyof Omit<DesgloseSalud, 'total'>, number> = {
   reunion: 35, domingo: 20, material: 20, participacion: 15, consistencia: 10,
 }
@@ -40,44 +41,72 @@ const FACTOR_LABEL: Record<keyof Omit<DesgloseSalud, 'total'>, string> = {
 
 export default function DashboardPage() {
   const router = useRouter()
-  const [user, setUser] = useState<Usuario | null>(null)
-  const [stats, setStats] = useState<EstadisticasDiscipulo[]>([])
-  const [registros, setRegistros] = useState<RegistroSemanal[]>([])
+  const [liderUid, setLiderUid]       = useState<string | null>(null)
+  const [liderNombre, setLiderNombre] = useState('')
+  const [discipulos, setDiscipulos]   = useState<PerfilDiscipulo[]>([])
+  const [registros, setRegistros]     = useState<RegistroSemanal[]>([])
+  const [loading, setLoading]         = useState(true)
   const [showFormula, setShowFormula] = useState(false)
 
   useEffect(() => {
-    const raw = localStorage.getItem('discipulado_session')
-    if (!raw) return
-    const u: Usuario = JSON.parse(raw)
-    setUser(u)
-    const regs = getRegistros(u.id)
-    setRegistros(regs)
-    const misDiscipulos = DISCIPULOS.filter((d) => d.discipuladorId === u.id)
-    setStats(misDiscipulos.map((d) => calcularEstadisticasDiscipulo(d, regs)))
+    const unsub = onAuthChange(async (user) => {
+      if (!user) return
+      setLiderUid(user.uid)
+      const [discs, regs] = await Promise.all([
+        getDiscipulosDeLider(user.uid),
+        getRegistrosDeLider(user.uid),
+      ])
+      setDiscipulos(discs)
+      setRegistros(regs)
+      setLoading(false)
+    })
+    return () => unsub()
   }, [])
 
-  if (!user) return null
+  // Get nombre from layout perfil via DOM — simplest approach
+  useEffect(() => {
+    const raw = document.cookie // not needed, we get it from Firebase
+  }, [])
 
-  const saludGrupo = calcularSaludGrupo(stats)
-  const promedioScore =
-    stats.length > 0 ? Math.round(stats.reduce((a, s) => a + s.desglose.total, 0) / stats.length) : 0
+  if (loading) return null
+
+  // Adapt PerfilDiscipulo to Discipulo shape expected by utils
+  const discipulosAdapted = discipulos.map((d) => ({
+    id: d.uid,
+    nombre: d.nombre,
+    email: d.email,
+    password: '',
+    telefono: d.telefono,
+    fechaInicio: d.fechaInicio,
+    iniciales: d.iniciales,
+    discipuladorId: d.discipuladorId,
+    color: d.color,
+    moduloActual: d.moduloActual as 'fundamento' | 'formacion' | 'comunidad' | 'mision',
+  }))
+
+  const stats: EstadisticasDiscipulo[] = discipulosAdapted.map((d) =>
+    calcularEstadisticasDiscipulo(d, registros)
+  )
+
+  const saludGrupo      = calcularSaludGrupo(stats)
+  const promedioScore   = stats.length > 0
+    ? Math.round(stats.reduce((a, s) => a + s.desglose.total, 0) / stats.length) : 0
   const necesitanAtencion = stats.filter((s) => s.salud !== 'verde').length
   const hora = new Date().getHours()
   const saludo = hora < 12 ? 'Buenos días' : hora < 19 ? 'Buenas tardes' : 'Buenas noches'
 
-  // Group attendance trend chart
-  const discipuloIds = stats.map((s) => s.discipulo.id)
-  const grupoChartData = SEMANAS_DISPONIBLES.map((semana) => {
+  const discipuloIds = discipulosAdapted.map((d) => d.id)
+  const grupoChartData = SEMANAS_DISPONIBLES.slice(-8).map((semana) => {
     const regsDelGrupo = registros.filter(
       (r) => discipuloIds.includes(r.discipuloId) && r.semana === semana
     )
-    const total = discipuloIds.length
+    const total     = discipuloIds.length
     const asistieron = regsDelGrupo.filter((r) => r.asistioReunion).length
-    const domingo = regsDelGrupo.filter((r) => r.asistiodomingo).length
+    const domingo    = regsDelGrupo.filter((r) => r.asistiodomingo).length
     return {
       semana: formatearSemana(semana),
       reunion: total > 0 ? Math.round((asistieron / total) * 100) : 0,
-      domingo: total > 0 ? Math.round((domingo / total) * 100) : 0,
+      domingo: total > 0 ? Math.round((domingo   / total) * 100) : 0,
     }
   })
 
@@ -90,7 +119,7 @@ export default function DashboardPage() {
           {saludo}
         </p>
         <h1 style={{ fontSize: '28px', fontWeight: '900', color: 'var(--text)', marginBottom: '4px' }}>
-          {user.nombre}
+          Mi grupo
         </h1>
         <p style={{ fontSize: '13px', color: 'var(--text-muted)' }}>
           Bread of Life Guatemala &nbsp;·&nbsp; Programa de Discipulado
@@ -100,7 +129,8 @@ export default function DashboardPage() {
       {/* Stats row */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))', gap: '14px', marginBottom: '28px' }}>
         <StatCard label="Discípulos" value={stats.length} sub="a tu cargo" accent="var(--text)" />
-        {/* Salud promedio — with formula toggle */}
+
+        {/* Salud promedio con fórmula */}
         <div className="card" style={{ padding: '22px', position: 'relative' }}>
           <p style={{ fontSize: '10px', fontWeight: '800', color: 'var(--text-muted)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
             Salud promedio
@@ -109,16 +139,14 @@ export default function DashboardPage() {
             {promedioScore}/100
           </p>
           <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{saludGrupo.label}</p>
-          <button
-            onClick={() => setShowFormula((v) => !v)}
-            style={{
-              background: 'none', border: 'none', padding: 0, cursor: 'pointer',
-              fontSize: '11px', color: 'var(--primary)', fontWeight: '700',
-              display: 'flex', alignItems: 'center', gap: '3px',
-            }}
-          >
+          <button onClick={() => setShowFormula((v) => !v)} style={{
+            background: 'none', border: 'none', padding: 0, cursor: 'pointer',
+            fontSize: '11px', color: 'var(--primary)', fontWeight: '700',
+            display: 'flex', alignItems: 'center', gap: '3px',
+          }}>
             ¿Cómo se calcula?
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" style={{ transition: 'transform .2s', transform: showFormula ? 'rotate(180deg)' : 'none' }}>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+              style={{ transition: 'transform .2s', transform: showFormula ? 'rotate(180deg)' : 'none' }}>
               <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
@@ -163,13 +191,14 @@ export default function DashboardPage() {
             </div>
           )}
         </div>
-        <StatCard label="Necesitan atención" value={necesitanAtencion} sub={necesitanAtencion === 0 ? '¡Todos van bien!' : 'en amarillo o rojo'} accent={necesitanAtencion === 0 ? '#22c55e' : '#ef4444'} />
+
+        <StatCard label="Necesitan atención" value={necesitanAtencion}
+          sub={necesitanAtencion === 0 ? '¡Todos van bien!' : 'en amarillo o rojo'}
+          accent={necesitanAtencion === 0 ? '#22c55e' : '#ef4444'} />
         <StatCard
           label="Racha más larga"
           value={`${Math.max(0, ...stats.map((s) => s.rachaActual))} sem.`}
-          sub="semanas seguidas"
-          accent="var(--primary)"
-        />
+          sub="semanas seguidas" accent="var(--primary)" />
       </div>
 
       {/* Disciple table */}
@@ -179,12 +208,8 @@ export default function DashboardPage() {
           display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px',
         }}>
           <div>
-            <h2 style={{ fontSize: '17px', fontWeight: '800', color: 'var(--text)', marginBottom: '2px' }}>
-              Mis discípulos
-            </h2>
-            <p style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
-              Haz clic en un discípulo para ver su perfil completo
-            </p>
+            <h2 style={{ fontSize: '17px', fontWeight: '800', color: 'var(--text)', marginBottom: '2px' }}>Mis discípulos</h2>
+            <p style={{ fontSize: '12px', color: 'var(--text-muted)' }}>Haz clic en un discípulo para ver su perfil completo</p>
           </div>
           <Link href="/dashboard/registro" style={{
             padding: '9px 18px', background: 'var(--text)', color: 'white',
@@ -196,14 +221,14 @@ export default function DashboardPage() {
 
         {stats.length === 0 ? (
           <div style={{ padding: '60px', textAlign: 'center', color: 'var(--text-muted)' }}>
-            No hay discípulos registrados.
+            No hay discípulos registrados aún.
           </div>
         ) : (
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
               <thead>
                 <tr style={{ background: 'var(--bg)' }}>
-                  {['Discípulo', 'Salud', 'Desglose', 'Últimas 4 reuniones', 'Estado'].map((h) => (
+                  {['Discípulo', 'Salud', 'Desglose', 'Últimas 4 sesiones', 'Estado'].map((h) => (
                     <th key={h} style={{
                       padding: '11px 18px', fontSize: '10px', fontWeight: '800',
                       color: 'var(--text-muted)', textAlign: 'left',
@@ -214,13 +239,9 @@ export default function DashboardPage() {
               </thead>
               <tbody>
                 {stats.map((s, idx) => (
-                  <tr
-                    key={s.discipulo.id}
-                    className="disciple-row"
+                  <tr key={s.discipulo.id} className="disciple-row"
                     onClick={() => router.push(`/dashboard/discipulos/${s.discipulo.id}`)}
-                    style={{ borderTop: idx === 0 ? 'none' : '1px solid var(--border)' }}
-                  >
-                    {/* Discípulo */}
+                    style={{ borderTop: idx === 0 ? 'none' : '1px solid var(--border)' }}>
                     <td style={{ padding: '16px 18px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '11px' }}>
                         <div style={{
@@ -228,26 +249,18 @@ export default function DashboardPage() {
                           background: s.discipulo.color,
                           display: 'flex', alignItems: 'center', justifyContent: 'center',
                           color: 'white', fontSize: '12px', fontWeight: '800', flexShrink: 0,
-                        }}>
-                          {s.discipulo.iniciales}
-                        </div>
+                        }}>{s.discipulo.iniciales}</div>
                         <div>
-                          <p style={{ fontSize: '14px', fontWeight: '700', color: 'var(--text)', marginBottom: '1px' }}>
-                            {s.discipulo.nombre}
-                          </p>
+                          <p style={{ fontSize: '14px', fontWeight: '700', color: 'var(--text)', marginBottom: '1px' }}>{s.discipulo.nombre}</p>
                           <p style={{ fontSize: '11px', color: 'var(--text-muted)' }}>
                             {s.rachaActual > 0 ? `${s.rachaActual} sem. seguidas` : 'Sin racha activa'}
                           </p>
                         </div>
                       </div>
                     </td>
-
-                    {/* Score */}
                     <td style={{ padding: '16px 18px' }}>
                       <ScoreRing score={s.desglose.total} salud={s.salud} />
                     </td>
-
-                    {/* Desglose */}
                     <td style={{ padding: '16px 18px', minWidth: '200px' }}>
                       <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                         {(Object.keys(MAXIMOS) as (keyof typeof MAXIMOS)[]).map((key) => {
@@ -263,7 +276,7 @@ export default function DashboardPage() {
                                 <div style={{
                                   height: '100%', width: `${pct}%`,
                                   background: pct >= 75 ? '#22c55e' : pct >= 50 ? '#f59e0b' : '#ef4444',
-                                  borderRadius: '3px', transition: 'width .5s',
+                                  borderRadius: '3px',
                                 }} />
                               </div>
                               <span style={{ fontSize: '9px', color: 'var(--text-muted)', width: '26px', textAlign: 'right', fontWeight: '700' }}>
@@ -274,17 +287,12 @@ export default function DashboardPage() {
                         })}
                       </div>
                     </td>
-
-                    {/* Últimas 4 reuniones */}
                     <td style={{ padding: '16px 18px' }}>
                       <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
-                        {(s.ultimasSemanas.length > 0
-                          ? s.ultimasSemanas
-                          : Array(4).fill({ reunion: false, domingo: false })
-                        ).map((sem, i) => (
+                        {s.ultimasSemanas.map((sem, i) => (
                           <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: '3px', alignItems: 'center' }}>
-                            <div title="Reunión" style={{ width: '10px', height: '10px', borderRadius: '50%', background: sem.reunion ? '#22c55e' : 'var(--border)' }} />
-                            <div title="Domingo" style={{ width: '10px', height: '10px', borderRadius: '2px', background: sem.domingo ? 'var(--primary)' : 'var(--border)' }} />
+                            <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: sem.reunion ? '#22c55e' : 'var(--border)' }} />
+                            <div style={{ width: '10px', height: '10px', borderRadius: '2px', background: sem.domingo ? 'var(--primary)' : 'var(--border)' }} />
                           </div>
                         ))}
                         {Array.from({ length: Math.max(0, 4 - s.ultimasSemanas.length) }).map((_, i) => (
@@ -294,17 +302,7 @@ export default function DashboardPage() {
                           </div>
                         ))}
                       </div>
-                      <div style={{ display: 'flex', gap: '10px', marginTop: '5px' }}>
-                        <span style={{ fontSize: '9px', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '3px' }}>
-                          <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#22c55e', display: 'inline-block' }} /> Reunión
-                        </span>
-                        <span style={{ fontSize: '9px', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '3px' }}>
-                          <span style={{ width: '7px', height: '7px', borderRadius: '2px', background: 'var(--primary)', display: 'inline-block' }} /> Domingo
-                        </span>
-                      </div>
                     </td>
-
-                    {/* Estado */}
                     <td style={{ padding: '16px 18px' }}>
                       <span style={{
                         padding: '5px 12px', borderRadius: '20px', fontSize: '11px', fontWeight: '800',
@@ -322,14 +320,10 @@ export default function DashboardPage() {
       </div>
 
       {/* Group trend chart */}
-      {grupoChartData.length > 0 && (
+      {grupoChartData.length > 0 && stats.length > 0 && (
         <div className="card" style={{ padding: '22px 26px', marginBottom: '20px' }}>
-          <h2 style={{ fontSize: '15px', fontWeight: '800', color: 'var(--text)', marginBottom: '3px' }}>
-            Tendencia del grupo
-          </h2>
-          <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginBottom: '20px' }}>
-            % de asistencia a reunión y domingo por semana
-          </p>
+          <h2 style={{ fontSize: '15px', fontWeight: '800', color: 'var(--text)', marginBottom: '3px' }}>Tendencia del grupo</h2>
+          <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginBottom: '20px' }}>% de asistencia a discipulado y domingo por semana</p>
           <ResponsiveContainer width="100%" height={180}>
             <AreaChart data={grupoChartData} margin={{ top: 4, right: 4, left: -20, bottom: 0 }}>
               <defs>
@@ -343,70 +337,41 @@ export default function DashboardPage() {
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
-              <XAxis
-                dataKey="semana"
-                tick={{ fontSize: 9, fill: 'var(--text-muted)' }}
-                axisLine={false} tickLine={false}
-                interval={0} angle={-20} textAnchor="end" height={36}
-              />
-              <YAxis
-                domain={[0, 100]}
-                tick={{ fontSize: 10, fill: 'var(--text-muted)' }}
-                axisLine={false} tickLine={false}
-                tickFormatter={(v) => `${v}%`}
-              />
+              <XAxis dataKey="semana" tick={{ fontSize: 9, fill: 'var(--text-muted)' }}
+                axisLine={false} tickLine={false} interval={0} angle={-20} textAnchor="end" height={36} />
+              <YAxis domain={[0, 100]} tick={{ fontSize: 10, fill: 'var(--text-muted)' }}
+                axisLine={false} tickLine={false} tickFormatter={(v) => `${v}%`} />
               <Tooltip
                 contentStyle={{ background: 'white', border: '1px solid var(--border)', borderRadius: '10px', fontSize: '12px' }}
-                formatter={(v: unknown, name: unknown) => [`${v}%`, name === 'reunion' ? 'Reunión' : 'Domingo']}
+                formatter={(v: unknown, name: unknown) => [`${v}%`, name === 'reunion' ? 'Discipulado' : 'Domingo']}
               />
               <Area type="monotone" dataKey="reunion" stroke="#22c55e" strokeWidth={2} fill="url(#gradReunion)" dot={{ r: 3, fill: '#22c55e' }} />
               <Area type="monotone" dataKey="domingo" stroke="var(--primary)" strokeWidth={2} fill="url(#gradDomingo)" dot={{ r: 3, fill: 'var(--primary)' }} />
             </AreaChart>
           </ResponsiveContainer>
-          <div style={{ display: 'flex', gap: '16px', marginTop: '12px' }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '11px', color: 'var(--text-muted)', fontWeight: '600' }}>
-              <span style={{ width: '20px', height: '2px', background: '#22c55e', borderRadius: '1px', display: 'inline-block' }} /> Reunión
-            </span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '11px', color: 'var(--text-muted)', fontWeight: '600' }}>
-              <span style={{ width: '20px', height: '2px', background: 'var(--primary)', borderRadius: '1px', display: 'inline-block' }} /> Domingo
-            </span>
-          </div>
         </div>
       )}
 
       {/* Notas recientes */}
       {stats.some((s) => s.registros.some((r) => r.notas)) && (
         <div className="card" style={{ padding: '20px 26px' }}>
-          <h3 style={{ fontSize: '14px', fontWeight: '800', color: 'var(--text)', marginBottom: '14px' }}>
-            Notas recientes
-          </h3>
+          <h3 style={{ fontSize: '14px', fontWeight: '800', color: 'var(--text)', marginBottom: '14px' }}>Notas recientes</h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             {stats.flatMap((s) =>
-              s.registros
-                .filter((r) => r.notas)
-                .slice(-1)
-                .map((r) => (
-                  <div
-                    key={r.id}
-                    onClick={() => router.push(`/dashboard/discipulos/${s.discipulo.id}`)}
-                    style={{ display: 'flex', gap: '12px', padding: '12px', background: 'var(--bg)', borderRadius: '10px', alignItems: 'flex-start', cursor: 'pointer' }}
-                  >
-                    <div style={{
-                      width: '32px', height: '32px', borderRadius: '50%',
-                      background: s.discipulo.color,
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      color: 'white', fontSize: '11px', fontWeight: '800', flexShrink: 0,
-                    }}>
-                      {s.discipulo.iniciales}
-                    </div>
-                    <div>
-                      <p style={{ fontSize: '13px', fontWeight: '700', color: 'var(--text)', marginBottom: '2px' }}>
-                        {s.discipulo.nombre}
-                      </p>
-                      <p style={{ fontSize: '13px', color: 'var(--text-muted)' }}>{r.notas}</p>
-                    </div>
+              s.registros.filter((r) => r.notas).slice(-1).map((r) => (
+                <div key={r.id} onClick={() => router.push(`/dashboard/discipulos/${s.discipulo.id}`)}
+                  style={{ display: 'flex', gap: '12px', padding: '12px', background: 'var(--bg)', borderRadius: '10px', alignItems: 'flex-start', cursor: 'pointer' }}>
+                  <div style={{
+                    width: '32px', height: '32px', borderRadius: '50%', background: s.discipulo.color,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    color: 'white', fontSize: '11px', fontWeight: '800', flexShrink: 0,
+                  }}>{s.discipulo.iniciales}</div>
+                  <div>
+                    <p style={{ fontSize: '13px', fontWeight: '700', color: 'var(--text)', marginBottom: '2px' }}>{s.discipulo.nombre}</p>
+                    <p style={{ fontSize: '13px', color: 'var(--text-muted)' }}>{r.notas}</p>
                   </div>
-                ))
+                </div>
+              ))
             )}
           </div>
         </div>
@@ -415,25 +380,18 @@ export default function DashboardPage() {
   )
 }
 
-// ── Components ─────────────────────────────────────────────────────────────────
-
 function StatCard({ label, value, sub, accent }: { label: string; value: string | number; sub: string; accent: string }) {
   return (
     <div className="card" style={{ padding: '22px' }}>
-      <p style={{ fontSize: '10px', fontWeight: '800', color: 'var(--text-muted)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
-        {label}
-      </p>
-      <p style={{ fontSize: '28px', fontWeight: '900', color: accent, marginBottom: '4px', lineHeight: 1 }}>
-        {value}
-      </p>
+      <p style={{ fontSize: '10px', fontWeight: '800', color: 'var(--text-muted)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>{label}</p>
+      <p style={{ fontSize: '28px', fontWeight: '900', color: accent, marginBottom: '4px', lineHeight: 1 }}>{value}</p>
       <p style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{sub}</p>
     </div>
   )
 }
 
 function ScoreRing({ score, salud }: { score: number; salud: NivelSalud }) {
-  const size = 44
-  const r = 17
+  const size = 44; const r = 17
   const circ = 2 * Math.PI * r
   const fill = (score / 100) * circ
   const color = SALUD_DOT[salud]
@@ -444,11 +402,7 @@ function ScoreRing({ score, salud }: { score: number; salud: NivelSalud }) {
         <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke={color} strokeWidth="4"
           strokeDasharray={`${fill} ${circ}`} strokeLinecap="round" />
       </svg>
-      <span style={{
-        position: 'absolute', top: '50%', left: '50%',
-        transform: 'translate(-50%, -50%)',
-        fontSize: '11px', fontWeight: '900', color: 'var(--text)',
-      }}>
+      <span style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '11px', fontWeight: '900', color: 'var(--text)' }}>
         {score}
       </span>
     </div>

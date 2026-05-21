@@ -3,9 +3,10 @@
 import { useEffect, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { DISCIPULOS, RegistroSemanal, Usuario } from '@/lib/mock-data'
+import { RegistroSemanal } from '@/lib/mock-data'
 import { calcularEstadisticasDiscipulo, formatearSemana, NivelSalud } from '@/lib/utils'
-import { getRegistros } from '@/lib/storage'
+import { onAuthChange } from '@/lib/auth'
+import { getPerfil, getRegistrosDeLider, PerfilDiscipulo } from '@/lib/db'
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
@@ -42,29 +43,44 @@ function weeklyScore(r: RegistroSemanal): number {
 export default function DiscipuloDetailPage() {
   const { id } = useParams<{ id: string }>()
   const router = useRouter()
-  const [user, setUser] = useState<Usuario | null>(null)
+  const [discipulo, setDiscipulo] = useState<PerfilDiscipulo | null>(null)
   const [registros, setRegistros] = useState<RegistroSemanal[]>([])
   const [showFormula, setShowFormula] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const raw = localStorage.getItem('discipulado_session')
-    if (!raw) { router.replace('/login'); return }
-    const u: Usuario = JSON.parse(raw)
-    setUser(u)
-    setRegistros(getRegistros(u.id))
-  }, [router])
+    const unsub = onAuthChange(async (user) => {
+      if (!user) { router.replace('/login'); return }
 
-  const discipulo = DISCIPULOS.find((d) => d.id === id)
+      // Load the discipulo profile and verify ownership
+      const [discPerfil, regs] = await Promise.all([
+        getPerfil(id),
+        getRegistrosDeLider(user.uid),
+      ])
 
-  useEffect(() => {
-    if (user && discipulo && discipulo.discipuladorId !== user.id) {
-      router.replace('/dashboard')
-    }
-  }, [user, discipulo, router])
+      if (!discPerfil || discPerfil.tipo !== 'discipulo') {
+        router.replace('/dashboard')
+        return
+      }
 
-  if (!user || !discipulo) return null
+      const disc = discPerfil as PerfilDiscipulo
+      if (disc.discipuladorId !== user.uid) {
+        router.replace('/dashboard')
+        return
+      }
 
-  const stats = calcularEstadisticasDiscipulo(discipulo, registros)
+      setDiscipulo(disc)
+      setRegistros(regs)
+      setLoading(false)
+    })
+    return () => unsub()
+  }, [router, id])
+
+  if (loading || !discipulo) return null
+
+  // Adapt PerfilDiscipulo (uid) → Discipulo (id) shape for utils
+  const discipuloAdapted = { ...discipulo, id: discipulo.uid, password: '' }
+  const stats = calcularEstadisticasDiscipulo(discipuloAdapted, registros)
   const misRegistros = registros
     .filter((r) => r.discipuloId === id)
     .sort((a, b) => new Date(a.semana).getTime() - new Date(b.semana).getTime())
@@ -446,35 +462,20 @@ function WeeklyBarChart({ data }: { data: { semana: string; score: number }[] })
                   onMouseEnter={() => setHoveredIdx(i)}
                   onMouseLeave={() => setHoveredIdx(null)}
                 >
-                  {/* Tooltip */}
                   {isHovered && (
                     <div style={{
-                      position: 'absolute',
-                      bottom: barH + 8,
-                      left: '50%',
-                      transform: 'translateX(-50%)',
-                      background: 'var(--text)',
-                      color: 'white',
-                      borderRadius: '6px',
-                      padding: '5px 10px',
-                      fontSize: '11px',
-                      fontWeight: '700',
-                      whiteSpace: 'nowrap',
-                      zIndex: 10,
-                      pointerEvents: 'none',
+                      position: 'absolute', bottom: barH + 8, left: '50%',
+                      transform: 'translateX(-50%)', background: 'var(--text)', color: 'white',
+                      borderRadius: '6px', padding: '5px 10px', fontSize: '11px', fontWeight: '700',
+                      whiteSpace: 'nowrap', zIndex: 10, pointerEvents: 'none',
                     }}>
                       {d.score}/100
                     </div>
                   )}
-
-                  {/* Bar */}
                   <div style={{
-                    width: '100%',
-                    height: pct > 0 ? `${barH}px` : '3px',
+                    width: '100%', height: pct > 0 ? `${barH}px` : '3px',
                     background: pct > 0 ? fill : 'var(--border)',
-                    borderRadius: '4px 4px 2px 2px',
-                    opacity: isHovered ? 0.85 : 1,
-                    transition: 'opacity 0.15s',
+                    borderRadius: '4px 4px 2px 2px', opacity: isHovered ? 0.85 : 1, transition: 'opacity 0.15s',
                   }} />
                 </div>
               )

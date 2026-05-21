@@ -1,9 +1,11 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { DISCIPULOS, SEMANAS_DISPONIBLES, Usuario, RegistroSemanal } from '@/lib/mock-data'
+import { useRouter } from 'next/navigation'
+import { SEMANAS_DISPONIBLES, RegistroSemanal } from '@/lib/mock-data'
 import { formatearSemana } from '@/lib/utils'
-import { getRegistros, saveRegistros } from '@/lib/storage'
+import { onAuthChange } from '@/lib/auth'
+import { getDiscipulosDeLider, getRegistrosDeLider, guardarRegistros, PerfilDiscipulo } from '@/lib/db'
 
 type Participacion = 'alta' | 'media' | 'baja'
 
@@ -17,44 +19,52 @@ interface EntradaRegistro {
 }
 
 export default function RegistroPage() {
-  const [user, setUser] = useState<Usuario | null>(null)
+  const router = useRouter()
+  const [liderUid, setLiderUid] = useState<string | null>(null)
+  const [discipulos, setDiscipulos] = useState<PerfilDiscipulo[]>([])
   const [todosRegistros, setTodosRegistros] = useState<RegistroSemanal[]>([])
   const [semana, setSemana] = useState(SEMANAS_DISPONIBLES[SEMANAS_DISPONIBLES.length - 1])
   const [entradas, setEntradas] = useState<Record<string, EntradaRegistro>>({})
   const [guardado, setGuardado] = useState(false)
+  const [guardando, setGuardando] = useState(false)
   const [modo, setModo] = useState<'registro' | 'historial'>('registro')
+  const [loading, setLoading] = useState(true)
 
-  // Load user + registros
   useEffect(() => {
-    const raw = localStorage.getItem('discipulado_session')
-    if (!raw) return
-    const u: Usuario = JSON.parse(raw)
-    setUser(u)
-    setTodosRegistros(getRegistros(u.id))
-  }, [])
-
-  const misDiscipulos = user ? DISCIPULOS.filter((d) => d.discipuladorId === user.id) : []
+    const unsub = onAuthChange(async (user) => {
+      if (!user) { router.replace('/login'); return }
+      const [discs, regs] = await Promise.all([
+        getDiscipulosDeLider(user.uid),
+        getRegistrosDeLider(user.uid),
+      ])
+      setLiderUid(user.uid)
+      setDiscipulos(discs)
+      setTodosRegistros(regs)
+      setLoading(false)
+    })
+    return () => unsub()
+  }, [router])
 
   // Re-initialize form when week or loaded registros change
   useEffect(() => {
-    if (!misDiscipulos.length) return
+    if (!discipulos.length) return
     const inicial: Record<string, EntradaRegistro> = {}
-    misDiscipulos.forEach((d) => {
-      const ex = todosRegistros.find((r) => r.discipuloId === d.id && r.semana === semana)
-      inicial[d.id] = ex
+    discipulos.forEach((d) => {
+      const ex = todosRegistros.find((r) => r.discipuloId === d.uid && r.semana === semana)
+      inicial[d.uid] = ex
         ? {
-            discipuloId: d.id,
+            discipuloId: d.uid,
             asistioReunion: ex.asistioReunion,
             asistiodomingo: ex.asistiodomingo,
             participacion: ex.participacion,
             completoMaterial: ex.completoMaterial,
             notas: ex.notas,
           }
-        : { discipuloId: d.id, asistioReunion: false, asistiodomingo: false, participacion: null, completoMaterial: false, notas: '' }
+        : { discipuloId: d.uid, asistioReunion: false, asistiodomingo: false, participacion: null, completoMaterial: false, notas: '' }
     })
     setEntradas(inicial)
     setGuardado(false)
-  }, [semana, todosRegistros]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [semana, todosRegistros, discipulos])
 
   function setField(discipuloId: string, campo: keyof EntradaRegistro, valor: unknown) {
     setEntradas((prev) => ({
@@ -70,15 +80,17 @@ export default function RegistroPage() {
     setGuardado(false)
   }
 
-  function handleGuardar(e: React.FormEvent) {
+  async function handleGuardar(e: React.FormEvent) {
     e.preventDefault()
-    if (!user) return
+    if (!liderUid) return
+    setGuardando(true)
 
-    const nuevos: RegistroSemanal[] = misDiscipulos.map((d) => {
-      const entrada = entradas[d.id]
+    const nuevos: (RegistroSemanal & { discipuladorId: string })[] = discipulos.map((d) => {
+      const entrada = entradas[d.uid]
       return {
-        id: `r-${d.id}-${semana}`,
-        discipuloId: d.id,
+        id: `${d.uid}_${semana}`,
+        discipuloId: d.uid,
+        discipuladorId: liderUid,
         semana,
         asistioReunion: entrada?.asistioReunion ?? false,
         asistiodomingo: entrada?.asistiodomingo ?? false,
@@ -88,7 +100,7 @@ export default function RegistroPage() {
       }
     })
 
-    saveRegistros(user.id, nuevos)
+    await guardarRegistros(liderUid, nuevos)
 
     // Sync local state so historial and charts reflect changes immediately
     setTodosRegistros((prev) => {
@@ -101,18 +113,19 @@ export default function RegistroPage() {
       return updated
     })
 
+    setGuardando(false)
     setGuardado(true)
     setTimeout(() => setGuardado(false), 3000)
   }
 
-  function historial(discipuloId: string): RegistroSemanal[] {
+  function historial(discipuloUid: string): RegistroSemanal[] {
     return todosRegistros
-      .filter((r) => r.discipuloId === discipuloId)
+      .filter((r) => r.discipuloId === discipuloUid)
       .sort((a, b) => new Date(b.semana).getTime() - new Date(a.semana).getTime())
       .slice(0, 8)
   }
 
-  if (!user) return null
+  if (loading) return null
 
   const asistieronReunion = Object.values(entradas).filter((e) => e.asistioReunion).length
   const asistieronDomingo = Object.values(entradas).filter((e) => e.asistiodomingo).length
@@ -168,17 +181,17 @@ export default function RegistroPage() {
               ))}
             </select>
             <div style={{ display: 'flex', gap: '16px', marginLeft: 'auto' }}>
-              <Counter label="Discipulado" value={asistieronReunion} total={misDiscipulos.length} color="#22c55e" />
-              <Counter label="Domingo" value={asistieronDomingo} total={misDiscipulos.length} color="var(--primary)" />
+              <Counter label="Discipulado" value={asistieronReunion} total={discipulos.length} color="#22c55e" />
+              <Counter label="Domingo" value={asistieronDomingo} total={discipulos.length} color="var(--primary)" />
             </div>
           </div>
 
           {/* Disciple cards */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '24px' }}>
-            {misDiscipulos.map((d) => {
-              const e = entradas[d.id] ?? { discipuloId: d.id, asistioReunion: false, asistiodomingo: false, participacion: null, completoMaterial: false, notas: '' }
+            {discipulos.map((d) => {
+              const e = entradas[d.uid] ?? { discipuloId: d.uid, asistioReunion: false, asistiodomingo: false, participacion: null, completoMaterial: false, notas: '' }
               return (
-                <div key={d.id} className="card" style={{
+                <div key={d.uid} className="card" style={{
                   padding: '20px 24px',
                   border: e.asistioReunion ? '1.5px solid #D4E8C2' : '1.5px solid transparent',
                   transition: 'border-color .15s',
@@ -200,13 +213,13 @@ export default function RegistroPage() {
                       label="Asistió al discipulado"
                       active={e.asistioReunion}
                       activeColor="#22c55e"
-                      onToggle={() => setField(d.id, 'asistioReunion', !e.asistioReunion)}
+                      onToggle={() => setField(d.uid, 'asistioReunion', !e.asistioReunion)}
                     />
                     <Toggle
                       label="Asistió a domingo"
                       active={e.asistiodomingo}
                       activeColor="var(--primary)"
-                      onToggle={() => setField(d.id, 'asistiodomingo', !e.asistiodomingo)}
+                      onToggle={() => setField(d.uid, 'asistiodomingo', !e.asistiodomingo)}
                     />
                   </div>
 
@@ -225,7 +238,7 @@ export default function RegistroPage() {
                             { val: 'baja',  label: 'Baja',   bg: '#FEE2E2', col: '#B91C1C', border: '#FECACA' },
                           ] as const).map(({ val, label, bg, col, border }) => (
                             <button key={val} type="button"
-                              onClick={() => setField(d.id, 'participacion', val)}
+                              onClick={() => setField(d.uid, 'participacion', val)}
                               style={{
                                 padding: '6px 16px', borderRadius: '8px',
                                 border: `1.5px solid ${e.participacion === val ? border : 'var(--border)'}`,
@@ -241,7 +254,7 @@ export default function RegistroPage() {
                       {/* Material */}
                       <label style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer' }}>
                         <input type="checkbox" checked={e.completoMaterial}
-                          onChange={(ev) => setField(d.id, 'completoMaterial', ev.target.checked)}
+                          onChange={(ev) => setField(d.uid, 'completoMaterial', ev.target.checked)}
                           style={{ width: '16px', height: '16px', accentColor: 'var(--primary)', cursor: 'pointer' }}
                         />
                         <span style={{ fontSize: '13px', color: 'var(--text)', fontWeight: '500' }}>
@@ -255,7 +268,7 @@ export default function RegistroPage() {
                           Notas (opcional)
                         </label>
                         <textarea value={e.notas}
-                          onChange={(ev) => setField(d.id, 'notas', ev.target.value)}
+                          onChange={(ev) => setField(d.uid, 'notas', ev.target.value)}
                           placeholder="Observaciones, peticiones de oración, seguimiento..."
                           rows={2} style={{
                             width: '100%', padding: '9px 12px',
@@ -283,25 +296,30 @@ export default function RegistroPage() {
                 Registro guardado
               </span>
             )}
-            <button type="submit" style={{
-              padding: '12px 32px', background: 'var(--text)', color: 'white',
+            <button type="submit" disabled={guardando} style={{
+              padding: '12px 32px', background: guardando ? '#E8DDD4' : 'var(--text)', color: 'white',
               border: 'none', borderRadius: '10px', fontSize: '14px', fontWeight: '800',
-              cursor: 'pointer', transition: 'background .15s',
+              cursor: guardando ? 'not-allowed' : 'pointer', transition: 'background .15s',
+              display: 'flex', alignItems: 'center', gap: '8px',
             }}>
-              Guardar registro
+              {guardando && (
+                <span style={{ width: '14px', height: '14px', border: '2px solid rgba(255,255,255,0.4)', borderTopColor: 'white', borderRadius: '50%', display: 'inline-block', animation: 'spin 0.7s linear infinite' }} />
+              )}
+              {guardando ? 'Guardando...' : 'Guardar registro'}
             </button>
           </div>
+          <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
         </form>
       )}
 
       {/* ── Historial ── */}
       {modo === 'historial' && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          {misDiscipulos.map((d) => {
-            const rows = historial(d.id)
+          {discipulos.map((d) => {
+            const rows = historial(d.uid)
             const asistencias = rows.filter((r) => r.asistioReunion).length
             return (
-              <div key={d.id} className="card" style={{ overflow: 'hidden' }}>
+              <div key={d.uid} className="card" style={{ overflow: 'hidden' }}>
                 <div style={{ padding: '16px 22px', borderBottom: '1px solid var(--border)', display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <div style={{
                     width: '36px', height: '36px', borderRadius: '50%', background: d.color,
