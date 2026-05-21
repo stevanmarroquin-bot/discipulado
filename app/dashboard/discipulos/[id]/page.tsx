@@ -79,7 +79,7 @@ export default function DiscipuloDetailPage() {
   if (loading || !discipulo) return null
 
   // Adapt PerfilDiscipulo (uid) → Discipulo (id) shape for utils
-  const discipuloAdapted = { ...discipulo, id: discipulo.uid, password: '' }
+  const discipuloAdapted = { ...discipulo, id: discipulo.uid, password: '', moduloActual: discipulo.moduloActual as import('@/lib/mock-data').ModuloCurriculo | undefined }
   const stats = calcularEstadisticasDiscipulo(discipuloAdapted, registros)
   const misRegistros = registros
     .filter((r) => r.discipuloId === id)
