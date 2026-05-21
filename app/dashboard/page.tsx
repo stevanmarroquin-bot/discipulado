@@ -357,7 +357,7 @@ export default function DashboardPage() {
               />
               <Tooltip
                 contentStyle={{ background: 'white', border: '1px solid var(--border)', borderRadius: '10px', fontSize: '12px' }}
-                formatter={(v: number, name: string) => [`${v}%`, name === 'reunion' ? 'Reunión' : 'Domingo']}
+                formatter={(v: unknown, name: unknown) => [`${v}%`, name === 'reunion' ? 'Reunión' : 'Domingo']}
               />
               <Area type="monotone" dataKey="reunion" stroke="#22c55e" strokeWidth={2} fill="url(#gradReunion)" dot={{ r: 3, fill: '#22c55e' }} />
               <Area type="monotone" dataKey="domingo" stroke="var(--primary)" strokeWidth={2} fill="url(#gradDomingo)" dot={{ r: 3, fill: 'var(--primary)' }} />
