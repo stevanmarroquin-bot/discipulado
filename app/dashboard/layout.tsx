@@ -16,7 +16,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       return
     }
     try {
-      setUser(JSON.parse(raw))
+      const session = JSON.parse(raw)
+      if (session.tipo === 'discipulo') { router.replace('/discipulo'); return }
+      setUser(session)
     } catch {
       router.replace('/login')
     }

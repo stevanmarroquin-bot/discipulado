@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { USUARIOS } from '@/lib/mock-data'
-import CrownLogo from '@/components/CrownLogo'
+import { USUARIOS, DISCIPULOS } from '@/lib/mock-data'
+import Image from 'next/image'
 
 export default function LoginPage() {
   const router = useRouter()
@@ -16,17 +16,32 @@ export default function LoginPage() {
     e.preventDefault()
     setError('')
     setLoading(true)
+
     setTimeout(() => {
-      const user = USUARIOS.find(
-        (u) => u.email === email.trim().toLowerCase() && u.password === password
+      const trimmedEmail = email.trim().toLowerCase()
+
+      // Check líderes first
+      const lider = USUARIOS.find(
+        (u) => u.email === trimmedEmail && u.password === password
       )
-      if (user) {
-        localStorage.setItem('discipulado_session', JSON.stringify(user))
+      if (lider) {
+        localStorage.setItem('discipulado_session', JSON.stringify({ tipo: 'lider', ...lider }))
         router.replace('/dashboard')
-      } else {
-        setError('Correo o contraseña incorrectos.')
-        setLoading(false)
+        return
       }
+
+      // Check discípulos
+      const discipulo = DISCIPULOS.find(
+        (d) => d.email === trimmedEmail && d.password === password
+      )
+      if (discipulo) {
+        localStorage.setItem('discipulado_session', JSON.stringify({ tipo: 'discipulo', ...discipulo }))
+        router.replace('/discipulo')
+        return
+      }
+
+      setError('Correo o contraseña incorrectos.')
+      setLoading(false)
     }, 600)
   }
 
@@ -39,14 +54,16 @@ export default function LoginPage() {
       justifyContent: 'center',
       padding: '24px',
       flexDirection: 'column',
-      gap: '40px',
+      gap: '36px',
     }}>
       {/* Logo */}
-      <CrownLogo
-        size={56}
-        color="var(--text)"
-        textColor="var(--text)"
-        subTextColor="var(--text-muted)"
+      <Image
+        src="/logo.png"
+        alt="Bread of Life Guatemala"
+        width={80}
+        height={80}
+        style={{ width: '80px', height: '80px', objectFit: 'contain' }}
+        priority
       />
 
       {/* Card */}
@@ -79,13 +96,9 @@ export default function LoginPage() {
               placeholder="tu@correo.com"
               required
               style={{
-                width: '100%',
-                padding: '11px 14px',
-                border: '1.5px solid var(--border)',
-                borderRadius: '10px',
-                fontSize: '14px',
-                color: 'var(--text)',
-                background: '#FAFAF8',
+                width: '100%', padding: '11px 14px',
+                border: '1.5px solid var(--border)', borderRadius: '10px',
+                fontSize: '14px', color: 'var(--text)', background: '#FAFAF8',
               }}
             />
           </div>
@@ -101,13 +114,9 @@ export default function LoginPage() {
               placeholder="••••••••"
               required
               style={{
-                width: '100%',
-                padding: '11px 14px',
-                border: '1.5px solid var(--border)',
-                borderRadius: '10px',
-                fontSize: '14px',
-                color: 'var(--text)',
-                background: '#FAFAF8',
+                width: '100%', padding: '11px 14px',
+                border: '1.5px solid var(--border)', borderRadius: '10px',
+                fontSize: '14px', color: 'var(--text)', background: '#FAFAF8',
               }}
             />
           </div>
@@ -122,21 +131,12 @@ export default function LoginPage() {
             type="submit"
             disabled={loading}
             style={{
-              marginTop: '4px',
-              width: '100%',
-              padding: '13px',
+              marginTop: '4px', width: '100%', padding: '13px',
               background: loading ? '#E8DDD4' : 'var(--text)',
-              color: 'white',
-              border: 'none',
-              borderRadius: '10px',
-              fontSize: '14px',
-              fontWeight: '800',
-              letterSpacing: '0.04em',
+              color: 'white', border: 'none', borderRadius: '10px',
+              fontSize: '14px', fontWeight: '800', letterSpacing: '0.04em',
               cursor: loading ? 'not-allowed' : 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '8px',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
               transition: 'background .2s',
             }}
           >
@@ -144,21 +144,13 @@ export default function LoginPage() {
               <span style={{
                 width: '15px', height: '15px',
                 border: '2px solid rgba(255,255,255,0.4)',
-                borderTopColor: 'white',
-                borderRadius: '50%',
-                display: 'inline-block',
-                animation: 'spin 0.7s linear infinite',
-              }}/>
+                borderTopColor: 'white', borderRadius: '50%',
+                display: 'inline-block', animation: 'spin 0.7s linear infinite',
+              }} />
             )}
             {loading ? 'Ingresando...' : 'Ingresar'}
           </button>
         </form>
-
-        <div style={{ marginTop: '24px', padding: '14px', background: 'var(--bg)', borderRadius: '10px', fontSize: '12px', color: 'var(--text-muted)' }}>
-          <p style={{ fontWeight: '700', marginBottom: '4px' }}>Cuentas de prueba</p>
-          <p>carlos@iglesia.com &nbsp;/&nbsp; 1234</p>
-          <p>maria@iglesia.com &nbsp;/&nbsp; 1234</p>
-        </div>
       </div>
 
       <p style={{ fontSize: '11px', color: 'var(--text-muted)' }}>

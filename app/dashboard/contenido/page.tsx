@@ -186,10 +186,9 @@ export default function ContenidoPage() {
 function SesionRow({ item, color }: { item: Contenido; color: string }) {
   return (
     <div style={{
-      display: 'flex', alignItems: 'center', gap: '14px',
-      padding: '12px 14px', borderRadius: '10px',
-      background: 'var(--bg)',
-      transition: 'background .12s',
+      display: 'flex', alignItems: 'center', gap: '12px',
+      padding: '12px 14px', borderRadius: '10px', background: 'var(--bg)',
+      transition: 'background .12s', flexWrap: 'wrap',
     }}
       onMouseEnter={(e) => ((e.currentTarget as HTMLDivElement).style.background = '#EDE8DF')}
       onMouseLeave={(e) => ((e.currentTarget as HTMLDivElement).style.background = 'var(--bg)')}
@@ -204,8 +203,8 @@ function SesionRow({ item, color }: { item: Contenido; color: string }) {
       </span>
 
       {/* Title + description */}
-      <div style={{ flex: 1, minWidth: 0 }}>
-        <p style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: 'var(--text)', marginBottom: '2px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+      <div style={{ flex: 1, minWidth: '160px' }}>
+        <p style={{ margin: 0, fontSize: '14px', fontWeight: '700', color: 'var(--text)', marginBottom: '2px' }}>
           {item.titulo}
         </p>
         <p style={{ margin: 0, fontSize: '12px', color: 'var(--text-muted)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
@@ -213,32 +212,70 @@ function SesionRow({ item, color }: { item: Contenido; color: string }) {
         </p>
       </div>
 
-      {/* File type */}
-      <span style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '10px', color: 'var(--text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em', flexShrink: 0 }}>
-        {TIPO_ICON[item.tipo]}
-        {item.tipo}
-      </span>
-
-      {/* Download button */}
-      <button
-        onClick={() => alert('Aquí se descargará el archivo cuando conectes los documentos reales.')}
-        style={{
-          flexShrink: 0, display: 'flex', alignItems: 'center', gap: '5px',
-          padding: '6px 12px', borderRadius: '7px', border: 'none',
-          fontSize: '12px', fontWeight: '700', cursor: 'pointer',
-          background: `${color}14`, color,
-          transition: 'background .15s',
-        }}
-        onMouseEnter={(e) => ((e.currentTarget as HTMLButtonElement).style.background = `${color}26`)}
-        onMouseLeave={(e) => ((e.currentTarget as HTMLButtonElement).style.background = `${color}14`)}
-      >
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          <polyline points="7 10 12 15 17 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        </svg>
-        Descargar
-      </button>
+      {/* Action buttons */}
+      <div style={{ display: 'flex', gap: '6px', flexShrink: 0 }}>
+        {item.videoUrl && (
+          <a
+            href={item.videoUrl} target="_blank" rel="noopener noreferrer"
+            style={{
+              display: 'flex', alignItems: 'center', gap: '5px',
+              padding: '6px 11px', borderRadius: '7px',
+              fontSize: '12px', fontWeight: '700', textDecoration: 'none',
+              background: '#fee2e2', color: '#dc2626', transition: 'background .15s',
+            }}
+            onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = '#fecaca')}
+            onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = '#fee2e2')}
+          >
+            {/* YouTube icon */}
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/>
+            </svg>
+            Video
+          </a>
+        )}
+        {item.audioUrl && (
+          <a
+            href={item.audioUrl} target="_blank" rel="noopener noreferrer"
+            style={{
+              display: 'flex', alignItems: 'center', gap: '5px',
+              padding: '6px 11px', borderRadius: '7px',
+              fontSize: '12px', fontWeight: '700', textDecoration: 'none',
+              background: '#f3e8ff', color: '#7c3aed', transition: 'background .15s',
+            }}
+            onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = '#e9d5ff')}
+            onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = '#f3e8ff')}
+          >
+            {/* Mic icon */}
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <line x1="12" y1="19" x2="12" y2="23" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              <line x1="8" y1="23" x2="16" y2="23" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+            Audio
+          </a>
+        )}
+        {item.url && item.url !== '#' && (
+          <a
+            href={item.url} target="_blank" rel="noopener noreferrer"
+            style={{
+              display: 'flex', alignItems: 'center', gap: '5px',
+              padding: '6px 11px', borderRadius: '7px',
+              fontSize: '12px', fontWeight: '700', textDecoration: 'none',
+              background: `${color}14`, color, transition: 'background .15s',
+            }}
+            onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = `${color}26`)}
+            onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = `${color}14`)}
+          >
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <polyline points="7 10 12 15 17 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+            PDF
+          </a>
+        )}
+      </div>
     </div>
   )
 }

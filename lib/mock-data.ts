@@ -7,15 +7,19 @@ export interface Usuario {
   cargo: string
 }
 
+export type ModuloCurriculo = 'fundamento' | 'formacion' | 'comunidad' | 'mision'
+
 export interface Discipulo {
   id: string
   nombre: string
   email: string
+  password: string
   telefono: string
   fechaInicio: string
   iniciales: string
   discipuladorId: string
   color: string
+  moduloActual?: ModuloCurriculo
 }
 
 export interface RegistroSemanal {
@@ -28,8 +32,6 @@ export interface RegistroSemanal {
   completoMaterial: boolean
   notas: string
 }
-
-export type ModuloCurriculo = 'fundamento' | 'formacion' | 'comunidad' | 'mision'
 
 export const MODULOS: { id: ModuloCurriculo; nombre: string; color: string }[] = [
   { id: 'fundamento', nombre: 'Fundamento: El evangelio',               color: '#2D6A4F' },
@@ -47,6 +49,8 @@ export interface Contenido {
   semana?: number
   modulo?: ModuloCurriculo
   url: string
+  videoUrl?: string   // YouTube link
+  audioUrl?: string   // Podcast / audio link
   fecha: string
 }
 
@@ -70,19 +74,37 @@ export const USUARIOS: Usuario[] = [
 ]
 
 export const DISCIPULOS: Discipulo[] = [
-  { id: 'd1', nombre: 'Ana García',      email: 'ana@gmail.com',     telefono: '5555-0001', fechaInicio: '2026-01-15', iniciales: 'AG', discipuladorId: 'u1', color: '#2D6A4F' },
-  { id: 'd2', nombre: 'Roberto Sánchez', email: 'roberto@gmail.com', telefono: '5555-0002', fechaInicio: '2026-01-15', iniciales: 'RS', discipuladorId: 'u1', color: '#1A4A7A' },
-  { id: 'd3', nombre: 'Sofía Herrera',   email: 'sofia@gmail.com',   telefono: '5555-0003', fechaInicio: '2026-02-01', iniciales: 'SH', discipuladorId: 'u1', color: '#7B3F8C' },
-  { id: 'd4', nombre: 'Diego Morales',   email: 'diego@gmail.com',   telefono: '5555-0004', fechaInicio: '2026-02-01', iniciales: 'DM', discipuladorId: 'u1', color: '#A0522D' },
-  { id: 'd5', nombre: 'Valeria Cruz',    email: 'valeria@gmail.com', telefono: '5555-0005', fechaInicio: '2026-02-15', iniciales: 'VC', discipuladorId: 'u1', color: '#C4893A' },
-  { id: 'd6', nombre: 'Luis Ramírez',    email: 'luis@gmail.com',    telefono: '5555-0006', fechaInicio: '2026-03-10', iniciales: 'LR', discipuladorId: 'u1', color: '#2E6D6D' },
-  { id: 'd7', nombre: 'Paula Castillo',  email: 'paula@gmail.com',   telefono: '5555-0007', fechaInicio: '2026-01-20', iniciales: 'PC', discipuladorId: 'u2', color: '#2D6A4F' },
-  { id: 'd8', nombre: 'Andrés Torres',   email: 'andres@gmail.com',  telefono: '5555-0008', fechaInicio: '2026-02-10', iniciales: 'AT', discipuladorId: 'u2', color: '#1A4A7A' },
+  { id: 'd1', nombre: 'Ana García',      email: 'ana@gmail.com',     password: '1234', telefono: '5555-0001', fechaInicio: '2026-01-15', iniciales: 'AG', discipuladorId: 'u1', color: '#2D6A4F', moduloActual: 'fundamento' },
+  { id: 'd2', nombre: 'Roberto Sánchez', email: 'roberto@gmail.com', password: '1234', telefono: '5555-0002', fechaInicio: '2026-01-15', iniciales: 'RS', discipuladorId: 'u1', color: '#1A4A7A', moduloActual: 'fundamento' },
+  { id: 'd3', nombre: 'Sofía Herrera',   email: 'sofia@gmail.com',   password: '1234', telefono: '5555-0003', fechaInicio: '2026-02-01', iniciales: 'SH', discipuladorId: 'u1', color: '#7B3F8C', moduloActual: 'fundamento' },
+  { id: 'd4', nombre: 'Diego Morales',   email: 'diego@gmail.com',   password: '1234', telefono: '5555-0004', fechaInicio: '2026-02-01', iniciales: 'DM', discipuladorId: 'u1', color: '#A0522D', moduloActual: 'fundamento' },
+  { id: 'd5', nombre: 'Valeria Cruz',    email: 'valeria@gmail.com', password: '1234', telefono: '5555-0005', fechaInicio: '2026-02-15', iniciales: 'VC', discipuladorId: 'u1', color: '#C4893A', moduloActual: 'fundamento' },
+  { id: 'd6', nombre: 'Luis Ramírez',    email: 'luis@gmail.com',    password: '1234', telefono: '5555-0006', fechaInicio: '2026-03-10', iniciales: 'LR', discipuladorId: 'u1', color: '#2E6D6D', moduloActual: 'fundamento' },
+  { id: 'd7', nombre: 'Paula Castillo',  email: 'paula@gmail.com',   password: '1234', telefono: '5555-0007', fechaInicio: '2026-01-20', iniciales: 'PC', discipuladorId: 'u2', color: '#2D6A4F', moduloActual: 'fundamento' },
+  { id: 'd8', nombre: 'Andrés Torres',   email: 'andres@gmail.com',  password: '1234', telefono: '5555-0008', fechaInicio: '2026-02-10', iniciales: 'AT', discipuladorId: 'u2', color: '#1A4A7A', moduloActual: 'fundamento' },
 ]
 
+// Semanas de mock data (para los registros de prueba)
 const SEMANAS = [
   '2026-03-09', '2026-03-16', '2026-03-23', '2026-03-30',
   '2026-04-06', '2026-04-13', '2026-04-20', '2026-04-27',
+]
+
+// Todos los lunes desde el inicio del programa hasta fin de año
+// Se actualiza agregando más fechas cuando sea necesario
+const TODAS_LAS_SEMANAS = [
+  '2026-01-05', '2026-01-12', '2026-01-19', '2026-01-26',
+  '2026-02-02', '2026-02-09', '2026-02-16', '2026-02-23',
+  '2026-03-02', '2026-03-09', '2026-03-16', '2026-03-23', '2026-03-30',
+  '2026-04-06', '2026-04-13', '2026-04-20', '2026-04-27',
+  '2026-05-04', '2026-05-11', '2026-05-18', '2026-05-25',
+  '2026-06-01', '2026-06-08', '2026-06-15', '2026-06-22', '2026-06-29',
+  '2026-07-06', '2026-07-13', '2026-07-20', '2026-07-27',
+  '2026-08-03', '2026-08-10', '2026-08-17', '2026-08-24', '2026-08-31',
+  '2026-09-07', '2026-09-14', '2026-09-21', '2026-09-28',
+  '2026-10-05', '2026-10-12', '2026-10-19', '2026-10-26',
+  '2026-11-02', '2026-11-09', '2026-11-16', '2026-11-23', '2026-11-30',
+  '2026-12-07', '2026-12-14', '2026-12-21', '2026-12-28',
 ]
 
 export const REGISTROS: RegistroSemanal[] = [
@@ -169,13 +191,13 @@ export const REGISTROS: RegistroSemanal[] = [
 
 export const CONTENIDO: Contenido[] = [
   // ── Fundamento: El evangelio (7 sesiones) ──
-  { id: 'c1',  titulo: 'Sesión 1: ¿Qué es el discipulado?',          descripcion: 'Fundamentos bíblicos del discipulado y el llamado de Jesús.',          categoria: 'material-base', tipo: 'pdf', semana: 1, modulo: 'fundamento', url: '#', fecha: '2026-01-06' },
-  { id: 'c2',  titulo: 'Sesión 2: La Gran Comisión',                  descripcion: 'Estudio profundo de Mateo 28:18-20 y su aplicación práctica.',         categoria: 'material-base', tipo: 'pdf', semana: 2, modulo: 'fundamento', url: '#', fecha: '2026-01-13' },
-  { id: 'c3',  titulo: 'Sesión 3: El evangelio — la buena noticia',   descripcion: 'Qué es el evangelio, por qué importa, y cómo cambia todo.',           categoria: 'material-base', tipo: 'pdf', semana: 3, modulo: 'fundamento', url: '#', fecha: '2026-01-20' },
-  { id: 'c4',  titulo: 'Sesión 4: ¿Qué es el pecado?',               descripcion: 'La condición humana y la necesidad real de un salvador.',               categoria: 'material-base', tipo: 'pdf', semana: 4, modulo: 'fundamento', url: '#', fecha: '2026-01-27' },
-  { id: 'c5',  titulo: 'Sesión 5: La cruz y la resurrección',         descripcion: 'El corazón del evangelio: lo que Jesús hizo y lo que eso significa.',   categoria: 'material-base', tipo: 'pdf', semana: 5, modulo: 'fundamento', url: '#', fecha: '2026-02-03' },
-  { id: 'c6',  titulo: 'Sesión 6: Fe, gracia y arrepentimiento',      descripcion: 'Cómo se recibe el evangelio y qué produce en la vida del creyente.',   categoria: 'material-base', tipo: 'pdf', semana: 6, modulo: 'fundamento', url: '#', fecha: '2026-02-10' },
-  { id: 'c7',  titulo: 'Sesión 7: Mi nueva identidad en Cristo',      descripcion: 'Quiénes somos en Cristo y cómo esa verdad transforma nuestra vida.',   categoria: 'material-base', tipo: 'pdf', semana: 7, modulo: 'fundamento', url: '#', fecha: '2026-02-17' },
+  { id: 'c1', titulo: 'Sesión 1: ¿Qué es el discipulado?',         descripcion: 'Fundamentos bíblicos del discipulado y el llamado de Jesús.',        categoria: 'material-base', tipo: 'pdf', semana: 1, modulo: 'fundamento', url: '#', videoUrl: 'https://youtube.com/watch?v=REEMPLAZAR', audioUrl: 'https://podcast.com/ep1', fecha: '2026-01-06' },
+  { id: 'c2', titulo: 'Sesión 2: La Gran Comisión',                 descripcion: 'Estudio profundo de Mateo 28:18-20 y su aplicación práctica.',       categoria: 'material-base', tipo: 'pdf', semana: 2, modulo: 'fundamento', url: '#', videoUrl: 'https://youtube.com/watch?v=REEMPLAZAR', fecha: '2026-01-13' },
+  { id: 'c3', titulo: 'Sesión 3: El evangelio — la buena noticia',  descripcion: 'Qué es el evangelio, por qué importa, y cómo cambia todo.',         categoria: 'material-base', tipo: 'pdf', semana: 3, modulo: 'fundamento', url: '#', fecha: '2026-01-20' },
+  { id: 'c4', titulo: 'Sesión 4: ¿Qué es el pecado?',              descripcion: 'La condición humana y la necesidad real de un salvador.',             categoria: 'material-base', tipo: 'pdf', semana: 4, modulo: 'fundamento', url: '#', fecha: '2026-01-27' },
+  { id: 'c5', titulo: 'Sesión 5: La cruz y la resurrección',        descripcion: 'El corazón del evangelio: lo que Jesús hizo y lo que eso significa.', categoria: 'material-base', tipo: 'pdf', semana: 5, modulo: 'fundamento', url: '#', fecha: '2026-02-03' },
+  { id: 'c6', titulo: 'Sesión 6: Fe, gracia y arrepentimiento',     descripcion: 'Cómo se recibe el evangelio y qué produce en la vida del creyente.', categoria: 'material-base', tipo: 'pdf', semana: 6, modulo: 'fundamento', url: '#', fecha: '2026-02-10' },
+  { id: 'c7', titulo: 'Sesión 7: Mi nueva identidad en Cristo',     descripcion: 'Quiénes somos en Cristo y cómo esa verdad transforma nuestra vida.', categoria: 'material-base', tipo: 'pdf', semana: 7, modulo: 'fundamento', url: '#', fecha: '2026-02-17' },
 
   // ── Formación: Viviendo desde El Evangelio ──
   { id: 'c8',  titulo: 'Sesión 1: Oración y dependencia de Dios',    descripcion: 'Cómo desarrollar una vida de oración auténtica y disciplinada.',       categoria: 'material-base', tipo: 'pdf', semana: 1, modulo: 'formacion', url: '#', fecha: '2026-03-03' },
@@ -190,4 +212,7 @@ export const CONTENIDO: Contenido[] = [
   { id: 'c13', titulo: 'Guía del Líder: Señales de alerta',          descripcion: 'Cómo identificar y responder cuando alguien está luchando.',            categoria: 'guia-lider',    tipo: 'pdf',          url: '#', fecha: '2026-03-01' },
 ]
 
-export const SEMANAS_DISPONIBLES = SEMANAS
+// Solo muestra semanas hasta hoy (no semanas futuras en el registro)
+export const SEMANAS_DISPONIBLES = TODAS_LAS_SEMANAS.filter(
+  (s) => new Date(s + 'T12:00:00') <= new Date()
+)
