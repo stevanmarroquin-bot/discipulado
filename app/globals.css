@@ -1,26 +1,97 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg:           #F0EAE0;
+  --card:         #FFFFFF;
+  --sidebar:      #1A1A1A;
+  --primary:      #C4893A;
+  --primary-lt:   #FEF3E2;
+  --text:         #1A1A1A;
+  --text-muted:   #6B6560;
+  --border:       #E5DDD3;
+  --sidebar-w:    248px;
+
+  --green:        #2D6A4F;
+  --green-bg:     #D1FAE5;
+  --yellow:       #92610A;
+  --yellow-bg:    #FEF3C7;
+  --red:          #B91C1C;
+  --red-bg:       #FEE2E2;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
 }
+
+/* ── Layout ── */
+.sidebar {
+  width: var(--sidebar-w);
+  min-height: 100vh;
+  background: var(--sidebar);
+  position: fixed;
+  left: 0; top: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  margin-left: var(--sidebar-w);
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .sidebar { transform: translateX(-100%); transition: transform .25s ease; }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { margin-left: 0; }
+}
+
+/* ── Cards ── */
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+}
+
+/* ── Health badges ── */
+.badge-verde    { background: var(--green-bg);  color: var(--green);  }
+.badge-amarillo { background: var(--yellow-bg); color: var(--yellow); }
+.badge-rojo     { background: var(--red-bg);    color: var(--red);    }
+
+.dot-verde    { background: #22c55e; }
+.dot-amarillo { background: #f59e0b; }
+.dot-rojo     { background: #ef4444; }
+.dot-gris     { background: #D5CCC3; }
+
+/* ── Form inputs ── */
+input, select, textarea {
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(196,137,58,.15);
+}
+
+/* ── Score ring animation ── */
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Disciple detail layout ── */
+.discipulo-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+@media (max-width: 860px) {
+  .discipulo-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Table row hover ── */
+.disciple-row { cursor: pointer; transition: background 0.12s; }
+.disciple-row:hover td { background: #F8F4EF !important; }
