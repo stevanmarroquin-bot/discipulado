@@ -40,9 +40,9 @@ export async function getPerfil(uid: string): Promise<Perfil | null> {
 }
 
 export async function getDiscipulosDeLider(liderUid: string): Promise<PerfilDiscipulo[]> {
+  // Query all profiles (lider or discipulo) that belong to this leader
   const q = query(
     collection(db, 'perfiles'),
-    where('tipo', '==', 'discipulo'),
     where('discipuladorId', '==', liderUid)
   )
   const snap = await getDocs(q)
