@@ -1,13 +1,15 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 import Image from 'next/image'
+import Link from 'next/link'
 import { onAuthChange, signOut } from '@/lib/auth'
 import { getPerfil, PerfilDiscipulo } from '@/lib/db'
 
 export default function DiscipuloLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter()
+  const pathname = usePathname()
   const [perfil, setPerfil] = useState<PerfilDiscipulo | null>(null)
 
   useEffect(() => {
@@ -48,6 +50,27 @@ export default function DiscipuloLayout({ children }: { children: React.ReactNod
             BREAD OF LIFE
           </span>
         </div>
+
+        {/* Nav links */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+          <Link href="/discipulo" style={{
+            padding: '6px 14px', borderRadius: '8px', fontSize: '13px', fontWeight: '600',
+            textDecoration: 'none',
+            color: pathname === '/discipulo' ? 'white' : 'rgba(255,255,255,0.5)',
+            background: pathname === '/discipulo' ? 'rgba(255,255,255,0.1)' : 'transparent',
+          }}>
+            Mi progreso
+          </Link>
+          <Link href="/discipulo/calendario" style={{
+            padding: '6px 14px', borderRadius: '8px', fontSize: '13px', fontWeight: '600',
+            textDecoration: 'none',
+            color: pathname === '/discipulo/calendario' ? 'white' : 'rgba(255,255,255,0.5)',
+            background: pathname === '/discipulo/calendario' ? 'rgba(255,255,255,0.1)' : 'transparent',
+          }}>
+            Calendario
+          </Link>
+        </div>
+
         <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <div style={{
