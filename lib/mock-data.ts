@@ -197,17 +197,7 @@ export const CONTENIDO: Contenido[] = [
   { id: 'c4', titulo: 'Estudio 3: ¿Cómo recibimos el evangelio? Parte I',  descripcion: 'Fe, arrepentimiento y la respuesta al evangelio — primera parte.',          categoria: 'material-base', tipo: 'pdf', semana: 3, modulo: 'fundamento', url: '/contenido/fundamento/Estudio 3 - ¿Cómo recibimos el evangelio? Parte I.pdf',  fecha: '2026-01-27' },
   { id: 'c5', titulo: 'Estudio 4: ¿Cómo recibimos el evangelio? Parte II', descripcion: 'Fe, arrepentimiento y la respuesta al evangelio — segunda parte.',          categoria: 'material-base', tipo: 'pdf', semana: 4, modulo: 'fundamento', url: '/contenido/fundamento/Estudio 4 - ¿Cómo recibimos el evangelio? Parte II.pdf', fecha: '2026-02-03' },
 
-  // ── Formación: Viviendo desde El Evangelio ──
-  { id: 'c8',  titulo: 'Sesión 1: Oración y dependencia de Dios',    descripcion: 'Cómo desarrollar una vida de oración auténtica y disciplinada.',       categoria: 'material-base', tipo: 'pdf', semana: 1, modulo: 'formacion', url: '#', fecha: '2026-03-03' },
-  { id: 'c9',  titulo: 'Sesión 2: La Palabra como base',             descripcion: 'Disciplinas espirituales: cómo estudiar la Biblia personalmente.',      categoria: 'material-base', tipo: 'pdf', semana: 2, modulo: 'formacion', url: '#', fecha: '2026-03-10' },
-
-  // ── Comunidad ──
-  { id: 'c10', titulo: 'Sesión 1: Comunidad y rendición de cuentas', descripcion: 'La importancia del cuerpo de Cristo en el crecimiento espiritual.',    categoria: 'material-base', tipo: 'pdf', semana: 1, modulo: 'comunidad', url: '#', fecha: '2026-04-07' },
-
-  // ── Guías para el líder ──
-  { id: 'c11', titulo: 'Guía del Líder: Primeras sesiones',          descripcion: 'Cómo arrancar bien con tu discípulo: expectativas y ritmo.',            categoria: 'guia-lider',    tipo: 'pdf',          url: '#', fecha: '2026-01-01' },
-  { id: 'c12', titulo: 'Guía del Líder: Manejando el desánimo',      descripcion: 'Qué hacer cuando tu discípulo quiere rendirse o pierde el ritmo.',     categoria: 'guia-lider',    tipo: 'pdf',          url: '#', fecha: '2026-02-15' },
-  { id: 'c13', titulo: 'Guía del Líder: Señales de alerta',          descripcion: 'Cómo identificar y responder cuando alguien está luchando.',            categoria: 'guia-lider',    tipo: 'pdf',          url: '#', fecha: '2026-03-01' },
+  // ── Formación, Comunidad, Misión — próximamente ──
 ]
 
 // Solo muestra semanas hasta hoy (no semanas futuras en el registro)
