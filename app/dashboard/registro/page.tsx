@@ -8,6 +8,7 @@ import { onAuthChange } from '@/lib/auth'
 import { getDiscipulosDeLider, getRegistrosDeLider, guardarRegistros, PerfilDiscipulo } from '@/lib/db'
 
 type Participacion = 'alta' | 'media' | 'baja'
+type TipoSemana = 'normal' | 'convivencia' | 'descanso'
 
 interface EntradaRegistro {
   discipuloId: string
@@ -28,6 +29,7 @@ export default function RegistroPage() {
   const [guardado, setGuardado] = useState(false)
   const [guardando, setGuardando] = useState(false)
   const [modo, setModo] = useState<'registro' | 'historial'>('registro')
+  const [tipoSemana, setTipoSemana] = useState<TipoSemana>('normal')
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -64,7 +66,19 @@ export default function RegistroPage() {
     })
     setEntradas(inicial)
     setGuardado(false)
+    setTipoSemana('normal')
   }, [semana, todosRegistros, discipulos])
+
+  function marcarTodosPresentes() {
+    setEntradas((prev) => {
+      const next = { ...prev }
+      discipulos.forEach((d) => {
+        next[d.uid] = { ...next[d.uid], asistioReunion: true }
+      })
+      return next
+    })
+    setGuardado(false)
+  }
 
   function setField(discipuloId: string, campo: keyof EntradaRegistro, valor: unknown) {
     setEntradas((prev) => ({
@@ -161,7 +175,7 @@ export default function RegistroPage() {
       {/* ── Registro form ── */}
       {modo === 'registro' && (
         <form onSubmit={handleGuardar}>
-          {/* Week selector + counters */}
+          {/* Week selector + tipo + counters */}
           <div className="card" style={{ padding: '18px 24px', marginBottom: '18px', display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style={{ color: 'var(--primary)' }}>
@@ -180,16 +194,92 @@ export default function RegistroPage() {
                 <option key={s} value={s}>{formatearSemana(s)}</option>
               ))}
             </select>
+
+            {/* Tipo de semana */}
+            <div style={{ display: 'flex', background: 'var(--bg)', borderRadius: '8px', padding: '3px', gap: '2px' }}>
+              {([
+                { val: 'normal',      label: 'Reunión normal' },
+                { val: 'convivencia', label: '🎉 Convivencia' },
+                { val: 'descanso',    label: '😴 Descanso' },
+              ] as const).map(({ val, label }) => (
+                <button key={val} type="button"
+                  onClick={() => setTipoSemana(val)}
+                  style={{
+                    padding: '5px 12px', borderRadius: '6px', border: 'none', fontSize: '12px',
+                    fontWeight: tipoSemana === val ? '700' : '500', cursor: 'pointer',
+                    background: tipoSemana === val ? 'white' : 'transparent',
+                    color: tipoSemana === val ? 'var(--text)' : 'var(--text-muted)',
+                    boxShadow: tipoSemana === val ? '0 1px 3px rgba(0,0,0,.08)' : 'none',
+                    transition: 'all .15s',
+                  }}
+                >{label}</button>
+              ))}
+            </div>
+
             <div style={{ display: 'flex', gap: '16px', marginLeft: 'auto' }}>
-              <Counter label="Discipulado" value={asistieronReunion} total={discipulos.length} color="#22c55e" />
+              <Counter
+                label={tipoSemana === 'convivencia' ? 'Convivencia' : 'Discipulado'}
+                value={asistieronReunion}
+                total={discipulos.length}
+                color="#22c55e"
+              />
               <Counter label="Domingo" value={asistieronDomingo} total={discipulos.length} color="var(--primary)" />
             </div>
           </div>
+
+          {/* Banner para semanas especiales */}
+          {tipoSemana === 'convivencia' && (
+            <div style={{
+              display: 'flex', alignItems: 'flex-start', gap: '12px',
+              padding: '14px 18px', marginBottom: '16px', borderRadius: '12px',
+              background: '#EFF6FF', border: '1.5px solid #BFDBFE',
+            }}>
+              <span style={{ fontSize: '20px', flexShrink: 0 }}>🎉</span>
+              <div>
+                <p style={{ fontSize: '13px', fontWeight: '800', color: '#1D4ED8', marginBottom: '3px' }}>
+                  Semana de convivencia
+                </p>
+                <p style={{ fontSize: '12px', color: '#3B82F6', lineHeight: 1.5 }}>
+                  No hay estudio formal esta semana. Marca la asistencia como positiva para quienes participaron en la convivencia grupal.
+                </p>
+              </div>
+            </div>
+          )}
+
+          {tipoSemana === 'descanso' && (
+            <div style={{
+              display: 'flex', alignItems: 'flex-start', gap: '12px',
+              padding: '14px 18px', marginBottom: '16px', borderRadius: '12px',
+              background: '#F5F3FF', border: '1.5px solid #DDD6FE',
+            }}>
+              <span style={{ fontSize: '20px', flexShrink: 0 }}>😴</span>
+              <div style={{ flex: 1 }}>
+                <p style={{ fontSize: '13px', fontWeight: '800', color: '#7C3AED', marginBottom: '3px' }}>
+                  Semana de descanso
+                </p>
+                <p style={{ fontSize: '12px', color: '#8B5CF6', lineHeight: 1.5, marginBottom: '10px' }}>
+                  Esta semana no hay reunión de discipulado. Puedes marcar la asistencia como positiva para todos si quieres mantener la racha del grupo.
+                </p>
+                <button type="button" onClick={marcarTodosPresentes} style={{
+                  padding: '6px 14px', borderRadius: '8px', border: '1.5px solid #C4B5FD',
+                  background: 'white', color: '#7C3AED', fontSize: '12px', fontWeight: '700',
+                  cursor: 'pointer',
+                }}>
+                  Marcar a todos como presentes
+                </button>
+              </div>
+            </div>
+          )}
 
           {/* Disciple cards */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '24px' }}>
             {discipulos.map((d) => {
               const e = entradas[d.uid] ?? { discipuloId: d.uid, asistioReunion: false, asistiodomingo: false, participacion: null, completoMaterial: false, notas: '' }
+              const labelAsistencia = tipoSemana === 'convivencia'
+                ? 'Asistió a la convivencia'
+                : tipoSemana === 'descanso'
+                  ? 'Marcar como presente'
+                  : 'Asistió al discipulado'
               return (
                 <div key={d.uid} className="card" style={{
                   padding: '20px 24px',
@@ -210,7 +300,7 @@ export default function RegistroPage() {
                       <p style={{ fontSize: '11px', color: 'var(--text-muted)' }}>{d.telefono}</p>
                     </div>
                     <Toggle
-                      label="Asistió al discipulado"
+                      label={labelAsistencia}
                       active={e.asistioReunion}
                       activeColor="#22c55e"
                       onToggle={() => setField(d.uid, 'asistioReunion', !e.asistioReunion)}
@@ -223,8 +313,8 @@ export default function RegistroPage() {
                     />
                   </div>
 
-                  {/* Expanded fields (only when attended reunion) */}
-                  {e.asistioReunion && (
+                  {/* Expanded fields — solo en semanas normales o convivencia con asistencia */}
+                  {e.asistioReunion && tipoSemana === 'normal' && (
                     <div style={{ marginTop: '18px', paddingTop: '16px', borderTop: '1px solid var(--border)', display: 'flex', flexDirection: 'column', gap: '14px' }}>
                       {/* Participación */}
                       <div>
@@ -278,6 +368,25 @@ export default function RegistroPage() {
                           }}
                         />
                       </div>
+                    </div>
+                  )}
+
+                  {/* Notas para convivencia / descanso */}
+                  {tipoSemana !== 'normal' && (
+                    <div style={{ marginTop: '14px', paddingTop: '14px', borderTop: '1px solid var(--border)' }}>
+                      <label style={{ display: 'block', fontSize: '10px', fontWeight: '800', color: 'var(--text-muted)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '6px' }}>
+                        Notas (opcional)
+                      </label>
+                      <textarea value={e.notas}
+                        onChange={(ev) => setField(d.uid, 'notas', ev.target.value)}
+                        placeholder="Observaciones, seguimiento..."
+                        rows={1} style={{
+                          width: '100%', padding: '9px 12px',
+                          border: '1.5px solid var(--border)', borderRadius: '8px',
+                          fontSize: '13px', color: 'var(--text)', resize: 'none', fontFamily: 'inherit',
+                          background: 'var(--bg)',
+                        }}
+                      />
                     </div>
                   )}
                 </div>
