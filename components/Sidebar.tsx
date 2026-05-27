@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
@@ -58,14 +59,31 @@ const NAV = [
 export default function Sidebar({ user }: { user: Usuario }) {
   const pathname = usePathname()
   const router = useRouter()
+  const [open, setOpen] = useState(false)
 
   async function handleLogout() {
     await signOut()
     router.replace('/login')
   }
 
+  // Close sidebar when navigating
+  function handleNav() { setOpen(false) }
+
   return (
-    <nav className="sidebar">
+    <>
+      {/* Hamburger button — only visible on mobile */}
+      <button className="mobile-menu-btn" onClick={() => setOpen(true)} aria-label="Abrir menú">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <line x1="3" y1="6" x2="21" y2="6" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+          <line x1="3" y1="12" x2="21" y2="12" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+          <line x1="3" y1="18" x2="21" y2="18" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+        </svg>
+      </button>
+
+      {/* Overlay */}
+      <div className={`sidebar-overlay${open ? ' open' : ''}`} onClick={() => setOpen(false)} />
+
+    <nav className={`sidebar${open ? ' open' : ''}`}>
       {/* Brand */}
       <div style={{ padding: '20px 20px 18px', borderBottom: '1px solid rgba(255,255,255,0.07)', display: 'flex', alignItems: 'center', gap: '10px' }}>
         <Image
@@ -101,6 +119,7 @@ export default function Sidebar({ user }: { user: Usuario }) {
             <Link
               key={item.href}
               href={item.href}
+              onClick={handleNav}
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -160,5 +179,6 @@ export default function Sidebar({ user }: { user: Usuario }) {
         </button>
       </div>
     </nav>
+    </>
   )
 }

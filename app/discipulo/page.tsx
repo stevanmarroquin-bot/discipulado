@@ -55,7 +55,7 @@ export default function DiscipuloPortal() {
   const saludo = hora < 12 ? 'Buenos días' : hora < 19 ? 'Buenas tardes' : 'Buenas noches'
 
   return (
-    <div style={{ maxWidth: '720px', margin: '0 auto', padding: '36px 24px' }}>
+    <div className="page-pad" style={{ maxWidth: '720px', margin: '0 auto', padding: '36px 24px' }}>
 
       {/* Welcome header */}
       <div style={{ marginBottom: '32px' }}>

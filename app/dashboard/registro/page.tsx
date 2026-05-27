@@ -145,7 +145,7 @@ export default function RegistroPage() {
   const asistieronDomingo = Object.values(entradas).filter((e) => e.asistiodomingo).length
 
   return (
-    <div style={{ padding: '36px', maxWidth: '880px', margin: '0 auto' }}>
+    <div className="page-pad" style={{ padding: '36px', maxWidth: '880px', margin: '0 auto' }}>
 
       {/* Header */}
       <div style={{ marginBottom: '28px', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: '14px' }}>

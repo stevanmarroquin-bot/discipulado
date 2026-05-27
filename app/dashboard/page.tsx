@@ -111,7 +111,7 @@ export default function DashboardPage() {
   })
 
   return (
-    <div style={{ padding: '36px', maxWidth: '1140px', margin: '0 auto' }}>
+    <div className="page-pad" style={{ padding: '36px', maxWidth: '1140px', margin: '0 auto' }}>
 
       {/* Header */}
       <div style={{ marginBottom: '32px' }}>
