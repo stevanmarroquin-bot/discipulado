@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Discipulado | Centro Vida',
+  title: 'Discipulado | Bread of Life',
   description: 'Plataforma de seguimiento y discipulado',
 }
 
