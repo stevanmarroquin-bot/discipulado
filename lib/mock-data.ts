@@ -198,6 +198,7 @@ export const CONTENIDO: Contenido[] = [
   { id: 'c5', titulo: 'Estudio 4: ¿Cómo recibimos el evangelio? Parte II', descripcion: 'Fe, arrepentimiento y la respuesta al evangelio — segunda parte.',          categoria: 'material-base', tipo: 'pdf', semana: 4, modulo: 'fundamento', url: '/contenido/fundamento/estudio-4-como-recibimos-el-evangelio-parte-2.pdf', fecha: '2026-02-03' },
   { id: 'c6', titulo: 'Estudio 5: ¿Y ahora qué? Viviendo desde el Evangelio', descripcion: 'Cómo vivir el evangelio en el día a día una vez que lo hemos recibido.',  categoria: 'material-base', tipo: 'pdf', semana: 5, modulo: 'fundamento', url: '/contenido/fundamento/estudio-5-viviendo-desde-el-evangelio.pdf', fecha: '2026-02-10' },
   { id: 'c7', titulo: 'Estudio 6: Viviendo desde el Evangelio',              descripcion: 'Profundizando en cómo el evangelio transforma nuestra vida diaria.',       categoria: 'material-base', tipo: 'pdf', semana: 6, modulo: 'fundamento', url: '/contenido/fundamento/estudio-6-viviendo-desde-el-evangelio.pdf',  fecha: '2026-02-17' },
+  { id: 'c8', titulo: 'Estudio 7: Perdón de pecados',                       descripcion: 'El perdón como base del evangelio y su impacto en nuestra vida.',            categoria: 'material-base', tipo: 'pdf', semana: 7, modulo: 'fundamento', url: '/contenido/fundamento/estudio-7-perdon-de-pecados.pdf',           fecha: '2026-03-09' },
 
   // ── Formación, Comunidad, Misión — próximamente ──
 ]
