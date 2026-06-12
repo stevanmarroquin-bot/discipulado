@@ -100,6 +100,29 @@ export default function AdminPage() {
     return () => unsub()
   }, [router])
 
+  function exportarCSV() {
+    const headers = ['Nombre', 'Líder', 'Módulo', 'Score', 'Salud', 'Última actualización', 'Estado']
+    const rows = ordenadas.map((f) => [
+      f.nombre,
+      f.liderNombre,
+      f.moduloLabel,
+      f.score,
+      SALUD_LABEL[f.salud],
+      f.ultimaSemana ? formatDate(f.ultimaSemana) : 'Sin datos',
+      f.stale ? 'Pendiente' : 'Al día',
+    ])
+    const csv = [headers, ...rows]
+      .map((r) => r.map((v) => `"${String(v).replace(/"/g, '""')}"`).join(','))
+      .join('\n')
+    const blob = new Blob(['﻿' + csv], { type: 'text/csv;charset=utf-8;' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `discipulos-${new Date().toISOString().slice(0, 10)}.csv`
+    a.click()
+    URL.revokeObjectURL(url)
+  }
+
   function toggleOrden(col: typeof ordenCol) {
     if (ordenCol === col) setOrdenAsc((a) => !a)
     else { setOrdenCol(col); setOrdenAsc(col === 'score' ? false : true) }
@@ -154,6 +177,26 @@ export default function AdminPage() {
           </h1>
         </div>
 
+        {/* Actions */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <button
+            onClick={exportarCSV}
+            style={{
+              display: 'flex', alignItems: 'center', gap: '7px',
+              padding: '9px 16px', borderRadius: '10px',
+              background: 'var(--text)', color: 'white',
+              border: 'none', fontSize: '13px', fontWeight: '700',
+              cursor: 'pointer',
+            }}
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <polyline points="7 10 12 15 17 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+            Exportar CSV
+          </button>
+
         {/* Leader filter */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <label style={{ fontSize: '12px', fontWeight: '700', color: 'var(--text-muted)' }}>Filtrar por líder:</label>
@@ -171,6 +214,7 @@ export default function AdminPage() {
               <option key={l} value={l}>{l}</option>
             ))}
           </select>
+        </div>
         </div>
       </div>
 
