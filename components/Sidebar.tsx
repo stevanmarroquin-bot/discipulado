@@ -56,7 +56,7 @@ const NAV = [
   },
 ]
 
-export default function Sidebar({ user }: { user: Usuario }) {
+export default function Sidebar({ user, esAdmin }: { user: Usuario; esAdmin?: boolean }) {
   const pathname = usePathname()
   const router = useRouter()
   const [open, setOpen] = useState(false)
@@ -141,6 +141,44 @@ export default function Sidebar({ user }: { user: Usuario }) {
             </Link>
           )
         })}
+
+        {esAdmin && (
+          <>
+            <p style={{
+              fontSize: '9px', fontWeight: '800', letterSpacing: '0.14em',
+              textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)',
+              padding: '0 10px', marginTop: '18px', marginBottom: '10px',
+            }}>
+              Admin
+            </p>
+            <Link
+              href="/dashboard/admin"
+              onClick={handleNav}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px',
+                padding: '10px 12px',
+                borderRadius: '10px',
+                marginBottom: '3px',
+                color: pathname === '/dashboard/admin' ? 'white' : 'rgba(255,255,255,0.55)',
+                background: pathname === '/dashboard/admin' ? 'rgba(196,137,58,0.18)' : 'transparent',
+                textDecoration: 'none',
+                fontSize: '13.5px',
+                fontWeight: pathname === '/dashboard/admin' ? '700' : '400',
+                transition: 'all .15s',
+                borderLeft: pathname === '/dashboard/admin' ? '3px solid var(--primary)' : '3px solid transparent',
+              }}
+            >
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M2 17l10 5 10-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M2 12l10 5 10-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              Vista General
+            </Link>
+          </>
+        )}
       </div>
 
       {/* User */}

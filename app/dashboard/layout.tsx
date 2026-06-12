@@ -41,7 +41,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
   return (
     <div style={{ display: 'flex' }}>
-      <Sidebar user={usuario} />
+      <Sidebar user={usuario} esAdmin={perfil.esAdmin} />
       <div className="main-content" style={{ flex: 1 }}>
         {children}
       </div>

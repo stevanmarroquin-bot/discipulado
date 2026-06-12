@@ -14,6 +14,7 @@ export interface PerfilLider {
   email: string
   iglesia: string
   cargo: string
+  esAdmin?: boolean
 }
 
 export interface PerfilDiscipulo {
@@ -66,6 +67,23 @@ export async function getRegistrosDeDiscipulo(discipuloUid: string): Promise<Reg
     where('discipuloId', '==', discipuloUid)
   )
   const snap = await getDocs(q)
+  return snap.docs.map((d) => ({ id: d.id, ...d.data() } as RegistroSemanal))
+}
+
+export async function getAllDiscipulos(): Promise<PerfilDiscipulo[]> {
+  const q = query(collection(db, 'perfiles'), where('tipo', '==', 'discipulo'))
+  const snap = await getDocs(q)
+  return snap.docs.map((d) => ({ uid: d.id, ...d.data() } as PerfilDiscipulo))
+}
+
+export async function getAllLideres(): Promise<PerfilLider[]> {
+  const q = query(collection(db, 'perfiles'), where('tipo', '==', 'lider'))
+  const snap = await getDocs(q)
+  return snap.docs.map((d) => ({ uid: d.id, ...d.data() } as PerfilLider))
+}
+
+export async function getAllRegistros(): Promise<RegistroSemanal[]> {
+  const snap = await getDocs(collection(db, 'registros'))
   return snap.docs.map((d) => ({ id: d.id, ...d.data() } as RegistroSemanal))
 }
 
