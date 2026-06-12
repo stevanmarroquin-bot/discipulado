@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { onAuthChange } from '@/lib/auth'
-import { getPerfil, getAllDiscipulos, getAllLideres, getAllRegistros, PerfilDiscipulo, PerfilLider, PerfilLider as PL } from '@/lib/db'
+import { getPerfil, getAllMiembros, getAllLideres, getAllRegistros, PerfilDiscipulo, PerfilLider, PerfilLider as PL } from '@/lib/db'
 import { calcularDesglose } from '@/lib/utils'
 import { RegistroSemanal } from '@/lib/mock-data'
 import { MODULOS } from '@/lib/mock-data'
@@ -49,7 +49,7 @@ export default function AdminPage() {
       if (!p || p.tipo !== 'lider' || !p.esAdmin) { router.replace('/dashboard'); return }
 
       const [discipulos, lids, registros] = await Promise.all([
-        getAllDiscipulos(),
+        getAllMiembros(),
         getAllLideres(),
         getAllRegistros(),
       ])

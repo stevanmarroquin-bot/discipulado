@@ -76,6 +76,15 @@ export async function getAllDiscipulos(): Promise<PerfilDiscipulo[]> {
   return snap.docs.map((d) => ({ uid: d.id, ...d.data() } as PerfilDiscipulo))
 }
 
+// Returns every profile that has a discipuladorId — covers both tipo:discipulo
+// and tipo:lider users who are themselves part of a discipleship group
+export async function getAllMiembros(): Promise<PerfilDiscipulo[]> {
+  const snap = await getDocs(collection(db, 'perfiles'))
+  return snap.docs
+    .map((d) => ({ uid: d.id, ...d.data() }))
+    .filter((d: any) => d.discipuladorId) as PerfilDiscipulo[]
+}
+
 export async function getAllLideres(): Promise<PerfilLider[]> {
   const q = query(collection(db, 'perfiles'), where('tipo', '==', 'lider'))
   const snap = await getDocs(q)
