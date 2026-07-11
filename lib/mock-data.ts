@@ -200,6 +200,10 @@ export const CONTENIDO: Contenido[] = [
   { id: 'c7', titulo: 'Estudio 6: Viviendo desde el Evangelio',              descripcion: 'Profundizando en cómo el evangelio transforma nuestra vida diaria.',       categoria: 'material-base', tipo: 'pdf', semana: 6, modulo: 'fundamento', url: '/contenido/fundamento/estudio-6-viviendo-desde-el-evangelio.pdf',  fecha: '2026-02-17' },
   { id: 'c8', titulo: 'Estudio 7: Perdón de pecados',                       descripcion: 'El perdón como base del evangelio y su impacto en nuestra vida.',            categoria: 'material-base', tipo: 'pdf', semana: 7, modulo: 'fundamento', url: '/contenido/fundamento/estudio-7-perdon-de-pecados.pdf',           fecha: '2026-03-09' },
 
+  // ── Formación: Viviendo desde El Evangelio ──
+  { id: 'c9',  titulo: 'Estudio 8: Redención',    descripcion: 'Qué significa haber sido redimido y cómo luce una vida que lo entiende.',         categoria: 'material-base', tipo: 'pdf', semana: 8, modulo: 'fundamento', url: '/contenido/fundamento/estudio-8-redencion.pdf',       fecha: '2026-03-16' },
+  { id: 'c10', titulo: 'Estudio 9: Justificación', descripcion: 'La justificación por fe y lo que significa ser declarados justos delante de Dios.', categoria: 'material-base', tipo: 'pdf', semana: 9, modulo: 'fundamento', url: '/contenido/fundamento/estudio-9-justificacion.pdf', fecha: '2026-03-23' },
+
   // ── Formación, Comunidad, Misión — próximamente ──
 ]
 
