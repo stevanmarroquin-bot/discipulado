@@ -202,7 +202,7 @@ export const CONTENIDO: Contenido[] = [
 
   // ── Formación: Viviendo desde El Evangelio ──
   { id: 'c9',  titulo: 'Estudio 8: Redención',    descripcion: 'Qué significa haber sido redimido y cómo luce una vida que lo entiende.',         categoria: 'material-base', tipo: 'pdf', semana: 8, modulo: 'fundamento', url: '/contenido/fundamento/estudio-8-redencion.pdf',       fecha: '2026-03-16' },
-  { id: 'c10', titulo: 'Estudio 9: Justificación', descripcion: 'La justificación por fe y lo que significa ser declarados justos delante de Dios.', categoria: 'material-base', tipo: 'pdf', semana: 9, modulo: 'fundamento', url: '/contenido/fundamento/estudio-9-justificacion.pdf', fecha: '2026-03-23' },
+  { id: 'c10', titulo: 'Estudio 9: Justificación', descripcion: 'La justificación por fe y lo que significa ser declarados justos delante de Dios.', categoria: 'material-base', tipo: 'pdf', semana: 1, modulo: 'formacion', url: '/contenido/fundamento/estudio-9-justificacion.pdf', fecha: '2026-03-30' },
 
   // ── Formación, Comunidad, Misión — próximamente ──
 ]
