@@ -203,6 +203,7 @@ export const CONTENIDO: Contenido[] = [
   { id: 'c9',  titulo: 'Estudio 8: Redención',    descripcion: 'Qué significa haber sido redimido y cómo luce una vida que lo entiende.',         categoria: 'material-base', tipo: 'pdf', semana: 8, modulo: 'formacion', url: '/contenido/fundamento/estudio-8-redencion.pdf',       fecha: '2026-03-16' },
   { id: 'c10', titulo: 'Estudio 9: Justificación',   descripcion: 'La justificación por fe y lo que significa ser declarados justos delante de Dios.',       categoria: 'material-base', tipo: 'pdf', semana: 9,  modulo: 'formacion', url: '/contenido/fundamento/estudio-9-justificacion.pdf',   fecha: '2026-03-30' },
   { id: 'c11', titulo: 'Estudio 10: Reconciliación', descripcion: 'Qué significa ser reconciliados con Dios y cómo eso transforma nuestras relaciones.', categoria: 'material-base', tipo: 'pdf', semana: 10, modulo: 'formacion', url: '/contenido/fundamento/estudio-10-reconciliacion.pdf', fecha: '2026-04-06' },
+  { id: 'c12', titulo: 'Estudio 11: Adopción',       descripcion: 'Lo que significa ser adoptados como hijos de Dios y vivir desde esa identidad.',      categoria: 'material-base', tipo: 'pdf', semana: 11, modulo: 'formacion', url: '/contenido/fundamento/estudio-11-adopcion.pdf',       fecha: '2026-04-13' },
 
   // ── Formación, Comunidad, Misión — próximamente ──
 ]
