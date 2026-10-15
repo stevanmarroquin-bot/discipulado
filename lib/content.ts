@@ -34,7 +34,7 @@ export const MODULOS: Modulo[] = [
     slug: 'el-evangelio',
     nombre: 'El Evangelio',
     subtitulo: 'En esta serie vas a aprender qué es el evangelio realmente, qué no es y por qué importa saberlo, cómo se recibe, y cómo se vive, no para el evangelio sino desde él.',
-    descripcion: 'La mayoría de creyentes cree que ya conoce el evangelio. Lo escuchó una vez, respondió, y lo dejó atrás para cosas "más profundas." Ese es el error. El evangelio no es el ABC del cristiano — es la A y la Z. Es todo.',
+    descripcion: 'La mayoría de creyentes cree que ya conoce el evangelio. Lo escuchó una vez, respondió, y lo dejó atrás para cosas "más profundas." Ese es el error. El evangelio no es el ABC del cristiano, es la A y la Z. Es todo.',
     color: '#2D6A4F',
     colorBg: '#E8F5EF',
     numero: 1,
