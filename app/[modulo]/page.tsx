@@ -27,7 +27,7 @@ export default async function ModuloPage({ params }: { params: Promise<{ modulo:
             Inicio
           </Link>
           <p className="module-eyebrow" style={{ color: mod.color }}>
-            Módulo {mod.numero}
+            Serie {mod.numero}
           </p>
           <h1 style={{ color: mod.color }}>{mod.nombre}</h1>
           <p>{mod.descripcion}</p>
@@ -36,7 +36,7 @@ export default async function ModuloPage({ params }: { params: Promise<{ modulo:
         {/* Lesson list */}
         {lecciones.length === 0 ? (
           <div className="coming-soon">
-            <p>Las lecciones de este módulo estarán disponibles próximamente.</p>
+            <p>Las lecciones de esta serie estarán disponibles próximamente.</p>
           </div>
         ) : (
           <div
