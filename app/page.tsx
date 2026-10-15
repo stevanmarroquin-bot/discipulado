@@ -11,10 +11,10 @@ export default function HomePage() {
 
         {/* Hero */}
         <div className="home-hero">
-          <h1>Un camino de<br />vida juntos.</h1>
+          <h1>Formados por la Palabra,<br />para vivir por fe.</h1>
           <p>
-            Material de discipulado para conocer el evangelio, crecer en la fe
-            y vivir en comunidad. Bread of Life Guatemala.
+            Discipulados para conocer el evangelio, profundizar en Cristo
+            y crecer en comunidad.
           </p>
         </div>
 
