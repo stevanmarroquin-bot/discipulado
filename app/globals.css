@@ -49,6 +49,9 @@ body {
   color: var(--text);
   text-decoration: none;
   letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .site-logo span {
@@ -113,6 +116,11 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 16px;
+  margin-bottom: 80px;
+}
+
+.module-card-featured {
+  max-width: 480px;
   margin-bottom: 80px;
 }
 

@@ -2,6 +2,9 @@ import Link from 'next/link'
 import { MODULOS, getLeccionesPorModulo } from '@/lib/content'
 
 export default function HomePage() {
+  const mod = MODULOS[0]
+  const lecciones = getLeccionesPorModulo(mod.id)
+
   return (
     <main>
       <div className="page-wrap">
@@ -15,30 +18,22 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* Modules grid */}
-        <div className="modules-grid">
-          {MODULOS.map((mod) => {
-            const lecciones = getLeccionesPorModulo(mod.id)
-            return (
-              <Link
-                key={mod.id}
-                href={`/${mod.slug}`}
-                className="module-card"
-                style={{ '--module-color': mod.color } as React.CSSProperties}
-              >
-                <span className="module-num">Módulo {mod.numero}</span>
-                <h2>{mod.nombre}</h2>
-                <span className="module-card-sub">{mod.subtitulo}</span>
-                <p>{mod.descripcion}</p>
-                <span className="module-card-count">
-                  {lecciones.length > 0
-                    ? `${lecciones.length} ${lecciones.length === 1 ? 'lección' : 'lecciones'}`
-                    : 'Próximamente'}
-                </span>
-              </Link>
-            )
-          })}
-        </div>
+        {/* Single module featured */}
+        <Link
+          href={`/${mod.slug}`}
+          className="module-card module-card-featured"
+          style={{ '--module-color': mod.color } as React.CSSProperties}
+        >
+          <span className="module-num">Módulo {mod.numero}</span>
+          <h2>{mod.nombre}</h2>
+          <span className="module-card-sub">{mod.subtitulo}</span>
+          <p>{mod.descripcion}</p>
+          <span className="module-card-count">
+            {lecciones.length > 0
+              ? `${lecciones.length} ${lecciones.length === 1 ? 'lección' : 'lecciones'} disponibles →`
+              : 'Próximamente'}
+          </span>
+        </Link>
 
       </div>
     </main>

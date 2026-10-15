@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import './globals.css'
-import { MODULOS } from '@/lib/content'
 
 export const metadata: Metadata = {
-  title: 'Discipulado · Bread of Life',
-  description: 'Material de discipulado — estudios, devocionales y guías para líderes.',
+  title: 'Discipulado BOL',
+  description: 'Material de discipulado — estudios, devocionales y guías para líderes. Bread of Life Guatemala.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -15,19 +15,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <nav className="site-nav">
           <div className="site-nav-inner">
             <Link href="/" className="site-logo">
-              Discipulado<span>.</span>
+              <Image
+                src="/breadoflifelogoblack.PNG"
+                alt="Bread of Life"
+                width={28}
+                height={28}
+                style={{ objectFit: 'contain' }}
+              />
+              Discipulado <span>BOL</span>
             </Link>
-            <div className="nav-modules">
-              {MODULOS.map((m) => (
-                <Link
-                  key={m.id}
-                  href={`/${m.slug}`}
-                  className="nav-module-link"
-                >
-                  {m.nombre}
-                </Link>
-              ))}
-            </div>
+            <Link href="/el-evangelio" className="nav-module-link">
+              El evangelio
+            </Link>
           </div>
         </nav>
         {children}
