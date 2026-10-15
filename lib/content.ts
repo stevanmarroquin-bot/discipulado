@@ -160,7 +160,7 @@ export const LECCIONES: Leccion[] = [
 
 <p><strong>El evangelio salva y transforma.</strong></p>
     `,
-    autor: 'Pastor Stevan Marroquin',
+    autor: 'Stevan Marroquin',
     youtubeUrl: 'https://www.youtube.com/watch?v=o3mUSRINu2A&t=2s',
     spotifyUrl: 'https://open.spotify.com/episode/7sVCGVSwIU3rzXzeWqiZA3?si=exJtDYo2RiWInEM6ppAnkQ',
     resumenClase: `

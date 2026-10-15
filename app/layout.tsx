@@ -6,6 +6,10 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Discipulado BOL',
   description: 'Material de discipulado — estudios, devocionales y guías para líderes. Bread of Life Guatemala.',
+  icons: {
+    icon: '/breadoflifelogoblack.PNG',
+    apple: '/breadoflifelogoblack.PNG',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
