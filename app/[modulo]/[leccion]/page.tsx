@@ -76,6 +76,23 @@ export default async function LeccionPage({
           dangerouslySetInnerHTML={{ __html: leccion.contenido }}
         />
 
+        {/* Resumen de clase */}
+        {leccion.resumenClase && (
+          <div className="lesson-section section-resumen">
+            <div className="lesson-section-label">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+                <path d="M9 11l3 3L22 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              Resumen de clase
+            </div>
+            <div
+              className="lesson-section-content"
+              dangerouslySetInnerHTML={{ __html: leccion.resumenClase }}
+            />
+          </div>
+        )}
+
         {/* Devocional */}
         {leccion.devocional && (
           <div className="lesson-section section-devocional">

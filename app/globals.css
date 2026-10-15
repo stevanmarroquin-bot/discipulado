@@ -425,6 +425,13 @@ body {
 
 .section-devocional .lesson-section-label { color: #92610A; }
 
+.section-resumen {
+  background: #F4F2EE;
+  border: 1px solid #DDD9D1;
+}
+
+.section-resumen .lesson-section-label { color: #4A4540; }
+
 .section-guia {
   background: #E8F5EF;
   border: 1px solid #A7D4BC;

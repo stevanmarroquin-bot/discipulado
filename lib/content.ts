@@ -20,6 +20,7 @@ export interface Leccion {
   fecha: string
   resumen: string
   contenido: string        // HTML string — main lesson body
+  resumenClase?: string    // HTML string — structured class summary
   devocional?: string      // HTML string
   guiaLider?: string       // HTML string
   youtubeUrl?: string
@@ -157,6 +158,17 @@ export const LECCIONES: Leccion[] = [
 <p>El evangelio hace una sola demanda, que es la fe. Creer para recibir. Creer para vivir.</p>
 
 <p><strong>El evangelio salva y transforma.</strong></p>
+    `,
+    resumenClase: `
+<p>El evangelio es el fundamento de todo el discipulado cristiano. Antes de avanzar en cualquier otra doctrina, es necesario entender con precisión qué es, qué no es, y cómo se recibe, porque un evangelio mal entendido produce una fe mal construida.</p>
+
+<p><strong>1. El problema.</strong> Todo ser humano está separado de Dios por el pecado y no puede salvarse a sí mismo. La paga del pecado es muerte, y ningún esfuerzo moral, religioso o ritual puede resolver esa deuda. Sin entender el diagnóstico, el evangelio no tiene sentido.</p>
+
+<p><strong>2. El evangelio.</strong> Es la buena noticia de un evento histórico: Jesucristo murió por nuestros pecados, fue sepultado y resucitó al tercer día. No es una filosofía, un sistema de principios ni una invitación a mejorar. Es el anuncio de lo que Dios ya hizo para restaurar lo que el pecado rompió.</p>
+
+<p><strong>3. La respuesta.</strong> El evangelio no se obedece como una ley, se recibe como una noticia. La fe es la mano abierta con la que se recibe lo que Cristo consumó. Esa misma fe es la que sostiene la vida cristiana cada día, y la que impulsa a compartir estas buenas noticias con otros.</p>
+
+<p>La diferencia entre el verdadero evangelio y cualquier otra religión es esta: no trata de lo que nosotros hacemos para llegar a Dios, sino de lo que Dios hizo para que pudiéramos llegar a él.</p>
     `,
     guiaLider: `
 <p>Estas preguntas están diseñadas para abrir conversación honesta, no para producir respuestas correctas. Dale espacio al grupo para pensar en voz alta.</p>
