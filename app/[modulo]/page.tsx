@@ -27,7 +27,7 @@ export default async function ModuloPage({ params }: { params: Promise<{ modulo:
             Inicio
           </Link>
           <p className="module-eyebrow" style={{ color: mod.color }}>
-            Serie {mod.numero}
+            Serie
           </p>
           <h1 style={{ color: mod.color }}>{mod.nombre}</h1>
           <p>{mod.descripcion}</p>

@@ -32,7 +32,7 @@ export const MODULOS: Modulo[] = [
   {
     id: 'fundamento',
     slug: 'el-evangelio',
-    nombre: 'El evangelio',
+    nombre: 'El Evangelio',
     subtitulo: 'Fundamento del discipulado',
     descripcion: 'El evangelio como base de todo lo que somos y hacemos como discípulos de Jesús.',
     color: '#2D6A4F',

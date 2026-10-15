@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               Discipulado <span>BOL</span>
             </Link>
             <Link href="/el-evangelio" className="nav-module-link">
-              El evangelio
+              El Evangelio
             </Link>
           </div>
         </nav>

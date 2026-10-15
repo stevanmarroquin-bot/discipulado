@@ -78,8 +78,42 @@ body {
   color: var(--text);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .nav-modules { display: none; }
+
+  .page-wrap { padding: 0 16px; }
+  .lesson-wrap { padding: 0 16px; }
+
+  .home-hero {
+    padding: 40px 0 36px;
+    margin-bottom: 36px;
+  }
+  .home-hero p { font-size: 16px; }
+
+  .module-card-featured { max-width: 100%; margin-bottom: 48px; }
+
+  .module-hero { padding: 36px 0 28px; margin-bottom: 32px; }
+
+  .lesson-header { padding: 36px 0 24px; margin-bottom: 32px; }
+
+  .lesson-content { font-size: 16px; }
+  .lesson-content h2 { font-size: 19px; margin: 28px 0 12px; }
+  .lesson-content h3 { font-size: 16px; }
+
+  .lesson-section { padding: 20px 20px; }
+
+  .lesson-card { padding: 16px; gap: 14px; }
+  .lesson-card-body h3 { font-size: 15px; }
+
+  .media-link { padding: 14px 16px; gap: 12px; }
+
+  .lesson-meta { gap: 8px; }
+}
+
+@media (max-width: 480px) {
+  .site-nav-inner { padding: 0 16px; }
+
+  .lesson-content blockquote { padding: 10px 14px; }
 }
 
 /* ── Page container ── */

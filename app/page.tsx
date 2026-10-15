@@ -24,7 +24,7 @@ export default function HomePage() {
           className="module-card module-card-featured"
           style={{ '--module-color': mod.color } as React.CSSProperties}
         >
-          <span className="module-num">Serie {mod.numero}</span>
+          <span className="module-num">Serie</span>
           <h2>{mod.nombre}</h2>
           <span className="module-card-sub">{mod.subtitulo}</span>
           <p>{mod.descripcion}</p>
