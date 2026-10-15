@@ -46,7 +46,7 @@ export const LECCIONES: Leccion[] = [
     slug: 'estudio-1',
     numero: 1,
     modulo: 'fundamento',
-    titulo: 'El evangelio',
+    titulo: '¿Qué es el evangelio?',
     tags: ['evangelio', 'fe', 'salvación', 'base'],
     fecha: '2026-01-13',
     resumen: 'Entender claramente qué es el evangelio, qué no es, y cómo recibirlo y vivirlo, para que deje de ser información y se convierta en la realidad desde la cual lo vives todo.',
