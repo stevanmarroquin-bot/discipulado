@@ -346,6 +346,13 @@ body {
   color: var(--text-light);
 }
 
+.lesson-autor {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
 /* ── Lesson content ── */
 .lesson-content {
   font-size: 17px;

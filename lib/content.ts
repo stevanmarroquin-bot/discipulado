@@ -23,6 +23,7 @@ export interface Leccion {
   resumenClase?: string    // HTML string — structured class summary
   devocional?: string      // HTML string
   guiaLider?: string       // HTML string
+  autor?: string
   youtubeUrl?: string
   spotifyUrl?: string
 }
@@ -159,6 +160,9 @@ export const LECCIONES: Leccion[] = [
 
 <p><strong>El evangelio salva y transforma.</strong></p>
     `,
+    autor: 'Pastor Stevan Marroquin',
+    youtubeUrl: 'https://www.youtube.com/watch?v=o3mUSRINu2A&t=2s',
+    spotifyUrl: 'https://open.spotify.com/episode/7sVCGVSwIU3rzXzeWqiZA3?si=exJtDYo2RiWInEM6ppAnkQ',
     resumenClase: `
 <p>El evangelio es el fundamento de todo el discipulado cristiano. Antes de avanzar en cualquier otra doctrina, es necesario entender con precisión qué es, qué no es, y cómo se recibe, porque un evangelio mal entendido produce una fe mal construida.</p>
 

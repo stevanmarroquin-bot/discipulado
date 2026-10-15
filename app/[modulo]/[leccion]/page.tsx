@@ -68,6 +68,10 @@ export default async function LeccionPage({
             </div>
             <span className="lesson-date">{formatFecha(leccion.fecha)}</span>
           </div>
+
+          {leccion.autor && (
+            <p className="lesson-autor">Por {leccion.autor}</p>
+          )}
         </div>
 
         {/* Main content */}
