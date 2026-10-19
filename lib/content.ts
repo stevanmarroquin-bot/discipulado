@@ -214,6 +214,221 @@ export const LECCIONES: Leccion[] = [
 <p>El evangelio no es una lista de tareas. Toma un día simplemente para recibir. Lee Efesios 1:3-14 lentamente y deja que penetre en ti que cada bendición espiritual descrita allí ya es tuya en Cristo, no porque lo que tú hiciste, sino porque lo que él hizo.</p>
     `,
   },
+  {
+    slug: 'estudio-2',
+    numero: 2,
+    modulo: 'fundamento',
+    titulo: '¿Qué no es el evangelio?',
+    tags: ['evangelio', 'legalismo', 'gracia', 'arrepentimiento'],
+    fecha: '2026-10-19',
+    resumen: 'Descubrir, a través de la parábola de los dos hijos perdidos, las dos formas equivocadas de llegar a Dios y la única forma verdadera: el evangelio.',
+    contenido: `
+<p style="font-style:italic;color:var(--text-muted);border-left:3px solid var(--border);padding:10px 16px;margin-bottom:32px"><strong>Propósito:</strong> Entender las dos formas equivocadas en las que intentamos relacionarnos con Dios, el legalismo y el relativismo, para reconocer cuál de las dos vive en nosotros y volver a la única forma verdadera de llegar al Padre: el evangelio.</p>
+
+<h2>El problema: dos hijos perdidos</h2>
+
+<p>En el estudio anterior vimos qué es el evangelio: las buenas noticias que comunican el plan de salvación de Dios para el mundo, Jesús, su encarnación, su vida perfecta, su sacrificio y su resurrección. Un evento histórico, algo que fue hecho hacia nosotros.</p>
+
+<p>Ahora necesitamos ver qué <em>no</em> es el evangelio. Y para eso Jesús nos dejó una de sus historias más conocidas. Pero antes de leerla, una pregunta para guardar:</p>
+
+<p><strong>Si Dios hiciera una fiesta por el peor pecador que conoces, ¿te alegrarías o te molestaría?</strong></p>
+
+<p>Mira el contexto en el que Jesús cuenta esta parábola:</p>
+
+<blockquote>"Se acercaban a Jesús todos los publicanos y pecadores para oírle, y los fariseos y los escribas murmuraban, diciendo: Este a los pecadores recibe, y con ellos come. Entonces él les refirió esta parábola, diciendo:" <em>Lucas 15:1-3</em></blockquote>
+
+<p>Después de contarles la parábola de la oveja perdida y la de la moneda perdida, Jesús comienza así:</p>
+
+<blockquote>"También dijo: Un hombre tenía dos hijos." <em>Lucas 15:11</em></blockquote>
+
+<p>Solemos llamarla "la parábola del hijo pródigo", y por eso nos enfocamos solo en el hijo menor. El mensaje que normalmente sacamos es: <em>"No importa qué tan perdido estés, si regresas al Padre, el Padre te recibe."</em> Eso es cierto, pero es solo la mitad. La parábola es acerca de <strong>dos</strong> hijos perdidos.</p>
+
+<h2>Las dos audiencias de Jesús</h2>
+
+<p>Jesús tenía frente a él a dos grupos: los publicanos y pecadores, que se acercaban para oírle, y los fariseos y escribas, que murmuraban. El hijo menor representa al primer grupo. El hijo mayor representa al segundo.</p>
+
+<p>Es un patrón que se repite en los evangelios: Zaqueo y los que murmuraban (Lucas 19), la mujer sorprendida en adulterio y los escribas y fariseos (Juan 8), María y Marta. Siempre hay alguien perdido afuera y alguien perdido adentro.</p>
+
+<p><strong>Hay perdidos de afuera y perdidos de adentro.</strong></p>
+
+<p>La esencia de la parábola es esta: hay dos formas equivocadas de intentar relacionarnos con Dios, dos formas de perdernos, dos evangelios falsos. Y hay solo una forma de llegar a Dios.</p>
+
+<p>A esas dos formas se les ha dado distintos nombres: legalismo y relativismo, moralismo y antinomianismo, religiosidad e irreligiosidad. La forma legalista dice: <em>"Tengo que obedecer para llegar a Dios."</em> La forma relativista dice: <em>"No existen reglas, yo decido cómo quiero vivir."</em> Uno dice "me porto bien para ganarme el cielo", el otro dice "no existe el cielo, puedo vivir como quiera". Uno dice "me porto bien para merecer cosas buenas", el otro dice "no necesito portarme bien, solo perseguir lo que quiero".</p>
+
+<p>Y la parábola muestra que ambos grupos están perdidos:</p>
+
+<blockquote>"No muchos días después, juntándolo todo el hijo menor, se fue lejos a una provincia apartada; y allí desperdició sus bienes viviendo perdidamente." <em>Lucas 15:13</em></blockquote>
+
+<blockquote>"Entonces se enojó, y no quería entrar. Salió por tanto su padre, y le rogaba que entrase." <em>Lucas 15:28</em></blockquote>
+
+<p>Los dos están lejos del Padre, y el Padre tiene que salir a buscar a los dos.</p>
+
+<h2>El evangelio no es una religión de obras</h2>
+
+<p>El evangelio no es legalismo, ni religiosidad, ni moralismo. <strong>El evangelio no es algo que hacemos, sino algo que fue hecho por nosotros.</strong> El evangelio sí produce cambios y fruto en nuestra vida, pero el evangelio no es el fruto ni los cambios.</p>
+
+<h3>El hijo mayor está igual de perdido que el menor</h3>
+
+<p>Por fuera, sus vidas se ven muy diferentes. Uno malgastó todo, el otro se quedó en casa trabajando. Por eso nos cuesta entenderlo.</p>
+
+<p>Pero cuidado: el hijo mayor no era perfecto. Él <em>creía</em> serlo. "Tantos años te sirvo, no habiéndote desobedecido jamás" (Lucas 15:29), dice, y en ese mismo momento está desobedeciendo: su padre le ruega que entre a la fiesta y él se niega. Su problema no era que no tuviera pecado, sino que no lo veía. Estaba tan lejos del Padre como su hermano, solo que sin saberlo.</p>
+
+<p><strong>El problema del hijo mayor no es que fuera perfecto, sino que creía serlo.</strong></p>
+
+<p>La meta nunca fue ser morales, religiosos o "buenos". <strong>La meta es llegar a Dios.</strong></p>
+
+<p>¿Qué fue lo que no dejó entrar al hijo mayor a la fiesta? No fue su pecado. Fue su propia justicia, sus buenas obras, su "gran moral". Fue su orgullo, su confianza en su propio esfuerzo.</p>
+
+<p><strong>El impedimento más grande para llegar a Dios no es el pecado, es el orgullo: la confianza en nuestra propia justicia.</strong></p>
+
+<p>Los hermanos menores saben que no tienen justicia propia, y por eso les es más fácil recibir gracia. Siempre son los perdidos, los pecadores notorios, los "de afuera", los que entienden el evangelio primero. Jesús se lo dijo a los principales sacerdotes y a los ancianos del pueblo:</p>
+
+<blockquote>"De cierto os digo, que los publicanos y las rameras van delante de vosotros al reino de Dios." <em>Mateo 21:31</em></blockquote>
+
+<p>Los hermanos mayores, en cambio, están orgullosos de sus buenas obras. Creen tener "algo" de justicia. Y la confianza en nuestra propia justicia es una forma de evitar a Jesús: si puedes salvarte a ti mismo, no necesitas un Salvador. Por eso, al final, los hermanos mayores rechazan a Jesús.</p>
+
+<h3>En el fondo, los dos hacen lo mismo</h3>
+
+<p>Los dos hijos dicen y hacen lo mismo, solo con métodos diferentes. El hijo menor le dice al Padre: <em>"Quiero lo que das, pero no a ti."</em> El hijo mayor dice exactamente lo mismo: <em>"Quiero tus cosas, pero me las voy a ganar siendo obediente."</em> Su lógica es: <em>Dios me tiene que dar lo que merezco. Obedezco para controlar a Dios.</em></p>
+
+<p>El menor desobedece para sí mismo. El mayor obedece para sí mismo. Los dos viven para sí mismos, y los dos están perdidos.</p>
+
+<p>El antídoto del orgullo es la clave del evangelio: la humildad, la pobreza en espíritu. El hijo menor, al no tener nada de qué estar orgulloso, al no poder confiar en su propia justicia, regresa al Padre y encuentra gracia.</p>
+
+<h3>¿Eres un hermano mayor?</h3>
+
+<p>Muchos en la iglesia creen estar en el evangelio, pero en realidad son hermanos mayores. Las señales de perdición del hijo menor son fáciles de ver. Las del mayor no tanto, pero existen. Revisa tu corazón con estas señales:</p>
+
+<p><strong>Estás enojado con Dios por su "injusticia".</strong> "Entonces se enojó, y no quería entrar" (Lucas 15:28). Cuando Dios bendice a otros que no lo "merecen", algo en ti protesta.</p>
+
+<p><strong>Tu obediencia es condicional y sin gozo.</strong> "He aquí, tantos años te sirvo, no habiéndote desobedecido jamás, y nunca me has dado ni un cabrito para gozarme con mis amigos" (Lucas 15:29). Sirves, pero como un empleado que espera su pago, no como un hijo.</p>
+
+<p><strong>Usas a Dios para obtener lo que quieres.</strong> Tu obediencia es un medio para tratar de controlar a Dios. Oras y obedeces por necesidad, no por intimidad.</p>
+
+<p><strong>Eres frío hacia los perdidos.</strong> "Pero cuando vino este tu hijo" (Lucas 15:30). Ni siquiera lo llama "mi hermano".</p>
+
+<p><strong>Tienes complejo de superioridad.</strong> <em>Yo estoy bien, tú estás mal.</em></p>
+
+<p><strong>No estás seguro del amor de Dios.</strong> El padre tiene que recordarle lo que siempre fue cierto: "Hijo, tú siempre estás conmigo, y todas mis cosas son tuyas" (Lucas 15:31).</p>
+
+<h2>El evangelio no es una vida sin reglas</h2>
+
+<p>El error opuesto es igual de peligroso: el relativismo, el antinomianismo, la irreligiosidad. Suena así: <em>"Como el evangelio no se trata de seguir reglas, entonces puedo hacer lo que quiera y vivir como quiera. Dios me perdona, su gracia me cubre."</em></p>
+
+<p>Pero el hijo menor también estaba perdido. La forma en la que vivía también era una forma equivocada de relacionarse con Dios:</p>
+
+<blockquote>"Mas era necesario hacer fiesta y regocijarnos, porque este tu hermano era muerto, y ha revivido; se había perdido, y es hallado." <em>Lucas 15:32</em></blockquote>
+
+<p>El orgullo y la confianza en nuestras propias obras son un impedimento para llegar a Dios. <strong>También lo es el pecado.</strong></p>
+
+<h3>No todos los perdidos reciben gracia</h3>
+
+<p>Solo los que reconocen su pecado. Mira lo que pasó con el hijo menor:</p>
+
+<blockquote>"Y volviendo en sí, dijo: ¡Cuántos jornaleros en casa de mi padre tienen abundancia de pan, y yo aquí perezco de hambre! Me levantaré e iré a mi padre, y le diré: Padre, he pecado contra el cielo y contra ti. Ya no soy digno de ser llamado tu hijo; hazme como a uno de tus jornaleros." <em>Lucas 15:17-19</em></blockquote>
+
+<p>Tal vez fue por tocar fondo, pero volvió en sí. Se dio cuenta de su pecado y lo reconoció. Sabía que no era digno de ser hijo. Estaba dispuesto a conformarse con ser un trabajador, a trabajar para compensar sus errores. <strong>Estaba implorando misericordia.</strong></p>
+
+<h3>Los dos hijos necesitan arrepentirse</h3>
+
+<p>Los dos están perdidos, los dos necesitan al Padre, y el Padre sale a buscar a los dos. El legalismo dice: <em>"Tienes que creer y vivir correctamente para ser salvo."</em> El antinomianismo dice: <em>"Porque eres salvo, no necesitas vivir una vida santa. Dios te ama y te acepta tal y como eres, en pecado, sin arrepentimiento."</em> Los dos están equivocados.</p>
+
+<blockquote>"El tiempo se ha cumplido, y el reino de Dios se ha acercado; arrepentíos, y creed en el evangelio." <em>Marcos 1:15</em></blockquote>
+
+<p>La palabra griega para arrepentimiento es <em>metánoia</em>: un cambio radical de mentalidad y de dirección, un giro completo en la forma de pensar y de actuar. Es reorientar la vida hacia una nueva dirección. Es volver en sí e ir al Padre.</p>
+
+<p><strong>Nos arrepentimos de nuestro pecado, y también de nuestro orgullo y de la confianza en nuestra propia justicia.</strong></p>
+
+<h2>El evangelio es la única forma de llegar a Dios</h2>
+
+<p>El evangelio tiene dos grandes enemigos. Se le atribuye a Tertuliano esta frase: <em>"Así como Jesús fue crucificado entre dos ladrones, el evangelio es crucificado entre dos errores."</em> Religión e irreligión. Legalismo y antinomianismo. Moralismo y relativismo.</p>
+
+<p>Pero la parábola no solo nos enseña las formas equivocadas de llegar a Dios. También nos enseña la correcta: el evangelio.</p>
+
+<h3>Llegamos al Padre porque el Padre sale a buscarnos</h3>
+
+<blockquote>"Y cuando aún estaba lejos, lo vio su padre, y fue movido a misericordia, y corrió, y se echó sobre su cuello, y le besó." <em>Lucas 15:20</em></blockquote>
+
+<p>El padre corre hacia el menor, y también sale a rogarle al mayor que entre. Los dos estaban lejos, y el Padre tuvo que salir a buscar a los dos.</p>
+
+<h3>La gracia tiene un costo</h3>
+
+<blockquote>"Pero el padre dijo a sus siervos: Sacad el mejor vestido, y vestidle; y poned un anillo en su mano, y calzado en sus pies. Y traed el becerro gordo y matadlo, y comamos y hagamos fiesta." <em>Lucas 15:22-23</em></blockquote>
+
+<p>Un teólogo señala algo que fácilmente pasamos por alto: <em>el hijo menor ya había malgastado su herencia, así que lo que el padre le dio al menor salió de lo que le correspondía al mayor.</em> Por eso el padre le dice al mayor: "todas mis cosas son tuyas". El hermano mayor paga el precio de la restitución del menor.</p>
+
+<h3>Jesús es el verdadero hermano mayor</h3>
+
+<p>Todos los hermanos mayores creen que su obediencia es suficiente, pero en realidad somos pecadores:</p>
+
+<blockquote>"Por cuanto todos pecaron, y están destituidos de la gloria de Dios." <em>Romanos 3:23</em></blockquote>
+
+<blockquote>"Si bien todos nosotros somos como suciedad, y todas nuestras justicias como trapo de inmundicia." <em>Isaías 64:6</em></blockquote>
+
+<p>Jesús es el único hermano mayor que realmente obedeció a la perfección. Ese hermano mayor salió a buscarnos: se encarnó. Obedeció a la perfección, así que merecía la fiesta y la herencia. Y se puso en nuestro lugar, pagó el precio de nuestro pecado y nos dio su recompensa, para que pudiéramos volver a casa.</p>
+
+<p><strong>El evangelio no es religión ni irreligión. Es una tercera forma de relacionarnos con Dios, y es la única forma de llegar a Él.</strong></p>
+
+<h2>Antes de terminar: vuelve a la fiesta</h2>
+
+<p>Al principio te pregunté: si Dios hiciera una fiesta por el peor pecador que conoces, ¿te alegrarías o te molestaría?</p>
+
+<p>Si tu primera reacción fue incomodidad, tal vez hay más hermano mayor en ti de lo que pensabas. Y si te identificaste con el hijo menor, el que se fue lejos, el Padre ya está corriendo hacia ti.</p>
+
+<p>De cualquier forma, la invitación es la misma: arrepiéntete de tu pecado y de tu propia justicia, vuelve en ti, y entra a la fiesta que tu verdadero hermano mayor pagó por ti.</p>
+    `,
+    autor: 'Stevan Marroquin',
+    resumenClase: `
+<p>La parábola de Lucas 15 no es la historia de un hijo perdido, sino de dos. Con ella Jesús confronta a sus dos audiencias, los pecadores que se acercaban y los religiosos que murmuraban, y muestra que hay dos formas equivocadas de intentar llegar a Dios.</p>
+
+<p><strong>1. El evangelio no es una religión de obras.</strong> El hijo mayor creía que nunca había desobedecido, pero en el momento clave desobedeció: su padre le rogó que entrara a la fiesta y se negó. No era perfecto, creía serlo, y estaba igual de lejos que su hermano. Lo que lo dejó afuera no fue su pecado, sino su orgullo y la confianza en su propia justicia. El legalismo usa la obediencia para tratar de controlar a Dios.</p>
+
+<p><strong>2. El evangelio no es una vida sin reglas.</strong> El hijo menor también estaba perdido y muerto. El relativismo usa la gracia como excusa para vivir como uno quiere. Solo recibe gracia quien vuelve en sí, reconoce su pecado y se arrepiente.</p>
+
+<p><strong>3. El evangelio es la única forma de llegar a Dios.</strong> El Padre sale a buscar a los dos hijos. Jesús es el verdadero hermano mayor: obedeció a la perfección, pagó el costo de nuestra restitución y nos da su recompensa para que volvamos a casa.</p>
+
+<p>El evangelio no es religión ni irreligión. Es la gracia de un Padre que corre hacia nosotros, recibida con arrepentimiento del pecado y de la propia justicia.</p>
+    `,
+    guiaLider: `
+<p>Estas preguntas buscan que cada persona se vea en la parábola, no que identifique a otros. Dale espacio al grupo para responder con honestidad.</p>
+
+<h3>Pregunta 1</h3>
+<p>Solemos leer esta parábola como la historia del hijo menor, pero Jesús la contó frente a fariseos y escribas que murmuraban. El hijo mayor decía que nunca había desobedecido, pero desobedeció al negarse a entrar a la fiesta cuando su padre se lo rogó. No era perfecto, creía serlo, y fue el que se quedó afuera. Lo que lo dejó afuera fue su orgullo, que no le dejaba ver su propio pecado.</p>
+<p><em>¿Con cuál de los dos hijos te identificas más hoy, y por qué? Si eres honesto, ¿cuál de las señales del hermano mayor ves en tu vida: enojo con Dios, obediencia sin gozo, usar a Dios para obtener cosas, frialdad hacia los perdidos, superioridad o inseguridad del amor de Dios?</em></p>
+
+<h3>Pregunta 2</h3>
+<p>El estudio dice que el hijo menor y el mayor, en el fondo, hacen lo mismo: los dos quieren las cosas del Padre pero no al Padre. Uno desobedece para sí mismo y el otro obedece para sí mismo. Es posible hacer todo lo correcto por las razones equivocadas.</p>
+<p><em>Piensa en tu oración, tu servicio en la iglesia o tu obediencia esta semana. ¿Cuánto de eso nace de intimidad con Dios y cuánto de querer obtener algo de Él o de sentirte en control? ¿Cómo sería obedecer como hijo y no como empleado?</em></p>
+
+<h3>Pregunta 3</h3>
+<p>El arrepentimiento, <em>metánoia</em>, es un cambio radical de dirección. El estudio dice que no solo nos arrepentimos de nuestro pecado, sino también de nuestra propia justicia. Y nos recuerda que Jesús es el verdadero hermano mayor que pagó el precio para que volviéramos a casa.</p>
+<p><em>¿Alguna vez te has arrepentido de tus "buenas obras", de confiar en ellas para estar bien con Dios? ¿Qué cambia en la forma en que tratas a las personas "más perdidas" que tú cuando recuerdas que Jesús pagó tu fiesta igual que la de ellos?</em></p>
+    `,
+    devocional: `
+<p>Esta semana vas a vivir dentro de la parábola. Cada día tiene una sola tarea concreta.</p>
+
+<h3>Día 1: Lee la historia completa</h3>
+<p>Lee Lucas 15 completo, en una sola sesión, sin saltarte la oveja perdida y la moneda perdida. Después escribe en una oración qué tienen en común las tres historias y qué hace diferente a la tercera.</p>
+
+<h3>Día 2: Examen del hermano mayor</h3>
+<p>Repasa las seis señales del hermano mayor de este estudio. Escribe cuál de ellas ves con más claridad en tu vida y un ejemplo concreto de esta semana. No lo justifiques, solo nómbralo delante de Dios.</p>
+
+<h3>Día 3: Examen del hermano menor</h3>
+<p>Lee Lucas 15:11-19. ¿Hay un área de tu vida donde estás usando la gracia como excusa para vivir como quieres? Escríbela. Luego lee en voz alta la oración del hijo menor en los versículos 18 y 19 y hazla tuya.</p>
+
+<h3>Día 4: Estudia el arrepentimiento</h3>
+<p>Lee Marcos 1:14-15 y Lucas 18:9-14, la parábola del fariseo y el publicano. Compara las dos oraciones. Escribe qué te enseña ese pasaje sobre arrepentirte no solo de tu pecado, sino de tu propia justicia.</p>
+
+<h3>Día 5: Ora por un "hermano menor"</h3>
+<p>Piensa en una persona que consideras lejos de Dios, alguien a quien has visto con cierta superioridad. Escribe su nombre y ora por ella cinco minutos, pidiendo que el Padre corra hacia ella como corrió hacia el hijo menor, y que quite cualquier frialdad tuya hacia ella.</p>
+
+<h3>Día 6: Mira al verdadero hermano mayor</h3>
+<p>Lee Filipenses 2:5-11 y Hebreos 2:10-11. Escribe un párrafo, con tus propias palabras, explicando cómo Jesús es el hermano mayor que salió a buscarte y pagó el precio de tu regreso a casa.</p>
+
+<h3>Día 7: Descansa en la fiesta</h3>
+<p>Lee Romanos 8:14-39 lentamente. Deja que penetre en ti lo que el padre le dijo al hijo mayor: "Hijo, tú siempre estás conmigo, y todas mis cosas son tuyas." No tienes que ganarte un lugar en la mesa. Ya fue pagado.</p>
+    `,
+  },
 ]
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
