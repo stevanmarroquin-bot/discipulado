@@ -431,6 +431,256 @@ export const LECCIONES: Leccion[] = [
 <p>Lee Romanos 8:14-39 lentamente. Deja que penetre en ti lo que el padre le dijo al hijo mayor: "Hijo, tú siempre estás conmigo, y todas mis cosas son tuyas." No tienes que ganarte un lugar en la mesa. Ya fue pagado.</p>
     `,
   },
+  {
+    slug: 'estudio-3',
+    numero: 3,
+    modulo: 'fundamento',
+    titulo: '¿Cómo recibimos el evangelio? Parte I',
+    tags: ['evangelio', 'arrepentimiento', 'fe', 'humildad'],
+    fecha: '2026-10-19',
+    resumen: 'Entender que el evangelio se recibe por medio del arrepentimiento y la fe, descubrir qué es el verdadero arrepentimiento y por qué las buenas noticias solo son buenas para quien sabe que las necesita.',
+    contenido: `
+<p style="font-style:italic;color:var(--text-muted);border-left:3px solid var(--border);padding:10px 16px;margin-bottom:32px"><strong>Propósito:</strong> Entender cómo se recibe el evangelio, por medio del arrepentimiento y la fe, y descubrir qué es el verdadero arrepentimiento, para que las buenas noticias dejen de ofendernos y se conviertan en buenas noticias para nosotros.</p>
+
+<h2>El problema: buenas noticias que ofenden</h2>
+
+<p>Hay una pregunta con la que vamos a comenzar. Guárdala, porque volveremos a ella al final:</p>
+
+<p><strong>¿Son las buenas noticias realmente buenas noticias para ti?</strong></p>
+
+<p>Parece una pregunta extraña. Si son buenas noticias, ¿cómo no van a serlo? Pero mira lo que ocurrió el día que Jesús predicó en su propio pueblo:</p>
+
+<blockquote>"Vino a Nazaret, donde se había criado; y en el día de reposo entró en la sinagoga, conforme a su costumbre, y se levantó a leer. Y se le dio el libro del profeta Isaías; y habiendo abierto el libro, halló el lugar donde estaba escrito: El Espíritu del Señor está sobre mí, Por cuanto me ha ungido para dar buenas nuevas a los pobres; Me ha enviado a sanar a los quebrantados de corazón; A pregonar libertad a los cautivos, Y vista a los ciegos; A poner en libertad a los oprimidos; A predicar el año agradable del Señor. Y enrollando el libro, lo dio al ministro, y se sentó; y los ojos de todos en la sinagoga estaban fijos en él. Y comenzó a decirles: Hoy se ha cumplido esta Escritura delante de vosotros." <em>Lucas 4:16-21</em></blockquote>
+
+<p>Al principio, todos estaban encantados. Pero pocos minutos después, esas mismas personas estaban tan llenas de ira que lo sacaron de la ciudad para despeñarlo desde un monte. La misma gente que se maravilló de sus palabras quiso matarlo. ¿Qué pasó en medio?</p>
+
+<p>Antes de responder, recordemos dónde estamos. En los estudios anteriores vimos qué es el evangelio. Cuando Jesús dice que fue ungido para dar <em>buenas nuevas</em>, usa la palabra griega <em>euangelízo</em>, anunciar buenas noticias. El evangelio son las buenas noticias que comunican el plan de salvación de Dios al mundo: Jesús vino a salvarnos.</p>
+
+<p>También vimos qué no es el evangelio. No es una religión de obras: no es legalismo, religiosidad ni moralismo. Y tampoco es una vida sin reglas: no es relativismo, antinomianismo ni irreligiosidad. El evangelio no es algo que nosotros hacemos, sino algo que fue hecho por nosotros.</p>
+
+<p>Ahora la pregunta es otra: si el evangelio es algo que fue hecho por nosotros, <strong>¿cómo lo recibimos?</strong></p>
+
+<h2>¿Cómo recibimos el evangelio? Arrepentimiento y fe</h2>
+
+<p>¿Qué haces con una noticia? La escuchas y respondes a ella. Lo primero es preguntarte si es cierta. Y la respuesta es sí, lo que Jesús hizo es verdad. Entonces la crees. Eso es la fe.</p>
+
+<blockquote>"Mas a todos los que le recibieron, a los que creen en su nombre, les dio potestad de ser hechos hijos de Dios." <em>Juan 1:12</em></blockquote>
+<blockquote>"Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna." <em>Juan 3:16</em></blockquote>
+<blockquote>"Que si confesares con tu boca que Jesús es el Señor, y creyeres en tu corazón que Dios le levantó de los muertos, serás salvo." <em>Romanos 10:9</em></blockquote>
+<blockquote>"Porque en el evangelio la justicia de Dios se revela por fe y para fe, como está escrito: Mas el justo por la fe vivirá." <em>Romanos 1:17</em></blockquote>
+
+<p>Fe es creer, confiar, descansar. Es recibir lo que Cristo ya hizo, apoyar todo tu peso sobre él.</p>
+
+<p>Pero, ¿y el arrepentimiento? Muchas veces hablamos de la fe como si fuera lo único, pero cuando Jesús comenzó a predicar, nunca separó las dos cosas:</p>
+
+<blockquote>"Jesús vino a Galilea predicando el evangelio del reino de Dios, diciendo: El tiempo se ha cumplido, y el reino de Dios se ha acercado; arrepentíos, y creed en el evangelio." <em>Marcos 1:14-15</em></blockquote>
+
+<p>El arrepentimiento y la fe van juntos. Son dos lados de la misma respuesta al evangelio.</p>
+
+<p><strong>Hasta que no haya arrepentimiento, no puede haber verdadera fe.</strong></p>
+
+<h2>Nazaret: los que no creyeron</h2>
+
+<p>Lucas 4 nos muestra a un grupo de personas que no creyeron. No tuvieron fe. Y no solo eso, hasta quisieron matar a Jesús. ¿Por qué no creyeron? Porque no se arrepintieron.</p>
+
+<p>Mira el contexto. Esto ocurrió en Nazaret, el pueblo donde Jesús se crió. Lo conocían. Lo habían visto crecer. Y al principio, les gustó lo que leyó y cómo lo explicó:</p>
+
+<blockquote>"Y todos daban buen testimonio de él, y estaban maravillados de las palabras de gracia que salían de su boca, y decían: ¿No es este el hijo de José?" <em>Lucas 4:22</em></blockquote>
+
+<p>Estaban dispuestos a creer. Entonces, ¿por qué no creyeron? Porque Jesús les explicó bien el evangelio, y eso los ofendió:</p>
+
+<blockquote>"Él les dijo: Sin duda me diréis este refrán: Médico, cúrate a ti mismo; de tantas cosas que hemos oído que se han hecho en Capernaum, haz también aquí en tu tierra. Y añadió: De cierto os digo, que ningún profeta es acepto en su propia tierra. Y en verdad os digo que muchas viudas había en Israel en los días de Elías, cuando el cielo fue cerrado por tres años y seis meses, y hubo una gran hambre en toda la tierra; pero a ninguna de ellas fue enviado Elías, sino a una mujer viuda en Sarepta de los Estados Sidón. Y muchos leprosos había en Israel en tiempo del profeta Eliseo; pero ninguno de ellos fue limpiado, sino Naamán el sirio. Al oír estas cosas, todos en la sinagoga se llenaron de ira; y levantándose, le echaron fuera de la ciudad, y le llevaron hasta la cumbre del monte sobre el cual estaba edificada la ciudad de ellos, para despeñarle. Mas él pasó por en medio de ellos, y se fue." <em>Lucas 4:23-30</em></blockquote>
+
+<p><strong>Las buenas noticias son buenas solo para quien sabe que está en malas noticias.</strong></p>
+
+<h2>Buenas noticias para quien sabe que las necesita</h2>
+
+<p>Si no reconoces tu condición, el evangelio te ofende. Vuelve a leer lo que Jesús leyó, pero esta vez pregúntate a quién está dirigido cada anuncio.</p>
+
+<p><em>"Me ha ungido para dar buenas nuevas a los pobres."</em> Si te crees rico, no son buenas noticias para ti.</p>
+
+<p><em>"Me ha enviado a sanar a los quebrantados de corazón."</em> Si crees que tu corazón no está roto, no son buenas noticias para ti.</p>
+
+<p><em>"A pregonar libertad a los cautivos."</em> Si crees que eres libre, no son buenas noticias para ti.</p>
+
+<p><em>"Y vista a los ciegos."</em> Si crees que puedes ver, no son buenas noticias para ti.</p>
+
+<p><em>"A poner en libertad a los oprimidos; a predicar el año agradable del Señor."</em> Es un año agradable solo para los que saben que no han vivido buenos años.</p>
+
+<p><strong>Esa es la esencia del arrepentimiento: reconocer que el anuncio es para ti, porque tú eres el pobre, el quebrantado, el cautivo y el ciego.</strong></p>
+
+<h2>¿Qué es el arrepentimiento?</h2>
+
+<p>Para muchos, la palabra arrepentimiento tiene una connotación negativa. Pensamos en sentirnos mal, culpables, condenados. Eso es parte, pero no es la historia completa.</p>
+
+<p>Mira la palabra que Jesús usó cuando dijo "arrepentíos". En griego es <em>metanoéo</em>, pensar diferente o después, reconsiderar. Arrepentimiento es pensar diferente después de experimentar algo, reconsiderar la manera en la que pensamos. Es renovar la mente. Es la manera en la que cambiamos.</p>
+
+<p>Entonces, ¿qué no es el arrepentimiento? Sentirnos mal sin renovar la mente. Puedes llorar, sentir culpa y prometer que no lo vas a volver a hacer, y aun así no haberte arrepentido. El verdadero arrepentimiento es renovar la mente.</p>
+
+<p>¿Y en qué renovamos nuestra mente específicamente? En reconocer nuestra condición delante de Dios: somos pobres, pecadores que necesitan urgentemente un Salvador.</p>
+
+<p>Eso es exactamente lo que Nazaret no reconoció. Se creían ricos, gente de bien, clase media espiritual. Y aquí está lo sorprendente: Jesús supo que no habían entendido su mensaje precisamente porque el mensaje les gustó. Por eso no se quedó en el aplauso. Fue como si les dijera: <em>"Definamos quién es el pobre. Ningún profeta es acepto en su propia tierra. ¿Recuerdan a la viuda y a Naamán?"</em></p>
+
+<blockquote>"Bienaventurados los pobres en espíritu, porque de ellos es el reino de los cielos." <em>Mateo 5:3</em></blockquote>
+
+<p>La palabra que Jesús usa para pobre es <em>ptōchós</em>, pobre, mendigo. No alguien con poco, sino alguien que no tiene nada y depende por completo de lo que otro le dé.</p>
+
+<p>La viuda de Sarepta y Naamán el sirio eran pobres espirituales. Ninguno tenía lo que se necesita para llegar a Dios. Eran gentiles, excluidos de las promesas de Dios, paganos, pecadores. Y precisamente a ellos fue enviada la gracia. Con estos dos ejemplos Jesús estaba diciendo: <em>"Yo soy buenas noticias para el que sabe que me necesita."</em></p>
+
+<p>Mira cómo se ve esto en el hijo pródigo:</p>
+
+<blockquote>"Y volviendo en sí, dijo: ¡Cuántos jornaleros en casa de mi padre tienen abundancia de pan, y yo aquí perezco de hambre! Me levantaré e iré a mi padre, y le diré: Padre, he pecado contra el cielo y contra ti. Ya no soy digno de ser llamado tu hijo; hazme como a uno de tus jornaleros." <em>Lucas 15:17-19</em></blockquote>
+
+<p><em>"Volviendo en sí."</em> Eso es <em>metanoéo</em>. Pensó diferente después de experimentar el hambre. Se arrepintió.</p>
+
+<p><strong>No todos los perdidos reciben gracia, solo los que reconocen su condición de pecado.</strong></p>
+
+<h2>¿Quién no se arrepiente?</h2>
+
+<p>El orgulloso. El más grande impedimento para llegar a Dios no son nuestros pecados, sino la confianza en nuestra propia justicia. Es la negación de nuestra condición y de nuestra necesidad de salvación. Un corazón no arrepentido es un corazón orgulloso.</p>
+
+<p>Por eso Nazaret se llenó de ira. No porque Jesús les hablara de pecado, sino porque les dijo que ellos también eran pobres, tan necesitados como una viuda pagana y un leproso extranjero.</p>
+
+<p><strong>El arrepentimiento es el acto de humildad que inicia la fe.</strong></p>
+
+<h2>¿Cómo me puedo arrepentir?</h2>
+
+<p>Si el arrepentimiento es tan importante, la pregunta práctica es cómo se ve. La historia del hijo pródigo nos da tres pasos.</p>
+
+<h3>Paso 1: Reconoce tu condición</h3>
+
+<p>Eres un pecador, culpable, pobre espiritual. Esto es más difícil de lo que parece, porque la mayoría pensamos que estamos bien como estamos. El rey David pecó gravemente con Betsabé y contra Urías, y aun así estaba ciego a su propio pecado, hasta que el profeta Natán le contó la historia de un hombre rico que le robó la única oveja a un pobre. David se indignó contra ese hombre, sin darse cuenta de que estaba hablando de sí mismo.</p>
+
+<blockquote>"Entonces dijo Natán a David: Tú eres aquel hombre." <em>2 Samuel 12:7</em></blockquote>
+
+<p>Además, este es un mensaje opuesto a la cultura. El arrepentimiento dice: <em>si quieres cambiar, tienes que reconocer lo que está mal en ti, tienes pecado.</em> El mundo dice: <em>no dejes que nadie te diga lo que tienes que hacer, eres perfecto así como eres, no necesitas cambiar, necesitas aceptarte y tener amor propio, y si alguien te dice lo contrario es porque no te ama, porque no te acepta.</em></p>
+
+<p>El arrepentimiento nos lleva a aceptar la verdad sobre nosotros. No somos perfectos. Hay pecado en nosotros, y nos está dañando a nosotros y a otros. Es nuestra condición humana.</p>
+
+<p>Agustín de Hipona cuenta que cuando tenía dieciséis años robó unas peras con sus amigos. Años después se preguntó por qué lo hizo. No tenía hambre, ni siquiera le gustaban esas peras, y terminaron tirándolas. Su conclusión fue honesta y terrible: <em>"Mi placer estaba en hacer algo que era prohibido."</em> Eso es el pecado en el corazón humano. Y eso es lo que el hijo pródigo reconoció cuando dijo: <em>"Ya no soy digno de ser llamado tu hijo."</em></p>
+
+<p><strong>Reconocer tu condición es dejar de pensar que estás bien como estás.</strong></p>
+
+<h3>Paso 2: Confiesa tu pecado</h3>
+
+<p><em>"Padre, he pecado contra el cielo y contra ti."</em> Confesar es reconocer y tomar responsabilidad. Es pedir perdón sin excusas. Mira cómo lo hace David cuando por fin ve su pecado:</p>
+
+<blockquote>"Lávame más y más de mi maldad, Y límpiame de mi pecado. Porque yo reconozco mis rebeliones, Y mi pecado está siempre delante de mí." <em>Salmo 51:2-3</em></blockquote>
+
+<p>Fíjate en las palabras: <em>mi</em> maldad, <em>mi</em> pecado, <em>yo</em> reconozco. Tomar responsabilidad tiene algunas trampas que vale la pena nombrar.</p>
+
+<p>Tomar responsabilidad no es minimizar la ofensa: <em>"No es para tanto, fue sin querer, por todo se ofenden."</em></p>
+
+<p>Tomar responsabilidad no es relativizar la ofensa: <em>"Es normal hacer esto, todos lo hacen."</em></p>
+
+<p>Tomar responsabilidad no es justificar la ofensa: <em>"Tengo necesidades y lo hice por necesidad, es que tú no entiendes lo que he vivido, no es fácil ser yo."</em></p>
+
+<p>Tomar responsabilidad es aceptar las consecuencias. El hijo pródigo dice: <em>"Hazme como a uno de tus jornaleros."</em> Está pidiendo misericordia, pero al mismo tiempo está dispuesto a trabajar. Es como decir: <em>"Sí, soy culpable, y acepto las consecuencias de mis acciones."</em> Ese es un corazón que está encaminado a cambiar.</p>
+
+<p><strong>Confesar nuestro pecado es admitir lo que está mal en nosotros y tomar responsabilidad de nuestras acciones.</strong></p>
+
+<h3>Paso 3: Renuncia al pecado detrás del pecado</h3>
+
+<p>Vuelve a leer la confesión del hijo: <em>"Padre, he pecado contra el cielo y contra ti."</em> Primero contra el cielo. David dice algo todavía más fuerte:</p>
+
+<blockquote>"Contra ti, contra ti solo he pecado, Y he hecho lo malo delante de tus ojos." <em>Salmo 51:4</em></blockquote>
+
+<p>¿Acaso David no pecó también contra Urías y contra Betsabé? Claro que sí. Pero David entendió algo más profundo. Como dijo Martín Lutero: <em>"No podemos pecar contra otros si al mismo tiempo no estamos pecando en contra de Dios."</em></p>
+
+<p>Piensa en la mentira. Si miento, es para obtener un beneficio para mí. En ese momento me amo a mí mismo más que a Dios. Ese es el verdadero pecado detrás de cada pecado: no amamos a Dios más que a otras cosas. No pecamos solamente contra su ley, pecamos contra él.</p>
+
+<p>Por eso muchas veces nuestro arrepentimiento es falso. Nos "arrepentimos" por las consecuencias, pero no por la relación que estamos dañando. Nos duele que nos descubrieron, que perdimos algo, que alguien se alejó. Nos arrepentimos por nosotros. Pero el pecado es, antes que todo, una ofensa en contra de Dios.</p>
+
+<p><strong>Renunciamos al pecado detrás del pecado cuando reconocemos que la ofensa es en contra de Dios.</strong></p>
+
+<h2>El arrepentimiento nos lleva al amor del Padre</h2>
+
+<p>Entender el evangelio nos lleva al verdadero arrepentimiento, y el verdadero arrepentimiento nos lleva a la verdadera fe. Pero no te equivoques: el hijo no experimentó el evangelio cuando se arrepintió, sino cuando vio el amor del Padre.</p>
+
+<blockquote>"Y levantándose, vino a su padre. Y cuando aún estaba lejos, lo vio su padre, y fue movido a misericordia, y corrió, y se echó sobre su cuello, y le besó." <em>Lucas 15:20</em></blockquote>
+
+<p><strong>No es acerca de nuestro arrepentimiento. Es acerca del amor del Padre.</strong></p>
+
+<h2>Lo que Jesús no leyó</h2>
+
+<p>Hay un detalle en Nazaret que es fácil pasar por alto. Jesús no leyó el texto completo, y lo hizo a propósito:</p>
+
+<blockquote>"A predicar el año agradable del Señor. Y enrollando el libro, lo dio al ministro, y se sentó; y los ojos de todos en la sinagoga estaban fijos en él." <em>Lucas 4:19-20</em></blockquote>
+
+<p>Se detuvo a mitad de la frase. Lo que faltaba era esto:</p>
+
+<blockquote>"A proclamar el año de la buena voluntad de Jehová, y el día de venganza del Dios nuestro." <em>Isaías 61:2</em></blockquote>
+
+<p>Jesús enrolló el libro antes de leer "el día de venganza". Es como si dijera: <em>"No he venido a tomar venganza, aún."</em> El día de la venganza vendrá. Habrá juicio al final de los tiempos, y Jesús regresará y traerá juicio sobre las naciones. Pero hoy estamos en la temporada de la gracia, de las buenas nuevas.</p>
+
+<p>¿Y por qué puede haber una temporada de gracia? Ese es el evangelio: Jesús vino a recibir la venganza de Dios sobre sí mismo. Hizo un intercambio sustituto en la cruz por nosotros. Recibió el juicio de Dios para poder darnos gracia, para que estas sean buenas nuevas para nosotros.</p>
+
+<h2>Antes de terminar: responde la pregunta</h2>
+
+<p>Al comienzo te pedimos que guardaras una pregunta. Aquí está de nuevo:</p>
+
+<p><strong>¿Son las buenas noticias realmente buenas noticias para ti?</strong></p>
+
+<p>Si te crees rico, sano, libre y con buena vista, el evangelio te va a parecer bonito por un momento, como a Nazaret, y después te va a ofender. Pero si hoy reconoces que eres el pobre, el quebrantado, el cautivo y el ciego, entonces Jesús es exactamente la noticia que necesitas.</p>
+
+<p>Todavía estamos en el año agradable del Señor. Vuelve en ti, reconoce tu condición, confiesa tu pecado, renuncia al pecado detrás del pecado, y corre a los brazos del Padre que ya viene corriendo hacia ti.</p>
+
+<p><strong>El evangelio es buenas noticias para el que sabe que lo necesita.</strong></p>
+    `,
+    autor: 'Stevan Marroquin',
+    youtubeUrl: 'https://www.youtube.com/watch?v=kKS_lBXht5M',
+    spotifyUrl: 'https://open.spotify.com/episode/7gaFKt5M9XI4oPLc8IWdPI',
+    resumenClase: `
+<p>El evangelio es algo que fue hecho por nosotros, y se recibe por medio del arrepentimiento y la fe. Jesús nunca separó las dos cosas: "arrepentíos, y creed en el evangelio." En Nazaret, la misma gente que se maravilló de sus palabras quiso matarlo, porque nunca reconoció que el mensaje era para ellos.</p>
+
+<p><strong>1. Buenas noticias para los pobres.</strong> Las buenas noticias solo son buenas para quien sabe que está en malas noticias. Jesús vino para los pobres, los quebrantados, los cautivos y los ciegos. Si no reconoces tu condición, el evangelio te ofende. El mayor impedimento para llegar a Dios es la confianza en nuestra propia justicia.</p>
+
+<p><strong>2. Qué es el arrepentimiento.</strong> La palabra griega <em>metanoéo</em> significa pensar diferente, reconsiderar, renovar la mente. No es solo sentirse mal, es reconocer nuestra condición delante de Dios: somos pobres, pecadores que necesitan urgentemente un Salvador. Es el acto de humildad que inicia la fe.</p>
+
+<p><strong>3. Cómo arrepentirnos.</strong> Como el hijo pródigo, reconocemos nuestra condición, confesamos nuestro pecado tomando responsabilidad sin minimizarlo, relativizarlo ni justificarlo, y renunciamos al pecado detrás del pecado, reconociendo que toda ofensa es primero contra Dios.</p>
+
+<p>Pero el hijo no experimentó el evangelio cuando se arrepintió, sino cuando vio el amor del Padre. Jesús dejó de leer antes del "día de venganza" porque vino a recibir esa venganza sobre sí mismo en la cruz. Hoy estamos en la temporada de la gracia.</p>
+    `,
+    guiaLider: `
+<p>Estas preguntas buscan que cada persona se vea a sí misma en Nazaret y en el hijo pródigo, no que señale a otros. Dale espacio al grupo para responder con honestidad.</p>
+
+<h3>Pregunta 1</h3>
+<p>La gente de Nazaret se maravilló de las palabras de Jesús, y minutos después quiso matarlo. Jesús supo que no habían entendido su mensaje precisamente porque les gustó. Las buenas noticias solo son buenas para quien sabe que está en malas noticias.</p>
+<p><em>¿En qué área de tu vida te consideras "rico", alguien que está bien y no necesita mucho de Dios? ¿Cuándo fue la última vez que el evangelio te incomodó en lugar de solo agradarte, y qué revela eso sobre cómo te ves a ti mismo?</em></p>
+
+<h3>Pregunta 2</h3>
+<p>El arrepentimiento no es solo sentirse mal, es <em>metanoéo</em>, renovar la mente. Y confesar es tomar responsabilidad sin minimizar ("no es para tanto"), relativizar ("todos lo hacen") ni justificar ("no entiendes lo que he vivido").</p>
+<p><em>¿Cuál de estas tres excusas usas con más frecuencia cuando fallas? Piensa en un pecado concreto de tu vida: ¿te has sentido mal por él sin realmente cambiar tu manera de pensar? ¿Qué significaría tomar responsabilidad completa, incluyendo las consecuencias?</em></p>
+
+<h3>Pregunta 3</h3>
+<p>Muchas veces nos "arrepentimos" por las consecuencias y no por la relación que dañamos. David dijo: "Contra ti, contra ti solo he pecado." Detrás de cada pecado está el pecado de amar algo más que a Dios. Y al final, el hijo no experimentó el evangelio cuando se arrepintió, sino cuando vio al Padre correr hacia él.</p>
+<p><em>Piensa en la última vez que te arrepentiste de algo. ¿Te dolió más lo que perdiste o el daño a tu relación con Dios? ¿Qué cosa estabas amando más que a él en ese momento? ¿Cómo cambia tu manera de arrepentirte saber que el Padre ya viene corriendo hacia ti?</em></p>
+    `,
+    devocional: `
+<p>Esta semana vas a recorrer el camino del hijo pródigo, de volver en ti a los brazos del Padre. Cada día tiene una sola tarea concreta.</p>
+
+<h3>Día 1: Lee lo que pasó en Nazaret</h3>
+<p>Lee Lucas 4:14-30 en una sola sesión, despacio. Marca el momento exacto en que la admiración se convierte en ira. Luego escribe una oración respondiendo: ¿qué dijo Jesús que los ofendió tanto, y por qué crees que les dolió?</p>
+
+<h3>Día 2: ¿Para quién son las buenas noticias?</h3>
+<p>Lee Lucas 4:18-19 y escribe las cinco descripciones: pobres, quebrantados de corazón, cautivos, ciegos, oprimidos. Junto a cada una, escribe con honestidad un área concreta de tu vida en la que esa descripción es verdad de ti. Si te cuesta encontrarla, pregúntate si te estás viendo como rico.</p>
+
+<h3>Día 3: Reconoce tu condición</h3>
+<p>Lee 2 Samuel 12:1-13. David se indignó contra el hombre de la historia sin ver que era él mismo. Pídele a Dios que te muestre un pecado al que te has vuelto ciego. Escríbelo sin adornos, con la misma claridad con la que Natán le habló a David: "Tú eres aquel hombre."</p>
+
+<h3>Día 4: Confiesa sin excusas</h3>
+<p>Lee el Salmo 51 completo. Toma el pecado que escribiste ayer y redacta una confesión a Dios usando las palabras "mi" y "yo", como David. Revisa lo que escribiste: si encuentras alguna frase que minimiza, relativiza o justifica, táchala y vuelve a escribirla.</p>
+
+<h3>Día 5: Encuentra el pecado detrás del pecado</h3>
+<p>Mira de nuevo ese pecado y pregúntate: ¿qué estaba amando más que a Dios cuando lo hice? Comodidad, aprobación, control, placer, mi imagen. Escribe una oración nombrándolo. Luego lee Lucas 15:11-19 y fíjate que el hijo dice primero "contra el cielo" y después "contra ti".</p>
+
+<h3>Día 6: Mira al Padre</h3>
+<p>Lee Lucas 15:20-24. Lee el versículo 20 tres veces y fíjate en cada verbo del padre: lo vio, fue movido a misericordia, corrió, se echó sobre su cuello, le besó. Escribe un párrafo sobre lo que significa que tu arrepentimiento no es lo que te salva, sino el amor del Padre que corre hacia ti. Ora dándole gracias por nombre por la gracia que recibiste.</p>
+
+<h3>Día 7: Descansa en la temporada de gracia</h3>
+<p>Lee Romanos 8:1-4 y 8:31-39 lentamente, sin prisa y sin tareas. Jesús enrolló el libro antes del día de venganza porque él iba a recibir esa venganza en tu lugar. Deja que penetre en ti la primera frase: "Ninguna condenación hay para los que están en Cristo Jesús." Hoy simplemente descansa en eso.</p>
+    `,
+  },
 ]
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
