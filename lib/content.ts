@@ -378,6 +378,8 @@ export const LECCIONES: Leccion[] = [
 <p>De cualquier forma, la invitación es la misma: arrepiéntete de tu pecado y de tu propia justicia, vuelve en ti, y entra a la fiesta que tu verdadero hermano mayor pagó por ti.</p>
     `,
     autor: 'Stevan Marroquin',
+    youtubeUrl: 'https://www.youtube.com/watch?v=dn4jS4ZFaNo',
+    spotifyUrl: 'https://open.spotify.com/episode/4AO09GRm53Y683cUQIvRvK',
     resumenClase: `
 <p>La parábola de Lucas 15 no es la historia de un hijo perdido, sino de dos. Con ella Jesús confronta a sus dos audiencias, los pecadores que se acercaban y los religiosos que murmuraban, y muestra que hay dos formas equivocadas de intentar llegar a Dios.</p>
 
