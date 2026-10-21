@@ -681,6 +681,215 @@ export const LECCIONES: Leccion[] = [
 <p>Lee Romanos 8:1-4 y 8:31-39 lentamente, sin prisa y sin tareas. Jesús enrolló el libro antes del día de venganza porque él iba a recibir esa venganza en tu lugar. Deja que penetre en ti la primera frase: "Ninguna condenación hay para los que están en Cristo Jesús." Hoy simplemente descansa en eso.</p>
     `,
   },
+  {
+    slug: 'estudio-4',
+    numero: 4,
+    modulo: 'fundamento',
+    titulo: '¿Cómo recibimos el evangelio? Parte II',
+    tags: ['evangelio', 'fe', 'creer', 'salvación'],
+    fecha: '2026-10-20',
+    resumen: 'Entender qué es la fe bíblica y qué significa creer en Jesús, para dejar de mirarnos a nosotros mismos y poner toda nuestra confianza en la obra de Cristo.',
+    contenido: `
+<p style="font-style:italic;color:var(--text-muted);border-left:3px solid var(--border);padding:10px 16px;margin-bottom:32px"><strong>Propósito:</strong> Entender qué es la fe bíblica, qué significa creer en Jesús y por qué el arrepentimiento y la fe son inseparables, para que sepas exactamente en quién está puesta tu confianza para salvación.</p>
+
+<h2>El problema: ¿puede ser tan fácil?</h2>
+
+<p>Hay una pregunta con la que vamos a comenzar. No la respondas todavía, guárdala para el final:</p>
+
+<p><strong>¿En dónde tienes puesta tu fe?</strong></p>
+
+<p>Recordemos dónde estamos. El evangelio son buenas noticias: las buenas noticias que comunican el plan de salvación de Dios al mundo, Jesús. Y si son buenas noticias, el evangelio no es algo que nosotros hacemos, sino algo que fue hecho por nosotros. No es una escalera que subimos para llegar a Dios.</p>
+
+<p>Entonces, ¿cómo recibimos el evangelio? Jesús mismo lo respondió desde el primer día de su ministerio:</p>
+
+<blockquote>"Después que Juan fue encarcelado, Jesús vino a Galilea predicando el evangelio del reino de Dios, diciendo: El tiempo se ha cumplido, y el reino de Dios se ha acercado; arrepentíos, y creed en el evangelio." <em>Marcos 1:14-15</em></blockquote>
+
+<p>Si esas noticias son verdaderas, la respuesta correcta es creerlas. Y creer en las noticias es tener fe.</p>
+
+<p>Pero aquí aparece la tensión. ¿Cómo es posible que sea tan fácil? Algo en nosotros se resiste. El corazón religioso siempre quiere convertir el evangelio en una tarea: hacer más, esforzarnos más, cambiar primero, ser merecedores. Nos parece que algo tan grande no puede recibirse simplemente creyendo.</p>
+
+<p>Pero el evangelio dice lo contrario: Jesús ya hizo la obra, solo tenemos que creer, tener fe.</p>
+
+<p>En el estudio anterior vimos la primera mitad de la respuesta: el arrepentimiento. Arrepentirse, <em>metanoéo</em>, es pensar diferente, reconsiderar. Es lo que hizo el hijo pródigo: volvió en sí, reconoció su necesidad, fue al padre, pidió perdón, estaba dispuesto a cambiar, y llegó implorando misericordia y gracia. Ahora vamos a ver la otra mitad: ¿qué es la fe, y qué significa tener fe en Jesús?</p>
+
+<h2>¿Qué es fe?</h2>
+
+<p>Lo primero que hay que aclarar es que creer y tener fe es lo mismo. En el Nuevo Testamento son dos formas de la misma palabra.</p>
+
+<p>Fe viene del griego <em>pistis</em>, convicción, seguridad, certeza en algo o en alguien, persuasión. Creer viene del griego <em>pisteuō</em>, pensar que algo es cierto, estar persuadido, dar crédito, colocar o dar confianza total, estar seguro de algo, convencido de algo.</p>
+
+<p>Cuando Jesús dice <em>"creed en el evangelio"</em>, está usando esa palabra. Tener fe, creer, es estar seguro de algo. Es tener convicción de que algo es cierto.</p>
+
+<h3>Una palabra desprestigiada</h3>
+
+<p>El problema es que en nuestro idioma de todos los días la palabra ha perdido su fuerza. Cuando alguien te pregunta si va a llover y respondes <em>"yo creo que sí"</em>, lo que en realidad estás diciendo es que no estás seguro. El término está desprestigiado: hoy creer denota duda.</p>
+
+<p>Y no solo duda, también ignorancia. Para muchos, la fe es sinónimo de no saber. Karl Marx lo dijo así: <em>"La religión es el opio del pueblo."</em> Marx argumentaba que la religión era una ilusión creada para consolar a las personas en medio de la injusticia social. Más recientemente, Richard Dawkins escribió en su libro <em>The God Delusion</em>: <em>"La fe es la gran excusa para evitar la necesidad de pensar y evaluar evidencias."</em> Para él, la ciencia ha reemplazado la necesidad de la fe.</p>
+
+<p>Pero eso no es lo que la Biblia quiere decir con fe. La fe bíblica no es duda ni ignorancia, es certeza.</p>
+
+<h3>Todos tenemos fe</h3>
+
+<p>Aquí está lo interesante: nadie vive sin fe. Mira cómo describe National Geographic el origen del universo:</p>
+
+<p><em>"Como ocurre con muchos otros misterios del cosmos, los científicos no pueden saber con exactitud el modo en que el universo evolucionó tras el Big Bang. Muchos creen que, a medida que transcurría el tiempo y la materia se enfriaba, comenzaron a formarse tipos de átomos más diversos, y que estos finalmente se condensaron en las estrellas y galaxias de nuestro universo presente."</em> National Geographic, 2010, actualizado en 2024.</p>
+
+<p>Fíjate en la palabra: <em>creen</em>. Los ateos también tienen fe. Tienen fe en que el universo se creó a sí mismo, en que la materia surgió de la nada, y en que todo evolucionó a través de billones de años hasta formar el ecosistema perfecto que permite que la vida exista. Incluso el físico teórico Andrei Linde, profesor de física en Stanford, reconoce: <em>"Nuestra comprensión de la realidad no es completa, la realidad existe independientemente de nosotros."</em></p>
+
+<p><strong>Todos tenemos fe en algo. Todos tenemos fe y vivimos por fe.</strong></p>
+
+<h3>La fe cristiana no es credulidad ciega</h3>
+
+<p>Entonces la pregunta no es si tienes fe, sino en qué la tienes puesta. Y la fe cristiana no es credulidad ciega. No es apagar el cerebro. Es responder a la persona histórica de Cristo.</p>
+
+<p>La fe bíblica no es creer sin evidencia. Es confiar en una persona real y en un evento histórico: la muerte y resurrección de Cristo.</p>
+
+<p><strong>La pregunta no es si tienes fe. La pregunta es: ¿en dónde tienes puesta tu fe?</strong></p>
+
+<h2>¿Qué significa tener fe en Jesús?</h2>
+
+<p>Etimológicamente ya lo vimos: tener fe es estar convencido, estar seguro, confiar. Pero, ¿qué significa bíblicamente tener fe en Jesús? Para responder, Juan nos presenta a un hombre que tenía una opinión muy alta de Jesús, y aun así no creía en él:</p>
+
+<blockquote>"Había un hombre de los fariseos que se llamaba Nicodemo, un principal entre los judíos. Este vino a Jesús de noche, y le dijo: Rabí, sabemos que has venido de Dios como maestro; porque nadie puede hacer estas señales que tú haces, si no está Dios con él." <em>Juan 3:1-2</em></blockquote>
+
+<p>Nicodemo es un fariseo, un líder religioso, y está confundido acerca de quién es Jesús. No niega que Jesús sea alguien importante, alguien diferente. Cree que es un gran maestro enviado por Dios. Pero eso no es creer en Jesús. Y Jesús, en lugar de aceptar el halago, le enseña lo que significa creer:</p>
+
+<blockquote>"Nadie subió al cielo, sino el que descendió del cielo; el Hijo del Hombre, que está en el cielo. Y como Moisés levantó la serpiente en el desierto, así es necesario que el Hijo del Hombre sea levantado, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna. Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna. Porque no envió Dios a su Hijo al mundo para condenar al mundo, sino para que el mundo sea salvo por él. El que en él cree, no es condenado; pero el que no cree, ya ha sido condenado, porque no ha creído en el nombre del unigénito Hijo de Dios." <em>Juan 3:13-18</em></blockquote>
+
+<p>Cuenta cuántas veces aparece la palabra: cree, cree, cree, no cree, no ha creído. En este pasaje Jesús nos muestra dos cosas que significa creer en él.</p>
+
+<h3>1. Creer que Jesús es el Hijo de Dios encarnado que vino a salvarnos</h3>
+
+<p>Mira de nuevo las palabras que Jesús usa para hablar de sí mismo:</p>
+
+<blockquote>"Nadie subió al cielo, sino el que descendió del cielo; el Hijo del Hombre, que está en el cielo... Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna. Porque no envió Dios a su Hijo al mundo para condenar al mundo, sino para que el mundo sea salvo por él." <em>Juan 3:13, 16-17</em></blockquote>
+
+<p>Jesús <em>descendió</em> del cielo. Fue <em>dado</em>, enviado por Dios para salvar. Es el <em>Hijo unigénito</em>, el Hijo de Dios, Dios mismo. Nicodemo creía que Jesús era solo un gran maestro. Jesús le dice que es mucho más que eso: es Dios hecho hombre, que vino a salvarnos a través de su sacrificio y su resurrección.</p>
+
+<p>Por eso hay maneras de creer en Jesús que no son fe en Jesús. Creer que fue un gran maestro moral, un gran hombre o un revolucionario, pero no Dios, no es fe en Jesús. Creer que fue un profeta, pero no Dios, como enseña el Islam, no es fe en Jesús. Creer que fue un ser creado y no el Dios eterno, como enseñan los Testigos de Jehová y los mormones, no es fe en Jesús. Y creer que nunca existió realmente, que es un mito o un arquetipo, como dice la nueva era, tampoco lo es.</p>
+
+<p><strong>Creer en Jesús es creer que Jesús es el Hijo de Dios encarnado que vino a salvarnos a través de su sacrificio y resurrección.</strong></p>
+
+<h3>2. Confiar en su obra redentora para salvación</h3>
+
+<p>Ahora mira la ilustración que Jesús escogió para explicarle a Nicodemo lo que significa creer:</p>
+
+<blockquote>"Y como Moisés levantó la serpiente en el desierto, así es necesario que el Hijo del Hombre sea levantado, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna." <em>Juan 3:14-15</em></blockquote>
+
+<p>Nicodemo, como maestro de Israel, conocía bien la historia. Ocurrió cuando el pueblo salió del monte Hor:</p>
+
+<blockquote>"Después partieron del monte de Hor, camino del Mar Rojo, para rodear la tierra de Edom; y se desanimó el pueblo por el camino. Y habló el pueblo contra Dios y contra Moisés: ¿Por qué nos hiciste subir de Egipto para que muramos en este desierto? Pues no hay pan ni agua, y nuestra alma tiene fastidio de este pan tan liviano. Y Jehová envió entre el pueblo serpientes ardientes, que mordían al pueblo; y murió mucho pueblo de Israel." <em>Números 21:4-6</em></blockquote>
+
+<blockquote>"Entonces el pueblo vino a Moisés y dijo: Hemos pecado por haber hablado contra Jehová, y contra ti; ruega a Jehová que quite de nosotros estas serpientes. Y Moisés oró por el pueblo. Y Jehová dijo a Moisés: Hazte una serpiente ardiente, y ponla sobre un asta; y cualquiera que fuere mordido y mirare a ella, vivirá. Y Moisés hizo una serpiente de bronce, y la puso sobre un asta; y cuando alguna serpiente mordía a alguno, miraba a la serpiente de bronce, y vivía." <em>Números 21:7-9</em></blockquote>
+
+<p>Los comentaristas señalan que en esta imagen la serpiente representa el pecado, y el bronce se asocia con el juicio, porque es un metal que se trabaja con fuego. La serpiente de bronce es el pecado juzgado.</p>
+
+<p>Eso es exactamente lo que ocurrió en la cruz:</p>
+
+<blockquote>"Al que no conoció pecado, por nosotros lo hizo pecado, para que nosotros fuésemos hechos justicia de Dios en él." <em>2 Corintios 5:21</em></blockquote>
+
+<p>Jesús tomó nuestro pecado y fue juzgado por nosotros. Así como Moisés levantó la serpiente en el desierto, Jesús fue levantado en la cruz. Y así como el israelita mordido solo tenía que mirar a la serpiente para vivir, nosotros solo tenemos que mirar a Jesús, a su obra, y creer en él para ser salvos.</p>
+
+<p>Entonces, ¿qué no es tener fe en Jesús? Confiar en nuestras obras para salvación. Vernos a nosotros mismos y no a él. Para los israelitas debió parecer tonto que la cura fuera solo voltear a ver algo. Pero en la historia les tocó hacer eso, porque no había otra salvación. Fíjate que antes de mirar, reconocieron: <em>"Hemos pecado por haber hablado contra Jehová, y contra ti."</em> Cuando te estás muriendo y no tienes opción, crees.</p>
+
+<p><strong>Creer en Jesús es confiar en su obra redentora para salvación: dejar de mirarte a ti y mirarlo a él.</strong></p>
+
+<h2>¿En dónde tienes puesta tu fe?</h2>
+
+<p>Dios hace la misma invitación a toda la humanidad:</p>
+
+<blockquote>"Mirad a mí, y sed salvos, todos los términos de la tierra, porque yo soy Dios, y no hay más." <em>Isaías 45:22</em></blockquote>
+
+<p>Entonces la pregunta es personal: ¿a qué volteas a ver para que te salve? Lo que miras en los momentos de aflicción, en eso confías. Puede ser tu esfuerzo, tu dinero, tu reputación, tu religiosidad o tu propia bondad.</p>
+
+<p>Y antes de responder, recuerda lo que Jesús le dijo a Nicodemo:</p>
+
+<blockquote>"Porque no envió Dios a su Hijo al mundo para condenar al mundo, sino para que el mundo sea salvo por él. El que en él cree, no es condenado; pero el que no cree, ya ha sido condenado, porque no ha creído en el nombre del unigénito Hijo de Dios." <em>Juan 3:17-18</em></blockquote>
+
+<p>Fíjate que no dice <em>"será condenado"</em>, sino <em>"ya ha sido condenado"</em>. Ya fuiste mordido. Ya estás condenado. Jesús no vino a condenarte, vino a salvarte de una condenación en la que ya estabas. No creer en Jesús es quedarse en condenación, porque es confiar en nuestras propias obras o en algún otro salvador, y nadie más puede salvar.</p>
+
+<blockquote>"Y en ningún otro hay salvación; porque no hay otro nombre bajo el cielo, dado a los hombres, en que podamos ser salvos." <em>Hechos 4:12</em></blockquote>
+
+<p><strong>Solo hay una serpiente levantada en el desierto, y solo hay un nombre que salva.</strong></p>
+
+<h2>¿Cómo recibimos el evangelio? Arrepentimiento y fe</h2>
+
+<p>Ahora podemos ver la respuesta completa a la pregunta de estos dos estudios. Jesús dijo: <em>"arrepentíos, y creed en el evangelio."</em> El arrepentimiento y la fe son inseparables.</p>
+
+<p>En el desierto, arrepentimiento es reconocer que fuimos mordidos y que vamos a morir. Fe es mirar a la serpiente de bronce.</p>
+
+<p>En la historia del hijo pródigo, arrepentirse es volver en sí, cambiar de dirección, reconocer nuestra condición y pedir perdón. Fe es ver al Padre y abrazarlo.</p>
+
+<p><strong>Arrepentirse es soltar; creer es aferrarse a Cristo.</strong></p>
+
+<h2>Antes de terminar: responde la pregunta</h2>
+
+<p>Al comienzo te pedimos que guardaras una pregunta. Aquí está de nuevo:</p>
+
+<p><strong>¿En dónde tienes puesta tu fe?</strong></p>
+
+<p>Ya sabes que todos tenemos fe. La pregunta es hacia dónde estás mirando. Piensa en el último momento de aflicción que viviste. ¿A qué volteaste a ver primero?</p>
+
+<p>Si tu respuesta es tu esfuerzo, tu historial o cualquier cosa que tú haces, estás mirando la mordida en lugar de mirar la serpiente levantada. Si tu respuesta es un Jesús que fue solo un gran maestro, estás donde estaba Nicodemo esa noche.</p>
+
+<p>Pero si has reconocido que fuiste mordido, y has dejado de mirarte a ti para mirar a Cristo, el Hijo de Dios levantado en la cruz por tu pecado, entonces ya no estás condenado. Tienes vida eterna.</p>
+
+<p><strong>Mira a Cristo y vive.</strong></p>
+    `,
+    autor: 'Stevan Marroquin',
+    youtubeUrl: 'https://www.youtube.com/watch?v=rO4S7JMImYA',
+    spotifyUrl: 'https://open.spotify.com/episode/5DqEc2ls7R7CY9s40IJkbJ',
+    resumenClase: `
+<p>El evangelio se recibe por medio del arrepentimiento y la fe. En el estudio anterior vimos el arrepentimiento, reconocer nuestra condición y volver en sí. En este estudio vemos la fe: qué es, en quién se pone y por qué no se puede separar del arrepentimiento.</p>
+
+<p><strong>1. Qué es la fe.</strong> Creer y tener fe es lo mismo: <em>pistis</em> y <em>pisteuō</em> hablan de convicción, certeza y confianza total. Aunque hoy la palabra se asocia con duda o ignorancia, todos tenemos fe en algo, incluso los ateos. La fe cristiana no es credulidad ciega, es responder a una persona real y a un evento histórico: la muerte y resurrección de Cristo.</p>
+
+<p><strong>2. Quién es Jesús.</strong> Nicodemo creía que Jesús era un gran maestro enviado por Dios, pero eso no es fe en Jesús. Creer en Jesús es creer que es el Hijo de Dios encarnado, que descendió del cielo para salvarnos por medio de su sacrificio y su resurrección. No basta con verlo como maestro, profeta, ser creado o mito.</p>
+
+<p><strong>3. Qué hizo Jesús.</strong> Como la serpiente de bronce en el desierto, Jesús fue levantado en la cruz, cargando nuestro pecado y recibiendo el juicio por nosotros. El que fue mordido solo tenía que mirar para vivir. Creer en Jesús es dejar de confiar en nuestras obras y confiar en su obra redentora, porque no hay otro nombre en que podamos ser salvos.</p>
+
+<p>El arrepentimiento y la fe son inseparables. Arrepentirse es reconocer que fuimos mordidos; creer es mirar a la serpiente levantada. Arrepentirse es soltar; creer es aferrarse a Cristo.</p>
+    `,
+    guiaLider: `
+<p>Estas preguntas buscan que cada persona identifique honestamente en dónde tiene puesta su fe, no que gane un debate. Dale espacio al grupo para responder sin prisa.</p>
+
+<h3>Pregunta 1</h3>
+<p>Este estudio dice que todos tenemos fe y vivimos por fe, y que la pregunta no es si creemos, sino en qué. También dice que lo que miras en los momentos de aflicción es aquello en lo que realmente confías.</p>
+<p><em>Piensa en la última vez que enfrentaste una crisis real: un problema de salud, de dinero, de familia. ¿Qué fue lo primero a lo que volteaste a ver? ¿Qué dice eso sobre dónde está puesta tu fe en la práctica, no solo en lo que dices creer?</em></p>
+
+<h3>Pregunta 2</h3>
+<p>Nicodemo tenía una opinión muy alta de Jesús. Lo llamaba Rabí, maestro venido de Dios. Pero Jesús le mostró que eso no era creer en él. Mucha gente hoy admira a Jesús como maestro moral, profeta o ejemplo, sin creer que es el Hijo de Dios que vino a salvarlos.</p>
+<p><em>¿Alguna vez trataste a Jesús más como un buen maestro que como tu Salvador? ¿Qué diferencia práctica hay entre admirar a Jesús y confiar en él para tu salvación? ¿Cómo se nota esa diferencia en la manera de orar, de enfrentar la culpa o de hablar de él con otros?</em></p>
+
+<h3>Pregunta 3</h3>
+<p>A los israelitas debió parecerles tonto que la cura para la mordida fuera solo mirar una serpiente de bronce. El corazón religioso siempre quiere convertir el evangelio en tarea: hacer más, esforzarse más, cambiar primero para ser merecedor.</p>
+<p><em>¿Qué parte de ti se resiste a que la salvación sea tan sencilla como mirar a Cristo y creer? ¿Qué cosa estás tratando de agregar al evangelio para sentirte merecedor? Si arrepentirse es soltar y creer es aferrarse a Cristo, ¿qué necesitas soltar esta semana?</em></p>
+    `,
+    devocional: `
+<p>Esta semana vas a hacer lo que hicieron los israelitas en el desierto: dejar de mirarte a ti y mirar a Cristo. Cada día tiene una sola tarea concreta.</p>
+
+<h3>Día 1: Examen honesto</h3>
+<p>Responde por escrito la pregunta del estudio: <em>"¿En dónde tengo puesta mi fe?"</em> Después haz una lista de las tres cosas a las que más volteas a ver cuando estás angustiado. Sé honesto. Termina leyendo Isaías 45:22 y pregúntate qué hay en tu lista que esté ocupando el lugar que solo le corresponde a Dios.</p>
+
+<h3>Día 2: Siéntate con Nicodemo</h3>
+<p>Lee Juan 3:1-21 completo en una sola sesión. Divide una hoja en dos columnas: en una escribe lo que Nicodemo creía de Jesús, en la otra lo que Jesús dice de sí mismo. Anota la diferencia y pregúntate en cuál columna has vivido tú.</p>
+
+<h3>Día 3: Mira la serpiente</h3>
+<p>Lee Números 21:4-9 despacio. Luego lee 2 Corintios 5:21. Escribe con tus propias palabras cómo la serpiente de bronce apunta a lo que Jesús hizo en la cruz. Termina orando: reconoce delante de Dios que tú también fuiste mordido, y dale gracias porque Cristo fue juzgado en tu lugar.</p>
+
+<h3>Día 4: ¿Quién es Jesús?</h3>
+<p>Lee Juan 1:1-18 y Juan 20:30-31. Subraya cada frase que dice quién es Jesús. Después repasa las cuatro maneras equivocadas de ver a Jesús del estudio: maestro moral, profeta, ser creado, mito. ¿Qué responde Juan a cada una?</p>
+
+<h3>Día 5: Investiga una pregunta</h3>
+<p>La fe cristiana no es credulidad ciega, responde a un evento histórico. Dedica 30 minutos a leer una fuente seria sobre la evidencia histórica de la resurrección de Jesús. Escribe la pregunta que más te inquietaba antes de empezar y lo que encontraste. La fe bíblica no le teme a las preguntas.</p>
+
+<h3>Día 6: Suelta y aférrate</h3>
+<p>Lee Hechos 4:12. Arrepentirse es soltar; creer es aferrarse a Cristo. Escribe una cosa en la que has estado confiando para sentirte aceptado delante de Dios y que necesitas soltar. Luego escribe una oración entregándola y aferrándote a Cristo. Si tienes a alguien de confianza en tu grupo, compártele lo que escribiste.</p>
+
+<h3>Día 7: Descansa en Cristo</h3>
+<p>Lee Colosenses 1:12-20 lentamente. Es el retrato de aquel a quien estás mirando: la imagen del Dios invisible, el primogénito de toda creación, en quien todas las cosas subsisten, el que hizo la paz mediante la sangre de su cruz. No tienes que hacer nada más hoy. Solo mira a Cristo, y descansa en que él es suficiente.</p>
+    `,
+  },
 ]
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
