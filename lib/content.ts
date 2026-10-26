@@ -1114,6 +1114,205 @@ export const LECCIONES: Leccion[] = [
 <p>Hoy no hay tarea. Lee Colosenses 1:15-20 lentamente, dos o tres veces. Es una vista de quién es ese Cristo en quien recibiste todo: la imagen del Dios invisible, el primogénito de toda creación, la cabeza de la iglesia, el que lo reconcilia todo por la sangre de su cruz. Simplemente adóralo por quién es.</p>
     `,
   },
+  {
+    slug: 'estudio-6',
+    numero: 6,
+    modulo: 'fundamento',
+    titulo: '¿Cómo cambiamos con el evangelio?',
+    tags: ['evangelio', 'santificación', 'cambio', 'comunidad'],
+    fecha: '2026-10-23',
+    resumen: 'Aprender a cambiar con el evangelio, no cumpliendo una ley moral sino mirando a Cristo: mirar adentro para diagnosticar el pecado, mirar arriba para orar como hijos y mirar afuera para vivir el evangelio en comunidad.',
+    contenido: `
+<p style="font-style:italic;color:var(--text-muted);border-left:3px solid var(--border);padding:10px 16px;margin-bottom:32px"><strong>Propósito:</strong> Entender cómo cambiamos con el evangelio, no adhiriéndonos a una ley moral sino mirando a Cristo, y aprender a mirar adentro, arriba y afuera cada vez que el pecado actúa en nuestra vida.</p>
+
+<h2>El problema: ¿y qué hago el lunes?</h2>
+
+<p>Hay una pregunta con la que vamos a comenzar. No la respondas todavía, guárdala para el final:</p>
+
+<p><strong>¿Hacia dónde estás mirando cuando el veneno actúa?</strong></p>
+
+<p>En esta serie hemos visto que el evangelio son buenas noticias, el anuncio de un evento histórico. Vimos que no es algo que hacemos, que no es religiosidad, ni moralismo, ni irreligiosidad. Vimos que se recibe como se recibe una noticia: creyéndola, por fe. Y en el estudio anterior vimos en Efesios 1 todo lo que el evangelio incluye, y cómo Pablo ora para que los ojos de nuestro entendimiento sean alumbrados, porque si entendemos podremos creer, y si creemos podremos vivir y experimentar esa verdad.</p>
+
+<p>Muchos tratan el evangelio como el punto de entrada, y luego buscan "algo más" para crecer. Pablo hace lo opuesto: escribe a creyentes y les recuerda el evangelio, porque es el fundamento de la nueva vida.</p>
+
+<blockquote>"Porque en el evangelio la justicia de Dios se revela por fe y para fe, como está escrito: Mas el justo por la fe vivirá." <em>Romanos 1:17</em></blockquote>
+
+<p>Pero ahora que ya entiendo mejor el evangelio y ya sé todo lo que incluye, queda una pregunta muy práctica: <em>¿y entonces qué hago el lunes?</em> ¿Cómo cambio de verdad?</p>
+
+<h2>Mirar para vivir</h2>
+
+<blockquote>"Y como Moisés levantó la serpiente en el desierto, así es necesario que el Hijo del Hombre sea levantado, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna." <em>Juan 3:14-15</em></blockquote>
+
+<p>Jesús se refiere a lo que pasó con Israel en el desierto, cerca del monte Hor. El pueblo había sido mordido por serpientes ardientes y estaba muriendo, sin poder salvarse a sí mismo. Y Dios le dio a Moisés una solución:</p>
+
+<blockquote>"Y Jehová dijo a Moisés: Hazte una serpiente ardiente, y ponla sobre una asta; y cualquiera que fuere mordido y mirare a ella, vivirá. Y Moisés hizo una serpiente de bronce, y la puso sobre una asta; y cuando alguna serpiente mordía a alguno, miraba a la serpiente de bronce, y vivía." <em>Números 21:8-9</em></blockquote>
+
+<p>La solución no era esfuerzo, era mirar. Eso es el evangelio. Y si así fuimos salvados, así también cambiamos: de alguna manera tenemos que estar siempre viendo al evangelio para poder cambiar.</p>
+
+<p>Recuerda la orquesta desafinada. No se arregla haciendo que cada músico afine con el de al lado, porque seguirán sonando mal. Todos tienen que afinar a un solo sonido. Ese sonido es el evangelio, y vivir el evangelio es afinar cada área de la vida a esa misma nota.</p>
+
+<p>Por eso necesitamos cambiar de lentes. Como dijo Lesslie Newbigin: <em>"La historia cristiana no es algo a lo que vemos, sino un conjunto de lentes por el cual vemos."</em></p>
+
+<p><strong>El evangelio no solo es el inicio de una nueva vida, es el centro permanente.</strong></p>
+
+<h2>Cómo no cambiamos</h2>
+
+<p>La mayoría de cristianos intenta cambiar adhiriéndose a una ley moral. Se proponen reglas, metas y disciplinas, y miden su vida cristiana por qué tan bien las cumplen.</p>
+
+<p>El resultado es siempre uno de dos. O terminas en orgullo, <em>"lo logré"</em>, o terminas en desesperación, <em>"no puedo"</em>. Ninguno de los dos es el evangelio, y ninguno de los dos funciona a largo plazo.</p>
+
+<p><strong>No cambiamos por cumplir una ley, cambiamos por mirar a Cristo.</strong></p>
+
+<h2>Antes de la lista: una advertencia</h2>
+
+<p>En este estudio te voy a dar una estructura mental para ayudarte a responder la pregunta <strong>¿cómo cambiamos con el evangelio?</strong> Pero el problema con las "aplicaciones prácticas del evangelio" es que fácilmente las convertimos en otra ley, otra obra, algo que hacemos, otra forma de ganarnos a Dios.</p>
+
+<p>Por eso esta estructura tiene que empezar en el lugar correcto: no en lo que haces, sino en a qué estás viendo. ¿Qué estás creyendo? ¿En dónde tienes puesta tu fe?</p>
+
+<p>Cada vez que el veneno actúa, cada vez que el pecado aparece, deberías preguntarte: <em>¿qué estoy viendo?</em></p>
+
+<h2>Mira adentro</h2>
+
+<p>El primer paso es aprender a diagnosticar, no solo a corregir. Y para diagnosticar hay tres pasos.</p>
+
+<h3>1. Conoce la verdad</h3>
+
+<p>Para saber qué está mal y qué está bien necesitas una medida que no seas tú mismo. Esa medida es la Palabra. No puedes diagnosticar tu corazón si no conoces lo que Dios dice.</p>
+
+<h3>2. Identifica el pecado y nómbralo</h3>
+
+<p>No lo suavices ni lo escondas detrás de palabras bonitas. Ponle nombre. Lo que no se nombra no se puede llevar a Dios.</p>
+
+<h3>3. Identifica la motivación: el pecado detrás del pecado</h3>
+
+<p>La mayoría trata el pecado como un problema de conducta. Pero en el evangelio no cambiamos por miedo al castigo, sino por amor. El problema del pecado es que estás amando algo más que a Dios, y eso es lo que produce el comportamiento.</p>
+
+<p>Por eso, cuando fallas, en lugar de solo arrepentirte del comportamiento, hazte esta pregunta: <em>¿qué estaba buscando en ese momento que no estaba buscando en Dios?</em> Ese es el pecado detrás del pecado.</p>
+
+<p>¿Por qué me enojé? ¿Por qué mentí? ¿Por qué miré pornografía? Tal vez el problema no es el enojo, sino tu obsesión por controlarlo todo. Tal vez el problema no es la mentira, sino tu miedo a perder algo. Tal vez el problema no es la pornografía, sino el vacío que intentas llenar con eso.</p>
+
+<p>Cuando llegas a esa respuesta, tienes algo real que llevar a Dios. Ya no es <em>"perdóname por enojarme"</em>, sino <em>"Señor, estoy intentando controlar lo que solo tú puedes sostener."</em> Ya no es solo <em>"perdóname por mentir"</em>, sino <em>"mentí porque tengo miedo a perder esto."</em> Ya no es solo <em>"perdóname por lo que vi"</em>, sino <em>"vi pornografía porque me siento vacío."</em></p>
+
+<p><strong>No basta con corregir la conducta. Tienes que encontrar qué estás amando más que a Dios.</strong></p>
+
+<h2>Mira arriba</h2>
+
+<p>En la parábola del hijo pródigo, el hijo mayor nunca se fue de la casa, pero tampoco entendió al Padre. Él no oraba, negociaba:</p>
+
+<blockquote>"Mas él, respondiendo, dijo al padre: He aquí, tantos años te sirvo, no habiéndote desobedecido jamás, y nunca me has dado ni un cabrito para gozarme con mis amigos." <em>Lucas 15:29</em></blockquote>
+
+<p>Sin el evangelio, la oración es negociación. El trabajador viene a negociar con Dios. El hijo viene porque es hijo.</p>
+
+<p>Cuando mires arriba, mira a Dios como un Padre bueno, a Jesús como un Salvador y al Espíritu como un amigo. Confiesa, arrepiéntete, pero también entra confiadamente:</p>
+
+<blockquote>"Acerquémonos, pues, confiadamente al trono de la gracia, para alcanzar misericordia y hallar gracia para el oportuno socorro." <em>Hebreos 4:16</em></blockquote>
+
+<p>Entra con agradecimiento, porque él te salva, te acepta y te ayuda. Eso es lo que hace Pablo en Efesios 1. Antes de orar, recuerda toda la verdad del evangelio, y eso lo hace entrar en oración con agradecimiento y esperanza:</p>
+
+<blockquote>"No ceso de dar gracias por vosotros, haciendo memoria de vosotros en mis oraciones, para que el Dios de nuestro Señor Jesucristo, el Padre de gloria, os dé espíritu de sabiduría y de revelación en el conocimiento de él, alumbrando los ojos de vuestro entendimiento, para que sepáis cuál es la esperanza a que él os ha llamado, y cuáles las riquezas de la gloria de su herencia en los santos, y cuál la supereminente grandeza de su poder para con nosotros los que creemos, según la operación del poder de su fuerza." <em>Efesios 1:16-19</em></blockquote>
+
+<p><strong>No te acercas a Dios como trabajador que negocia, sino como hijo que confía.</strong></p>
+
+<h2>Mira afuera</h2>
+
+<p>Somos seres relacionales. Necesitamos vivir el evangelio en comunidad.</p>
+
+<blockquote>"Confesaos vuestras ofensas unos a otros, y orad unos por otros, para que seáis sanados. La oración eficaz del justo puede mucho." <em>Santiago 5:16</em></blockquote>
+
+<p>Nota para qué confesamos unos a otros. No para recibir perdón, ese ya lo tenemos en Cristo, sino para sanar. La palabra griega es <em>iaomai</em>, curar, sanar, hacer completo, libre de errores.</p>
+
+<h3>El evangelio es paradójico</h3>
+
+<p>El evangelio nos dice que somos tan pecadores y perdidos que no teníamos esperanza, por eso vino Cristo. Pero al mismo tiempo nos dice que somos tan amados y valiosos que él dio su vida por nosotros.</p>
+
+<blockquote>"Ahora, pues, ninguna condenación hay para los que están en Cristo Jesús." <em>Romanos 8:1a</em></blockquote>
+
+<p>Eso quiere decir que ya no hay condenación, y ya no nos importa aparentar ser perfectos. Y al mismo tiempo somos más amados de lo que podríamos imaginar, así que no necesitamos aprobación ni identidad de nadie más que de Dios.</p>
+
+<h3>Necesitamos ser conocidos por otros</h3>
+
+<p>Ser conocidos nos sana, nos hace completos, nos ayuda a estar libres de errores. Y el evangelio lo hace posible de tres maneras.</p>
+
+<p><strong>Ya no te tienes que esconder.</strong> Puedes dejar que otros miren tus errores. Puedes ser vulnerable, porque no hay condenación para ti.</p>
+
+<p><strong>Puedes recibir corrección.</strong> Sin colapsar y sin defenderte, porque tu identidad no está en lo que haces. La crítica ya no es una amenaza existencial, es información. El hijo mayor no podía recibir la corrección del padre porque su orgullo era su identidad. Cuando el evangelio es real, puedes escuchar <em>"estás equivocado"</em> sin que eso te destruya.</p>
+
+<p><strong>Puedes extender gracia a otros.</strong> Puedes escuchar sin juzgar y ayudar sin resentimiento. El hijo mayor llevaba la cuenta de lo que merecía. Tú, en cambio, puedes ser el hermano mayor que otros necesitan.</p>
+
+<p><strong>El evangelio te libera para ser conocido, corregido y para extender gracia.</strong></p>
+
+<h2>El hábito que lo sostiene todo</h2>
+
+<p>Todo lo anterior necesita un fundamento, y ese fundamento no es disciplina ni esfuerzo. Es exposición deliberada y repetida al evangelio mismo.</p>
+
+<p>Como Israel, que tenía que mirar activamente a la serpiente. No una vez, sino cada vez que el veneno actuaba.</p>
+
+<p>Tienes que predicarte el evangelio a ti mismo. No pedirle a Dios que te ayude a ser mejor, sino recordarte activamente, todos los días, lo que ya es verdad: lo que Cristo hizo, quién eres en él, que no hay condenación, que estás vestido con su justicia y no con tus hojas de higuera.</p>
+
+<p><strong>Predícate el evangelio cada día, cada vez que el veneno actúe.</strong></p>
+
+<h2>Antes de terminar: responde la pregunta</h2>
+
+<p>El evangelio no solo es el inicio de una nueva vida, es el centro permanente. No vives alrededor de ti, sino alrededor de lo que Jesús hizo por ti. ¿Cuál es tu centro de gravedad?</p>
+
+<p>Israel no tenía un sistema de siete pasos para curarse de la mordida. Solo tenían que mirar. Por eso la pregunta de cada día no es <em>¿qué voy a hacer hoy para ser mejor cristiano?</em> La pregunta es la misma con la que comenzamos:</p>
+
+<p><strong>¿Hacia dónde estás mirando cuando el veneno actúa?</strong></p>
+    `,
+    autor: 'Stevan Marroquin',
+    youtubeUrl: 'https://www.youtube.com/watch?v=vqhilBs7TG8',
+    spotifyUrl: 'https://open.spotify.com/episode/3YJuH0uENV3icwIAqBdD22',
+    resumenClase: `
+<p>Después de creer el evangelio, la pregunta práctica es cómo cambiamos. El evangelio responde que cambiamos de la misma manera en que fuimos salvados: mirando a Cristo. Como Israel en el desierto, la solución no es esfuerzo, es mirar.</p>
+
+<p><strong>1. Mira adentro.</strong> Aprende a diagnosticar, no solo a corregir. Conoce la verdad por la Palabra, nombra el pecado y busca el pecado detrás del pecado: qué estabas buscando en ese momento que no estabas buscando en Dios. Eso es lo que llevas a él.</p>
+
+<p><strong>2. Mira arriba.</strong> Sin el evangelio la oración es negociación, como el hijo mayor. Con el evangelio entras confiadamente al trono de la gracia, como hijo y no como trabajador, mirando a Dios como Padre bueno, a Jesús como Salvador y al Espíritu como amigo.</p>
+
+<p><strong>3. Mira afuera.</strong> El evangelio se vive en comunidad. Porque no hay condenación y somos amados por Dios, podemos dejar de escondernos, recibir corrección sin colapsar y extender gracia a otros. Confesamos unos a otros no para ser perdonados, sino para ser sanados.</p>
+
+<p>Todo esto se sostiene con un solo hábito: exposición deliberada y repetida al evangelio, predicándonos cada día lo que ya es verdad en Cristo.</p>
+    `,
+    guiaLider: `
+<p>Estas preguntas son personales y pueden tocar áreas delicadas. Cuida que el grupo sea un lugar seguro, sin juicio, y no presiones a nadie a compartir más de lo que quiera.</p>
+
+<h3>Pregunta 1</h3>
+<p>La mayoría de cristianos intenta cambiar adhiriéndose a una ley moral, y el resultado es orgullo cuando lo logran o desesperación cuando no pueden. Ninguno de los dos es el evangelio.</p>
+<p><em>Cuando fallas en algo que te habías propuesto, ¿tiendes más al orgullo o a la desesperación? ¿Qué te dice eso sobre dónde has puesto tu fe para cambiar?</em></p>
+
+<h3>Pregunta 2</h3>
+<p>El estudio dice que el problema del pecado es que estamos amando algo más que a Dios, y nos invita a preguntarnos qué estábamos buscando en ese momento que no estábamos buscando en Dios.</p>
+<p><em>Piensa en un pecado recurrente en tu vida. Sin dar detalles que no quieras compartir, ¿qué crees que estás buscando realmente cuando caes en él? ¿Cómo cambiaría tu oración si llevaras eso a Dios en lugar de solo el comportamiento?</em></p>
+
+<h3>Pregunta 3</h3>
+<p>Santiago 5:16 nos llama a confesarnos unos a otros para ser sanados. El hijo mayor no podía recibir corrección porque su orgullo era su identidad. El evangelio nos libera para ser conocidos.</p>
+<p><em>¿Hay alguien en tu vida que te conozca de verdad, incluyendo tus luchas? Si no lo hay, ¿qué te detiene: el miedo a ser rechazado, el orgullo o la falta de confianza? ¿Qué paso concreto podrías dar esta semana para dejar de esconderte?</em></p>
+    `,
+    devocional: `
+<p>Esta semana vas a practicar mirar en lugar de esforzarte. Cada día tiene una sola tarea concreta.</p>
+
+<h3>Día 1: Mira la serpiente</h3>
+<p>Lee Números 21:4-9 y Juan 3:14-17. Escribe en una frase qué tenían que hacer los israelitas para vivir y qué tienes que hacer tú. Luego escribe en otra frase en qué estás confiando hoy para cambiar.</p>
+
+<h3>Día 2: Nombra el pecado</h3>
+<p>Pídele a Dios que te muestre un pecado que se repite en tu vida. Escríbelo con su nombre real, sin suavizarlo. Luego busca en la Palabra un texto que diga qué está bien y qué está mal en esa área.</p>
+
+<h3>Día 3: El pecado detrás del pecado</h3>
+<p>Toma el pecado que escribiste ayer y responde por escrito: <em>¿qué estaba buscando en ese momento que no estaba buscando en Dios?</em> Sigue preguntando "¿por qué?" hasta llegar a algo real. Luego escribe una oración a Dios con esa respuesta, como <em>"Señor, estoy intentando controlar lo que solo tú puedes sostener."</em></p>
+
+<h3>Día 4: Hijo, no trabajador</h3>
+<p>Lee Lucas 15:11-32 completo y presta atención al hijo mayor. Anota las frases que muestran que se relacionaba con su padre como trabajador. Luego lee Hebreos 4:14-16 y ora entrando confiadamente, comenzando por dar gracias por lo que Cristo ya hizo antes de pedir nada.</p>
+
+<h3>Día 5: Recuerda antes de orar</h3>
+<p>Lee Efesios 1:3-14 y luego 1:15-23. Haz lo que hizo Pablo: escribe primero cinco verdades del evangelio que ya son tuyas y, solo después, escribe tu oración. Nota cómo cambia tu manera de orar cuando empiezas recordando.</p>
+
+<h3>Día 6: Mira afuera</h3>
+<p>Lee Santiago 5:16 y Romanos 8:1. Piensa en una persona de confianza en tu grupo o en tu iglesia. Escríbele o búscala esta semana para contarle una lucha real y pedirle que ore por ti. Y pregúntale cómo puedes orar tú por ella.</p>
+
+<h3>Día 7: Descansa y adora</h3>
+<p>Hoy no hay tarea. Lee Romanos 8:31-39 lentamente, dos o tres veces. Deja que cada pregunta de Pablo te responda: si Dios es por ti, ¿quién contra ti? ¿Quién te acusará? ¿Quién te separará del amor de Cristo? Predícate esas verdades y simplemente descansa en ellas.</p>
+    `,
+  },
 ]
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
