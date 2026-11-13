@@ -448,222 +448,53 @@ export const LECCIONES: Leccion[] = [
     titulo: '¿Cómo vivimos el evangelio?',
     tags: ['evangelio', 'nueva vida', 'efesios', 'identidad'],
     fecha: '2026-10-23',
-    resumen: 'Descubrir que el evangelio es el inicio de una nueva vida, conocer todas las bendiciones espirituales que recibimos en Cristo y aprender a afinar cada área de nuestra vida a esa verdad.',
-    contenido: `
-<p style="font-style:italic;color:var(--text-muted);border-left:3px solid var(--border);padding:10px 16px;margin-bottom:32px"><strong>Propósito:</strong> Entender que el evangelio es el inicio de una nueva vida, descubrir todas las bendiciones espirituales que recibimos en Cristo, y aprender a afinar cada área de nuestra vida a esa verdad.</p>
-
-<h2>El problema: ¿y ahora qué?</h2>
-
-<p>Hay una pregunta con la que vamos a comenzar. No la respondas todavía, guárdala para el final:</p>
-
-<p><strong>¿Qué está en el centro de tu vida?</strong></p>
-
-<p>Si has seguido esta serie, ya sabes que el evangelio no es algo que hacemos, sino algo que se hizo por nosotros. Ya sabes que no se gana con obras, que es por gracia, y que la única respuesta es creer. Pero tarde o temprano aparece una pregunta muy honesta:</p>
-
-<p><em>"Yo sé que no es por obras, que es gracia y que solo tengo que creer, pero ¿qué sigue después de creer el evangelio? ¿Cómo puedo cambiar?"</em></p>
-
-<p>Y casi sin darnos cuenta, esa pregunta nos regresa al mismo lugar del que el evangelio nos sacó: a hacer, a esforzarnos, a intentar cambiar por nuestra cuenta. Creímos por gracia, pero queremos crecer por obras.</p>
-
-<p><strong>El evangelio no es el final del camino. Es el inicio de una nueva vida.</strong></p>
-
-<h2>Recordemos: ¿qué es el evangelio?</h2>
-
-<p>El evangelio son las buenas noticias que comunican el plan de salvación de Dios al mundo. Una noticia no es algo que hacemos, es el anuncio de un evento histórico. Por eso el evangelio no es algo que hacemos, sino algo que se hizo por nosotros.</p>
-
-<p>Y por eso la respuesta al evangelio es creer. Creer incluye dos cosas inseparables: arrepentimiento, que es dejar de creer mentiras y pensar diferente, y fe, que es poner nuestra fe y confianza en el trabajo de Jesús.</p>
-
-<h2>El evangelio lo cambia todo</h2>
-
-<p>Aquí está la tensión que vamos a resolver en este estudio. El evangelio no es una nueva vida que tú construyes, pero aun así el evangelio produce una nueva vida. El evangelio lo afecta todo.</p>
-
-<p>Como lo dijo Tim Keller: <em>"El evangelio no es algo que hacemos, sino algo que ha sido hecho por nosotros y aún así resulta en una nueva forma de vida."</em></p>
-
-<p>Para entender esa nueva vida necesitamos responder tres preguntas: ¿Cuáles son todas las bendiciones espirituales que recibimos con el evangelio? ¿Qué sigue después de creer el evangelio? ¿Cómo vivimos el evangelio?</p>
-
-<p><strong>El evangelio no es una nueva vida, pero produce una nueva vida.</strong></p>
-
-<h2>¿Cuáles son las bendiciones espirituales que recibimos con el evangelio?</h2>
-
-<h3>Una sola oración</h3>
-
-<p>Pablo abre su carta a los Efesios con algo impresionante. En el texto original, los versículos 3 al 14 son una sola oración, una sola frase larguísima que contiene todo lo que Dios hizo por nosotros.</p>
-
-<blockquote>"Bendito sea el Dios y Padre de nuestro Señor Jesucristo, que nos bendijo con toda bendición espiritual en los lugares celestiales en Cristo." <em>Efesios 1:3</em></blockquote>
-
-<p>En esencia, aquí está todo. Sistemáticamente podríamos tomar cada término y definirlo mejor, y vale la pena hacerlo, pero este pasaje nos da algo distinto: una vista panorámica de todo lo que el evangelio incluye.</p>
-
-<h3>En Cristo</h3>
-
-<p>Si lees el pasaje con atención, notarás una frase que se repite una y otra vez: <em>en Cristo</em>, <em>en él</em>, <em>por medio de Jesucristo</em>, <em>en el Amado</em>, <em>en quien</em>. Y junto a ella otra idea que también se repite: <em>según el puro afecto de su voluntad</em>, <em>según las riquezas de su gracia</em>, <em>según su beneplácito</em>.</p>
-
-<blockquote>"Para alabanza de la gloria de su gracia, con la cual nos hizo aceptos en el Amado, en quien tenemos redención por su sangre, el perdón de pecados según las riquezas de su gracia." <em>Efesios 1:6-7</em></blockquote>
-
-<p>Nada de esto lo ganamos. Son bendiciones no ganadas, eso es gracia. Todo fue ganado por Cristo, y cuando recibimos el evangelio lo recibimos por mérito de Cristo, por un regalo sustitutivo de gracia.</p>
-
-<p><strong>Cada bendición espiritual es tuya en Cristo, no por tu mérito, sino por el suyo.</strong></p>
-
-<h3>Escogidos y predestinados</h3>
-
-<blockquote>"Según nos escogió en él antes de la fundación del mundo, para que fuésemos santos y sin mancha delante de él, en amor habiéndonos predestinado para ser adoptados hijos suyos por medio de Jesucristo, según el puro afecto de su voluntad." <em>Efesios 1:4-5</em></blockquote>
-
-<blockquote>"En él asimismo tuvimos herencia, habiendo sido predestinados conforme al propósito del que hace todas las cosas según el designio de su voluntad." <em>Efesios 1:11</em></blockquote>
-
-<p>Muchos malinterpretan estos pasajes y dicen que Dios está hablando aquí de salvación: <em>"Dios determina a quién salva y a quién no"</em>, <em>"no tenemos libre albedrío"</em>. Pero recuerda a quién se escribió esta carta. Pablo le escribe a cristianos, a personas que ya están en Cristo.</p>
-
-<p>La predestinación y la elección en este pasaje no son acerca de quién se salva, sino de santificación, adopción y herencia. Dios tiene un plan para los que están en Cristo desde antes de la fundación del mundo. Hay un destino predeterminado, un plan.</p>
-
-<p>Piénsalo como un avión. El destino del vuelo y la forma de llegar a ese destino ya fueron determinados de antemano. Pero cada pasajero elige si sube al avión o no. Quien sube a Cristo llega al destino que Dios ya trazó.</p>
-
-<p><strong>Dios tiene un destino para ti en Cristo, y lo trazó antes de la fundación del mundo.</strong></p>
-
-<h3>¿Cuál es ese plan?</h3>
-
-<p>Si Dios tiene un plan, la siguiente pregunta es obvia: ¿cuál es? ¿Cuáles son todas esas bendiciones espirituales? El mismo pasaje nos las muestra una por una.</p>
-
-<p><strong>Redención de pecados.</strong> <em>"En quien tenemos redención por su sangre, el perdón de pecados según las riquezas de su gracia"</em> (Efesios 1:7). Fuiste justificado. Tu deuda fue pagada con la sangre de Cristo.</p>
-
-<p><strong>Aceptos.</strong> <em>"Con la cual nos hizo aceptos en el Amado"</em> (Efesios 1:6). Fuiste aceptado por Dios. No tolerado, aceptado.</p>
-
-<p><strong>Adoptados.</strong> <em>"En amor habiéndonos predestinado para ser adoptados hijos suyos por medio de Jesucristo"</em> (Efesios 1:5). Ahora eres hijo. Tienes una nueva identidad.</p>
-
-<p><strong>Conocimiento de su voluntad.</strong> <em>"Que hizo sobreabundar para con nosotros en toda sabiduría e inteligencia, dándonos a conocer el misterio de su voluntad"</em> (Efesios 1:8-9). Dios te dio sabiduría e inteligencia y te reveló su plan: reunir todas las cosas en Cristo.</p>
-
-<p><strong>Santificación.</strong> <em>"Para que fuésemos santos y sin mancha delante de él"</em> (Efesios 1:4). Dios te escogió para hacerte santo.</p>
-
-<p><strong>Herencia.</strong> <em>"En él asimismo tuvimos herencia"</em> (Efesios 1:11). Recibiste todo lo que Cristo merecía.</p>
-
-<p><strong>El Espíritu Santo mismo.</strong> <em>"Fuisteis sellados con el Espíritu Santo de la promesa, que es las arras de nuestra herencia hasta la redención de la posesión adquirida"</em> (Efesios 1:13-14). Dios no solo te dio cosas, se dio a sí mismo. El Espíritu es el sello y la garantía de todo lo que viene.</p>
-
-<p><strong>Una vida para alabanza de su gloria.</strong> Tres veces lo repite Pablo: <em>"para alabanza de la gloria de su gracia"</em>, <em>"a fin de que seamos para alabanza de su gloria"</em>, <em>"para alabanza de su gloria"</em> (Efesios 1:6, 12, 14). Todo esto resulta en una vida que muestra lo glorioso que es Dios.</p>
-
-<p><strong>El evangelio no solo te perdona. Te acepta, te adopta, te enseña, te santifica, te da herencia, te da al Espíritu y te convierte en alabanza de su gloria.</strong></p>
-
-<h2>¿Qué sigue después de creer el evangelio?</h2>
-
-<p>Pablo le escribe a cristianos que ya recibieron el evangelio. Les recuerda todo lo que el evangelio incluye, y después de todo eso, no les da una lista de tareas. Ora por ellos:</p>
-
-<blockquote>"Por esta causa también yo, habiendo oído de vuestra fe en el Señor Jesús, y de vuestro amor para con todos los santos, no ceso de dar gracias por vosotros, haciendo memoria de vosotros en mis oraciones, para que el Dios de nuestro Señor Jesucristo, el Padre de gloria, os dé espíritu de sabiduría y de revelación en el conocimiento de él, alumbrando los ojos de vuestro entendimiento, para que sepáis cuál es la esperanza a que él os ha llamado, y cuáles las riquezas de la gloria de su herencia en los santos, y cuál la supereminente grandeza de su poder para con nosotros los que creemos, según la operación del poder de su fuerza, la cual operó en Cristo, resucitándole de los muertos y sentándole a su diestra en los lugares celestiales, sobre todo principado y autoridad y poder y señorío, y sobre todo nombre que se nombra, no solo en este siglo, sino también en el venidero; y sometió todas las cosas bajo sus pies, y lo dio por cabeza sobre todas las cosas a la iglesia, la cual es su cuerpo, la plenitud de Aquel que todo lo llena en todo." <em>Efesios 1:15-23</em></blockquote>
-
-<p>Pablo ora para que entiendan la verdad. Eso es lo que sigue.</p>
-
-<h3>Primero oír la verdad</h3>
-
-<p>Todo comienza por oír. Así fue como los efesios recibieron el Espíritu:</p>
-
-<blockquote>"En él también vosotros, habiendo oído la palabra de verdad, el evangelio de vuestra salvación, y habiendo creído en él, fuisteis sellados con el Espíritu Santo de la promesa." <em>Efesios 1:13</em></blockquote>
-<blockquote>"Esto solo quiero saber de vosotros: ¿Recibisteis el Espíritu por las obras de la ley, o por el oír con fe?" <em>Gálatas 3:2</em></blockquote>
-<blockquote>"Así que la fe es por el oír, y el oír, por la palabra de Dios." <em>Romanos 10:17</em></blockquote>
-
-<h3>Necesitamos que Dios nos alumbre</h3>
-
-<p>Pero oír no es suficiente. Necesitamos que Dios nos haga entender, que nos alumbre, que abra nuestros ojos. Eso es obra del Espíritu.</p>
-
-<blockquote>"Mas el Consolador, el Espíritu Santo, a quien el Padre enviará en mi nombre, él os enseñará todas las cosas, y os recordará todo lo que yo os he dicho." <em>Juan 14:26</em></blockquote>
-<blockquote>"El cual asimismo nos hizo ministros competentes de un nuevo pacto, no de la letra, sino del espíritu; porque la letra mata, mas el espíritu vivifica." <em>2 Corintios 3:6</em></blockquote>
-
-<h3>Entender para creer mejor</h3>
-
-<p>Si no entiendes la verdad, no la puedes creer. Y si no la crees bien, no la podrás experimentar. Por eso Pablo no ora para que se esfuercen más, sino para que vean mejor.</p>
-
-<p>Si Dios alumbra los ojos de tu entendimiento, podrás ver cuál es la esperanza a la que él te ha llamado. Podrás ver las riquezas de la gloria de tu herencia. Podrás ver la supereminente grandeza de su poder hacia ti, que es el mismo poder que resucitó a Cristo de los muertos y el mismo poder que lo sentó a la diestra del Padre, sobre todo principado y autoridad. Podrás ver que ese Jesús es tu líder, la cabeza de la iglesia. Y podrás ver que Dios usa a la iglesia, a nosotros, para afectarlo todo, porque somos su cuerpo, <em>"la plenitud de Aquel que todo lo llena en todo."</em></p>
-
-<p><strong>Lo que sigue después de creer no es hacer más, es ver mejor.</strong></p>
-
-<h2>¿Cómo vivimos el evangelio?</h2>
-
-<h3>Por fe y para fe</h3>
-
-<blockquote>"Porque en el evangelio la justicia de Dios se revela por fe y para fe, como está escrito: Mas el justo por la fe vivirá." <em>Romanos 1:17</em></blockquote>
-
-<p>El evangelio se recibe por fe y se vive por fe. Lesslie Newbigin, misionero y teólogo inglés, lo dijo así: <em>"La historia cristiana no es algo a lo cual vemos, sino un conjunto de lentes por el cual vemos."</em></p>
-
-<p>El evangelio no es solo algo que miras de vez en cuando. Es el lente a través del cual miras todo lo demás: tu pasado, tu identidad, tus relaciones, tu futuro.</p>
-
-<p><strong>El evangelio lo cambia todo, porque cambia la manera en que lo ves todo.</strong></p>
-
-<h3>Afinar la vida al evangelio</h3>
-
-<p>Imagina una orquesta que está tocando muy desafinado. La solución no es que cada músico afine con el músico de al lado, porque seguirán sonando mal. La solución es que todos afinen a un solo sonido.</p>
-
-<p>Así es la vida cristiana. No cambiamos comparándonos con el de al lado. Cambiamos cuando afinamos nuestra vida al sonido del evangelio.</p>
-
-<p><strong>Debemos afinar nuestra vida al sonido del evangelio.</strong></p>
-
-<h3>Los lentes antiguos</h3>
-
-<p>El problema es que muchos creemos en Jesús, pero en muchas áreas seguimos viviendo con los lentes antiguos. Fuimos perdonados, pero seguimos viviendo llenos de culpa, de vergüenza y de resentimiento. Fuimos aceptados, pero seguimos viviendo aislados, separados, como si fuéramos rechazados. Fuimos adoptados, y eso debería hacernos vivir confiados, con valor, sin complejos de superioridad ni de inferioridad, pero seguimos buscando quiénes somos en otro lado.</p>
-
-<p>Recibimos sabiduría e inteligencia, pero seguimos viviendo como necios. Fuimos escogidos para ser santos, pero seguimos en pecado, sin arrepentimiento y sin fruto. Tenemos una esperanza y una herencia segura, pero seguimos viviendo con miedo y ansiedad. Tenemos al Espíritu Santo, pero seguimos viviendo solos, en nuestras propias fuerzas. Y fuimos hechos para alabanza de su gloria, pero con nuestra vida seguimos desprestigiando o deshonrando a Dios.</p>
-
-<p>Cada una de esas áreas es una cuerda desafinada. Y la solución no es esforzarte más, es afinar esa cuerda a lo que el evangelio ya dice de ti.</p>
-
-<h2>Antes de terminar: responde la pregunta</h2>
-
-<p>Al comienzo te pedimos que guardaras una pregunta. Aquí está de nuevo:</p>
-
-<p><strong>¿Qué está en el centro de tu vida?</strong></p>
-
-<p>Vivir el evangelio es ponerlo en el centro. Es afinar tu vida al evangelio y poner a Jesús en el centro. Y si Dios está en el centro, puedes tener la misma esperanza por la que oraba Pablo:</p>
-
-<blockquote>"Alumbrando los ojos de vuestro entendimiento, para que sepáis cuál es la esperanza a que él os ha llamado, y cuáles las riquezas de la gloria de su herencia en los santos." <em>Efesios 1:18</em></blockquote>
-
-<p>Piensa en las áreas donde todavía vives con los lentes antiguos. No le pidas a Dios fuerzas para cambiar por tu cuenta. Pídele que alumbre los ojos de tu entendimiento para ver lo que ya es tuyo en Cristo.</p>
-
-<p><strong>El evangelio es solo el inicio de una nueva vida, y esa vida se vive con el evangelio en el centro.</strong></p>
-    `,
+    resumen: 'Es posible creer el evangelio y que tu vida no cambie. Todo lo que recibimos en Cristo ya fue dado; vivir el evangelio es aprender a verlo y afinar cada área de la vida a ese sonido.',
     autor: 'Stevan Marroquin',
     youtubeUrl: 'https://www.youtube.com/watch?v=96nvJlv7NeE',
     spotifyUrl: 'https://open.spotify.com/episode/7cAJ7Czpv6c8mcm0Ukuccz',
-    resumenClase: `
-<p>Creer el evangelio no es el final del camino, es el inicio de una nueva vida. El evangelio no es algo que hacemos, sino algo que se hizo por nosotros, y aun así produce una nueva forma de vida que lo afecta todo.</p>
-
-<p><strong>1. Las bendiciones.</strong> En Efesios 1:3-14 Pablo resume en una sola oración todo lo que recibimos en Cristo: redención, aceptación, adopción, conocimiento de su voluntad, santificación, herencia, el Espíritu Santo como sello y una vida para alabanza de su gloria. Nada de esto se gana, todo se recibe por el mérito de Cristo. La elección y la predestinación en este pasaje hablan del destino que Dios trazó para los que están en Cristo.</p>
-
-<p><strong>2. Lo que sigue.</strong> Después de recordar el evangelio, Pablo no da una lista de tareas, ora para que Dios alumbre los ojos del entendimiento. Primero oímos la verdad, luego el Espíritu nos hace entenderla, y al entenderla la creemos mejor y la experimentamos.</p>
-
-<p><strong>3. Cómo se vive.</strong> El evangelio se vive por fe y para fe. Es un lente por el cual vemos todo. Como una orquesta que afina a un solo sonido, cada área de nuestra vida tiene que afinarse al evangelio, dejando los lentes antiguos de la culpa, el aislamiento, el miedo y nuestras propias fuerzas.</p>
-
-<p>Vivir el evangelio es poner a Jesús en el centro y dejar que lo que él ya hizo por nosotros redefina cómo vemos y vivimos todo lo demás.</p>
-    `,
-    guiaLider: `
-<p>Estas preguntas buscan que cada persona identifique dónde todavía vive con los lentes antiguos, no que dé respuestas perfectas. Dale espacio al grupo para ser honesto.</p>
-
-<h3>Pregunta 1</h3>
-<p>Muchos creyentes creen que fueron salvos por gracia, pero viven como si tuvieran que crecer por esfuerzo propio. Pablo, después de recordar todo lo que el evangelio incluye, no les da a los efesios una lista de tareas, sino que ora para que Dios alumbre sus ojos.</p>
-<p><em>Cuando piensas en cambiar o crecer como cristiano, ¿tu primer instinto es hacer más o ver mejor? ¿En qué área de tu vida has estado intentando cambiar por tu cuenta, sin volver a mirar lo que el evangelio ya dice de ti?</em></p>
-
-<h3>Pregunta 2</h3>
-<p>Efesios 1 nos muestra que en Cristo fuimos redimidos, aceptados, adoptados, santificados, sellados con el Espíritu y que tenemos una herencia. Pero muchos seguimos viviendo con culpa, aislados, con miedo o en nuestras propias fuerzas.</p>
-<p><em>De todas las bendiciones de Efesios 1, ¿cuál es la que más te cuesta creer que es verdad para ti? ¿Cómo se nota en tu vida diaria que esa cuerda todavía está desafinada?</em></p>
-
-<h3>Pregunta 3</h3>
-<p>Una orquesta desafinada no se arregla afinando con el músico de al lado, sino con un solo sonido. Muchas veces medimos nuestra vida cristiana comparándonos con otros creyentes, para bien o para mal.</p>
-<p><em>¿Con quién te sueles comparar para saber si "vas bien" como cristiano? ¿Qué cambiaría si en lugar de afinar tu vida con otros la afinaras únicamente con el evangelio?</em></p>
-    `,
-    devocional: `
-<p>Esta semana vas a caminar despacio por Efesios 1 y a revisar cada área de tu vida con el lente del evangelio. Cada día tiene una sola tarea concreta.</p>
-
-<h3>Día 1: Una sola oración</h3>
-<p>Lee Efesios 1:3-14 en voz alta, de corrido, como una sola oración. Luego vuelve a leerlo y subraya cada vez que aparece <em>en Cristo</em>, <em>en él</em> o <em>en quien</em>. Cuéntalas. Escribe una frase sobre lo que te dice que todo dependa de estar en él.</p>
-
-<h3>Día 2: Haz la lista</h3>
-<p>En una hoja escribe las bendiciones de Efesios 1: redención, aceptación, adopción, sabiduría, santificación, herencia, el Espíritu y alabanza de su gloria. Junto a cada una escribe con tus propias palabras qué significa para ti hoy. No uses vocabulario religioso.</p>
-
-<h3>Día 3: Examina tus lentes</h3>
-<p>Toma la lista de ayer y, junto a cada bendición, escribe con honestidad cómo has estado viviendo en esa área: con culpa, aislado, con miedo, en tus propias fuerzas, o confiado en lo que Cristo hizo. Marca las dos áreas más desafinadas.</p>
-
-<h3>Día 4: Ora como Pablo</h3>
-<p>Lee Efesios 1:15-23. Usa esa misma oración por ti, con tus palabras, pidiéndole a Dios que alumbre los ojos de tu entendimiento en las dos áreas que marcaste ayer. Luego ora la misma oración por una persona de tu grupo, mencionándola por nombre.</p>
-
-<h3>Día 5: Investiga una pregunta</h3>
-<p>Lee Efesios 1:4-5 y 1:11 y anota todo lo que dicen sobre para qué nos escogió y predestinó Dios. Luego lee Romanos 8:29-30. Escribe en un párrafo qué destino tiene Dios para los que están en Cristo y cómo cambia eso la manera en que ves tu semana.</p>
-
-<h3>Día 6: Afina una cuerda</h3>
-<p>Elige una de las áreas desafinadas. Busca en Efesios 1 la verdad que le corresponde y escríbela en una tarjeta o en tu teléfono. Léela cada vez que esa área se active hoy, el miedo, la culpa o la soledad, y en lugar de esforzarte por sentirte diferente, recuérdate lo que ya es verdad.</p>
-
-<h3>Día 7: Descansa y adora</h3>
-<p>Hoy no hay tarea. Lee Colosenses 1:15-20 lentamente, dos o tres veces. Es una vista de quién es ese Cristo en quien recibiste todo: la imagen del Dios invisible, el primogénito de toda creación, la cabeza de la iglesia, el que lo reconcilia todo por la sangre de su cruz. Simplemente adóralo por quién es.</p>
-    `,
+    lectura: [
+      {
+        "titulo": "Creer no es el final. Es el comienzo del problema",
+        "html": "<p>Muchos llegan al evangelio, lo entienden, lo creen, y entonces se quedan esperando que algo cambie.</p>\n<p>Pasan semanas. Meses. Y siguen enojándose igual. Siguen con las mismas ansiedades. Siguen sintiéndose solos o inferiores o culpables. Y la pregunta que nadie hace en voz alta pero todos piensan es: ¿funcionó?</p>\n<p>¿Es posible creer el evangelio y que tu vida no cambie?</p>\n<p>La respuesta es sí. Y Pablo sabía exactamente por qué.</p>"
+      },
+      {
+        "titulo": "Todo en una sola oración",
+        "html": "<p>Efesios 1:3-14 es, en el griego original, una sola oración. Una frase larga, densa, que contiene en vista panorámica todo lo que Dios hizo por nosotros en Cristo. Pablo no la escribió para que la analizáramos en partes, la escribió para que la sintiéramos completa.</p>\n<p>Y lo primero que salta es la repetición: <em>en Cristo, en él, por medio de Jesucristo, en el Amado.</em> Once veces en doce versículos. Todo lo que recibimos, sin excepción, lo recibimos porque estamos en Cristo. No por mérito propio. Por mérito sustituto.</p>\n<p>¿Qué es exactamente lo que recibimos?</p>\n<p><strong>Escogidos y predestinados:</strong> Dios tiene un plan para tu vida desde antes de que el mundo existiera. Muchos leen esto y piensan que Pablo está hablando de quién se salva y quién no. Pero esta carta fue escrita a personas que ya creían, a cristianos. Lo que Dios predeterminó no fue tu condenación o salvación, sino tu destino: ser santo, adoptado, heredero. Es como un avión cuyo destino y ruta ya están determinados, pero tú decides si abordas o no.</p>\n<p><strong>Redimidos y perdonados:</strong> <em>\"redención por su sangre, el perdón de pecados según las riquezas de su gracia.\"</em> No según tus méritos. Según sus riquezas.</p>\n<p><strong>Adoptados:</strong> nueva identidad. No solo perdonados como criminales indultados. Adoptados como hijos. Esa diferencia importa más de lo que parece.</p>\n<p><strong>Sellados con el Espíritu:</strong> <em>\"fuisteis sellados con el Espíritu Santo de la promesa, que es las arras de nuestra herencia.\"</em> Las arras en el mundo antiguo era el anticipo de pago que garantizaba el contrato. El Espíritu es la garantía de que lo que Dios prometió va a cumplirse. No una posibilidad. Una garantía.</p>\n<p>Todo esto ya fue dado. Pasado. Recibido. No es algo que estás trabajando para obtener.</p>\n<p>Entonces ¿por qué no lo estás experimentando?</p>"
+      },
+      {
+        "titulo": "El problema de creer sin ver",
+        "html": "<p>Pablo termina la lista de bendiciones y no dice: \"ya que tienen todo esto, ahora vivan diferente.\" Lo que hace es orar.</p>\n<blockquote>\"Para que el Dios de nuestro Señor Jesucristo, el Padre de gloria, os dé espíritu de sabiduría y de revelación en el conocimiento de él, alumbrando los ojos de vuestro entendimiento.\" <em>Efesios 1:17-18</em></blockquote>\n<p>¿Por qué un apóstol ora para que gente que ya cree pueda <em>ver</em> lo que ya tiene?</p>\n<p>Porque conocer la verdad y ver la verdad no es lo mismo.</p>\n<p>Cuando tenías 13 años y necesitabas lentes por primera vez, ya existía el mundo en alta definición. Los árboles ya tenían hojas individuales. Las caras ya tenían expresiones detalladas. Todo eso era real. Pero tú no lo podías ver. No porque no existiera, sino porque tus ojos no podían procesarlo.</p>\n<p>El evangelio funciona igual. Las bendiciones son reales. Están dadas. Pero si tus ojos no fueron alumbrados para verlas, no puedes experimentarlas. Y la fe que no ve lo que tiene no puede vivir de ello.</p>\n<p>Pablo ora para que vean tres cosas específicas: la esperanza de su llamamiento, las riquezas de la herencia, y la grandeza del poder de Dios hacia ellos. El mismo poder, dice, que resucitó a Cristo de los muertos y lo sentó sobre todo principado y autoridad. Ese poder, el poder de resurrección, está disponible para los que creen. No es metáfora. Es declaración doctrinal.</p>\n<p>Pero solo lo experimentan los que lo ven.</p>"
+      },
+      {
+        "titulo": "La orquesta desafinada",
+        "html": "<p>Lesslie Newbigin, misionero y teólogo inglés, dijo algo que reorienta todo: <em>\"La historia cristiana no es algo a lo que vemos, sino un conjunto de lentes por el cual vemos.\"</em></p>\n<p>Ahí está el problema. Muchos de nosotros recibimos el evangelio pero seguimos viendo la vida con los lentes viejos. El evangelio se convirtió en información adicional, no en la óptica desde la cual procesamos todo lo demás.</p>\n<p>Imagina una orquesta que suena desafinada. La solución intuitiva es que cada músico afine con el músico de al lado. Pero si todos afinan entre sí, el resultado sigue siendo caos, solo más coordinado. La única solución es que todos afinen con un solo sonido externo, el estándar de referencia.</p>\n<p><strong>El evangelio es ese sonido.</strong></p>\n<p>Perdonados, pero viviendo llenos de culpa y vergüenza.<br>Aceptados, pero sintiéndose aislados y rechazados.<br>Adoptados, pero con complejos de inferioridad o superioridad.<br>Con el Espíritu, pero sintiéndose completamente solos.<br>Con esperanza, pero con ansiedad constante.</p>\n<p>Cada una de esas tensiones es el mismo problema: una realidad posicional que no se ha convertido en lente. Creer que algo es verdad no es lo mismo que ver el mundo desde esa verdad.</p>\n<p>Vivir el evangelio no es esforzarse más. Es afinar cada área de tu vida al sonido del evangelio hasta que lo que ves coincida con lo que tienes.</p>\n<p>Y eso, a diferencia de los intentos de cambio por disciplina moral, produce algo que el esfuerzo nunca puede producir: la esperanza que Pablo describía. No optimismo. Certeza fundamentada en un Jesús resucitado que tiene toda autoridad y que, según Efesios 1:23, usa a su iglesia para llenar todo en todo.</p>\n<p>La pregunta no es si el evangelio tiene el poder para cambiar tu vida. La pregunta es si lo estás viendo.</p>"
+      }
+    ],
+    versiculos: [
+      "Efesios 1:3-23",
+      "Romanos 1:17",
+      "Gálatas 3:2",
+      "Romanos 10:17",
+      "Juan 14:26",
+      "2 Corintios 3:6",
+      "2 Corintios 5:17",
+      "Colosenses 3:1-4"
+    ],
+    preguntas: [
+      "Pablo lista bendiciones que ya fueron dadas, perdonados, adoptados, sellados con el Espíritu, pero ora para que los creyentes puedan <em>verlas</em>. ¿Cuál de esas realidades es la que más te cuesta ver como tuya, y por qué?",
+      "La clase distingue entre identidad posicional y experiencia vivida, entre lo que eres en Cristo y cómo te sientes en la práctica. ¿En cuál de las áreas de la lista (culpa, rechazo, inferioridad, ansiedad, soledad) sigues viviendo con los lentes viejos?",
+      "La analogía de la orquesta dice que la solución no es afinar con los de al lado sino con un solo estándar externo. ¿Con qué estás afinando tu vida actualmente, y qué cambiaría si el evangelio fuera el sonido de referencia para cada decisión?"
+    ],
+    declaraciones: [
+      "Las bendiciones de la salvación no son ganadas progresivamente sino recibidas de una vez en Cristo, son realidades posicionales, no procesos morales.",
+      "La elección y predestinación en Efesios 1 se refieren al plan de santificación y adopción, no a la determinación unilateral de quiénes son salvos; el libre albedrío humano no es anulado sino presupuesto.",
+      "La justificación, adopción, redención, santificación y glorificación son lógicamente distinguibles pero ontológicamente inseparables en la unión con Cristo.",
+      "El Espíritu Santo es arras, garantía jurídica y anticipo experiencial, de la herencia escatológica.",
+      "La iluminación del Espíritu es condición epistémica necesaria para que la verdad revelada sea creída y experimentada, no solo conocida intelectualmente.",
+      "La fe es el medio continuo de la vida cristiana, no solo el punto de entrada: el justo vive por fe desde la justificación hasta la glorificación (Romanos 1:17).",
+      "El evangelio no produce una nueva lista de obligaciones sino una nueva identidad que reorienta todas las áreas de la vida.",
+      "La vida cristiana es el proceso de alinear la experiencia vivida con las realidades posicionales ya recibidas en Cristo."
+    ],
   },
   {
     slug: 'estudio-6',
