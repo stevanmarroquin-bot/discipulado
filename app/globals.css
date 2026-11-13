@@ -558,3 +558,68 @@ body {
 }
 
 .coming-soon p { font-size: 15px; }
+
+/* ── Collapsible lesson blocks (new format) ── */
+.fold-group { margin-bottom: 28px; }
+.fold-group-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+.fold {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.fold summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text);
+}
+.fold summary::-webkit-details-marker { display: none; }
+.fold-num {
+  flex: 0 0 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--border);
+  color: var(--text);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fold-title { flex: 1; line-height: 1.35; }
+.fold-chevron {
+  font-size: 22px;
+  color: var(--text-muted);
+  transition: transform .15s;
+}
+.fold[open] .fold-chevron { transform: rotate(90deg); }
+.fold-body { padding: 4px 20px 20px; margin: 0; }
+.fold-body.lesson-content { font-size: 16px; }
+ol.fold-body, ul.fold-body { padding-left: 40px; }
+.fold-body li { margin-bottom: 12px; line-height: 1.65; }
+.fold-body li:last-child { margin-bottom: 0; }
+.verse-list { list-style: none; padding-left: 20px !important; }
+.verse-list li { font-weight: 600; }
+.fold-versiculos { background: #FEF3E2; border-color: #F6D7A7; }
+.fold-versiculos summary { color: #92610A; }
+.fold-preguntas { background: #E8F5EF; border-color: #A7D4BC; }
+.fold-preguntas summary { color: #1B5E40; }
+.fold-declaraciones { background: #F4F2EE; border-color: #DDD9D1; }
+.fold-declaraciones summary { color: #4A4540; }
+.fold-versiculos, .fold-preguntas, .fold-declaraciones { margin-bottom: 16px; }
+.fold-declaraciones + .lesson-media, .fold-preguntas + .lesson-media { margin-top: 32px; }
+.fold-declaraciones ul.fold-body { list-style: disc; }
+.fold-preguntas ol.fold-body { list-style: decimal; }

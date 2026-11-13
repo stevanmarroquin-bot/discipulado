@@ -74,11 +74,72 @@ export default async function LeccionPage({
           )}
         </div>
 
-        {/* Main content */}
-        <div
-          className="lesson-content"
-          dangerouslySetInnerHTML={{ __html: leccion.contenido }}
-        />
+        {/* Main content (old format) */}
+        {leccion.contenido && (
+          <div
+            className="lesson-content"
+            dangerouslySetInnerHTML={{ __html: leccion.contenido }}
+          />
+        )}
+
+        {/* Lectura: one collapsible block per topic */}
+        {leccion.lectura && (
+          <section className="fold-group">
+            <div className="fold-group-label">Lectura</div>
+            {leccion.lectura.map((t, i) => (
+              <details key={t.titulo} className="fold" open={i === 0}>
+                <summary>
+                  <span className="fold-num">{i + 1}</span>
+                  <span className="fold-title">{t.titulo}</span>
+                  <span className="fold-chevron" aria-hidden>›</span>
+                </summary>
+                <div
+                  className="fold-body lesson-content"
+                  dangerouslySetInnerHTML={{ __html: t.html }}
+                />
+              </details>
+            ))}
+          </section>
+        )}
+
+        {/* Versículos de la semana */}
+        {leccion.versiculos && leccion.versiculos.length > 0 && (
+          <details className="fold fold-versiculos">
+            <summary>
+              <span className="fold-title">Versículos para leer durante la semana</span>
+              <span className="fold-chevron" aria-hidden>›</span>
+            </summary>
+            <ul className="fold-body verse-list">
+              {leccion.versiculos.map((v) => <li key={v}>{v}</li>)}
+            </ul>
+          </details>
+        )}
+
+        {/* Preguntas para discusión */}
+        {leccion.preguntas && leccion.preguntas.length > 0 && (
+          <details className="fold fold-preguntas">
+            <summary>
+              <span className="fold-title">Preguntas para discusión en clase</span>
+              <span className="fold-chevron" aria-hidden>›</span>
+            </summary>
+            <ol className="fold-body lesson-content">
+              {leccion.preguntas.map((q, i) => <li key={i} dangerouslySetInnerHTML={{ __html: q }} />)}
+            </ol>
+          </details>
+        )}
+
+        {/* Declaraciones teológicas */}
+        {leccion.declaraciones && leccion.declaraciones.length > 0 && (
+          <details className="fold fold-declaraciones">
+            <summary>
+              <span className="fold-title">Declaraciones teológicas</span>
+              <span className="fold-chevron" aria-hidden>›</span>
+            </summary>
+            <ul className="fold-body lesson-content">
+              {leccion.declaraciones.map((d, i) => <li key={i} dangerouslySetInnerHTML={{ __html: d }} />)}
+            </ul>
+          </details>
+        )}
 
         {/* Resumen de clase */}
         {leccion.resumenClase && (

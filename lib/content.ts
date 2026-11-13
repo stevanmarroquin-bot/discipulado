@@ -19,7 +19,11 @@ export interface Leccion {
   tags: string[]
   fecha: string
   resumen: string
-  contenido: string        // HTML string — main lesson body
+  contenido?: string       // HTML string — main lesson body (old format)
+  lectura?: { titulo: string; html: string }[]   // new format: collapsible reading topics
+  versiculos?: string[]    // verses to read during the week
+  preguntas?: string[]     // class discussion questions (HTML)
+  declaraciones?: string[] // theological statements (HTML)
   resumenClase?: string    // HTML string — structured class summary
   devocional?: string      // HTML string
   guiaLider?: string       // HTML string
@@ -46,173 +50,58 @@ export const LECCIONES: Leccion[] = [
     slug: 'estudio-1',
     numero: 1,
     modulo: 'fundamento',
-    titulo: '¿Qué es el evangelio?',
+    titulo: "¿Qué es el evangelio?",
     tags: ['evangelio', 'fe', 'salvación', 'base'],
     fecha: '2026-01-13',
-    resumen: 'Entender claramente qué es el evangelio, qué no es, y cómo recibirlo y vivirlo, para que deje de ser información y se convierta en la realidad desde la cual lo vives todo.',
-    contenido: `
-<p style="font-style:italic;color:var(--text-muted);border-left:3px solid var(--border);padding:10px 16px;margin-bottom:32px"><strong>Propósito:</strong> Entender claramente qué es el evangelio, qué no es, y cómo recibirlo, vivirlo y compartirlo, para que deje de ser información que sabes y se convierta en la realidad desde la cual vives todo lo demás.</p>
-
-<h2>El problema: un mensaje que creemos conocer</h2>
-
-<p>Hay una pregunta honesta con la que vamos a comenzar. No la respondas todavía:</p>
-
-<p><strong>¿Eres cristiano?</strong></p>
-
-<p>Guarda esa pregunta. Volverás a ella antes de que este estudio termine.</p>
-
-<p>El evangelio debería ser el tema más básico para cualquier creyente, algo que entiende, vive y puede compartir con facilidad. En teoría, alguien se convierte en creyente precisamente porque alguien le compartió el evangelio y lo creyó. Entonces todos los creyentes deberían entender el evangelio.</p>
-
-<p>Pero la realidad es diferente. Muchos creyentes, en el mejor de los casos, han creído el evangelio pero permanecen confundidos, creyendo una versión incompleta o distorsionada. En el peor de los casos, muchos de los que se llaman a sí mismos cristianos nunca han creído el verdadero evangelio, sino una versión falsa de él.</p>
-
-<blockquote>"No todo el que me dice: Señor, Señor, entrará en el reino de los cielos, sino el que hace la voluntad de mi Padre que está en los cielos. Muchos me dirán en aquel día: Señor, Señor, ¿no profetizamos en tu nombre, y en tu nombre echamos fuera demonios, y en tu nombre hicimos muchos milagros? Y entonces les declararé: Nunca os conocí; apartaos de mí, hacedores de maldad." <em>Mateo 7:21-23</em></blockquote>
-
-<p>Esto no es un asunto menor. Nuestro destino eterno, y el destino eterno de otros, depende de entender esto correctamente. ¿Cómo podemos compartir el evangelio con otros si nosotros mismos no lo hemos entendido?</p>
-
-<p>También hay una confusión común que vale la pena aclarar desde el principio: muchas personas tratan el evangelio y la Biblia como sinónimos. La Biblia no es el evangelio. La Biblia contiene el evangelio, pero no todo lo que la Biblia contiene es el evangelio. Entender la Biblia y sus doctrinas es necesario para entender el evangelio correctamente, pero no son la misma cosa.</p>
-
-<p>Existe un solo evangelio verdadero, pero puede ser creído incorrectamente, en una versión distorsionada, incompleta o directamente falsa.</p>
-
-<blockquote>"Estoy maravillado de que tan pronto os hayáis alejado del que os llamó por la gracia de Cristo, para seguir un evangelio diferente. No que haya otro, sino que hay algunos que os perturban y quieren pervertir el evangelio de Cristo." <em>Gálatas 1:6-7</em></blockquote>
-
-<h2>¿Qué es el evangelio?</h2>
-
-<p>La palabra griega es <em>euangélion</em>. Significa buenas noticias.</p>
-
-<p>No es una palabra religiosa. En el mundo antiguo describía el anuncio de algo de gran importancia: una victoria militar, el nacimiento de un rey, una proclamación de paz. Era el anuncio de un evento que ya había ocurrido.</p>
-
-<blockquote>"Pero el ángel les dijo: No temáis; porque he aquí os doy nuevas de gran gozo, que será para todo el pueblo: que os ha nacido hoy, en la ciudad de David, un Salvador, que es CRISTO el Señor." <em>Lucas 2:10-11</em></blockquote>
-
-<p>El evangelio se refiere a un evento histórico, algo que ocurrió, no una idea, una filosofía o un sistema de principios. Cuando Pablo y los demás apóstoles predicaban el evangelio, estaban anunciando las buenas noticias de que Dios había actuado para salvar al mundo a través de la obra de Jesucristo.</p>
-
-<h2>Lo que el evangelio no es</h2>
-
-<p>Una pregunta de diagnóstico útil, usada por el pastor Martyn Lloyd-Jones, es simplemente preguntarle a alguien: "¿Eres cristiano?"</p>
-
-<p>La mayoría de las personas revela que no ha entendido el evangelio cuando responde: <em>"Trato de serlo."</em></p>
-
-<p>Cualquier persona cuya respuesta involucra algo que ella tiene que hacer para ser cristiana no ha entendido el evangelio, porque el evangelio no es algo que nosotros hacemos, sino lo que Jesús hizo por nosotros.</p>
-
-<p>Todas las grandes religiones comunican lo que debemos hacer para ser salvos: ganarnos el cielo, alcanzar algún tipo de iluminación, seguir reglas, acumular mérito, realizar rituales. El cristianismo también tiene mandamientos y una manera de vivir, pero en su esencia es fundamentalmente diferente. No trata de lo que nosotros podemos hacer para llegar a Dios, sino de lo que Dios hizo para que pudiéramos llegar a él.</p>
-
-<p><strong>Ser cristiano es recibir y creer lo que Dios ya hizo por ti.</strong></p>
-
-<h2>¿Por qué son buenas noticias?</h2>
-
-<p>La respuesta directa es que Jesús murió por ti. Pero eso solo tiene sentido si entiendes de qué necesitabas ser salvo.</p>
-
-<p>Si alguien te dice "encontramos la cura" o "tu deuda fue cancelada", eso solo es una buena noticia si sabes que estás enfermo o endeudado. Si no lo estás, el anuncio es irrelevante.</p>
-
-<p>Considera esto: si tu casa estuviera en llamas pero tú y tu familia ya estuvieran afuera a salvo, y de repente tu vecino entrara a la casa en llamas y muriera, quedarías devastado, pero también confundido. Su muerte parecería innecesaria. Pero si estuvieras atrapado adentro, a segundos de morir, y vieras a tu vecino entrar corriendo, sacarte y morir en el proceso, entonces entenderías completamente. Te amó lo suficiente como para dar su vida por la tuya.</p>
-
-<p>Las buenas noticias del evangelio solo tienen sentido cuando entiendes tu condición real: que estás en un camino cuyo final es la muerte eterna, y que no puedes salvarte a ti mismo.</p>
-
-<blockquote>"Por cuanto todos pecaron, y están destituidos de la gloria de Dios." <em>Romanos 3:23</em></blockquote>
-<blockquote>"Porque la paga del pecado es muerte." <em>Romanos 6:23</em></blockquote>
-
-<p>Hasta que honestamente digas "no puedo salvarme, necesito un Salvador", el evangelio nunca tendrá pleno sentido para ti. Sin diagnóstico no hay celebración, no hay gratitud por la medicina.</p>
-
-<h2>¿Qué hacemos con el evangelio?</h2>
-
-<p>¿Qué haces con una noticia? No la obedeces como sí obedeces una ley. La escuchas y respondes a ella.</p>
-
-<h3>Paso 1: Determina si es verdad</h3>
-
-<p>No todo anuncio merece ser creído de inmediato. Es responsabilidad de cada persona investigar honestamente si el mensaje de Jesús es verdadero. ¿Fue una persona histórica real? ¿Hizo lo que se afirma que hizo? ¿Resucitó de verdad? Ese es el lugar correcto para comenzar. La evidencia histórica de la vida, muerte y resurrección de Jesús es sustancial y ha sido examinada por eruditos serios durante siglos.</p>
-
-<h3>Paso 2: Recíbelo</h3>
-
-<p>Si es verdad, y lo es, entonces la respuesta es recibirlo. Eso es lo que la Biblia llama tener fe.</p>
-
-<blockquote>"Mas a todos los que le recibieron, a los que creen en su nombre, les dio potestad de ser hechos hijos de Dios." <em>Juan 1:12</em></blockquote>
-<blockquote>"Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna." <em>Juan 3:16</em></blockquote>
-<blockquote>"Que si confesares con tu boca que Jesús es el Señor, y creyeres en tu corazón que Dios le levantó de los muertos, serás salvo." <em>Romanos 10:9</em></blockquote>
-
-<p>La fe no es el esfuerzo humano para producir salvación. La fe es simplemente recibir: es la mano abierta con la que recibes lo que ya fue logrado. El evangelio no es un sistema de fe que construyes, ni una obediencia que debes mantener. Es, primariamente en su esencia, un regalo que recibes.</p>
-
-<p>Como lo resumió Tim Keller: <em>"Aunque el evangelio no trata de algo que nosotros hacemos sino de lo que Dios hizo por nosotros, el evangelio sin embargo resulta en una vida nueva."</em></p>
-
-<p>El evangelio no es el ABC de la vida cristiana, no es solo el punto de partida para después ir a cosas más avanzadas. El evangelio es la A hasta la Z. Se recibe por fe y también se vive por fe cada día.</p>
-
-<blockquote>"...como está escrito: Mas el justo por la fe vivirá." <em>Romanos 1:17b</em></blockquote>
-
-<h3>Paso 3: Compártelo</h3>
-
-<p>D.A. Carson lo resume bien: porque el evangelio es una noticia, una buena noticia, debe ser proclamada, porque eso es lo que se hace con las noticias. No es ética para debatir, ni principios para admirar, ni un sistema de teología para estructurar, aunque el evangelio sí tiene todo eso. Es una noticia, y las noticias se proclaman.</p>
-
-<blockquote>"Y les dijo: Id por todo el mundo y predicad el evangelio a toda criatura." <em>Marcos 16:15</em></blockquote>
-
-<p>Cuando genuinamente entiendes lo que recibiste, la respuesta natural es querer que otros también lo tengan.</p>
-
-<h2>Antes de terminar: responde la pregunta</h2>
-
-<p>Al comienzo te pedimos que guardaras una pregunta. Aquí está de nuevo:</p>
-
-<p><strong>¿Eres cristiano?</strong></p>
-
-<p>Respóndela honestamente, en silencio, ahora mismo, y presta atención a cómo la respondes.</p>
-
-<p>Si tu respuesta comienza con <em>"trato de serlo", "estoy en eso", "voy a la iglesia"</em> o cualquier variación que involucre algo que tú haces, hoy es el día para examinar si realmente has creído el evangelio o si has creído una versión incompleta de él.</p>
-
-<p>Si tu respuesta es <em>"sí, porque Cristo ya hizo lo que yo no podía hacer, y yo lo he recibido por fe"</em>, eso es evidencia de que entiendes el verdadero evangelio.</p>
-
-<p>El evangelio hace una sola demanda, que es la fe. Creer para recibir. Creer para vivir.</p>
-
-<p><strong>El evangelio salva y transforma.</strong></p>
-    `,
+    resumen: "El evangelio no es algo que tú haces sino algo que alguien hizo por ti. Qué es, por qué solo tiene sentido cuando entiendes el problema que resuelve, y qué se hace con una noticia así.",
     autor: 'Stevan Marroquin',
     youtubeUrl: 'https://www.youtube.com/watch?v=o3mUSRINu2A&t=2s',
     spotifyUrl: 'https://open.spotify.com/episode/7sVCGVSwIU3rzXzeWqiZA3?si=exJtDYo2RiWInEM6ppAnkQ',
-    resumenClase: `
-<p>El evangelio es el fundamento de todo el discipulado cristiano. Antes de avanzar en cualquier otra doctrina, es necesario entender con precisión qué es, qué no es, y cómo se recibe, porque un evangelio mal entendido produce una fe mal construida.</p>
-
-<p><strong>1. El problema.</strong> Todo ser humano está separado de Dios por el pecado y no puede salvarse a sí mismo. La paga del pecado es muerte, y ningún esfuerzo moral, religioso o ritual puede resolver esa deuda. Sin entender el diagnóstico, el evangelio no tiene sentido.</p>
-
-<p><strong>2. El evangelio.</strong> Es la buena noticia de un evento histórico: Jesucristo murió por nuestros pecados, fue sepultado y resucitó al tercer día. No es una filosofía, un sistema de principios ni una invitación a mejorar. Es el anuncio de lo que Dios ya hizo para restaurar lo que el pecado rompió.</p>
-
-<p><strong>3. La respuesta.</strong> El evangelio no se obedece como una ley, se recibe como una noticia. La fe es la mano abierta con la que se recibe lo que Cristo consumó. Esa misma fe es la que sostiene la vida cristiana cada día, y la que impulsa a compartir estas buenas noticias con otros.</p>
-
-<p>La diferencia entre el verdadero evangelio y cualquier otra religión es esta: no trata de lo que nosotros hacemos para llegar a Dios, sino de lo que Dios hizo para que pudiéramos llegar a él.</p>
-    `,
-    guiaLider: `
-<p>Estas preguntas están diseñadas para abrir conversación honesta, no para producir respuestas correctas. Dale espacio al grupo para pensar en voz alta.</p>
-
-<h3>Pregunta 1</h3>
-<p>El evangelio se define como la noticia de algo que ya ocurrió, no un consejo, no una filosofía, no un sistema de superación personal. La mayoría de los sistemas religiosos colocan el peso de la salvación en lo que la persona hace. El evangelio coloca el peso completamente en lo que Cristo ya hizo.</p>
-<p><em>¿En qué área de tu vida cotidiana sigues operando como si tu aceptación ante Dios dependiera de tu rendimiento, tu consistencia, tu asistencia a la iglesia o tu historial moral? ¿Qué cambiaría esta semana si genuinamente creyeras que tu posición ante Dios se basa completamente en lo que Cristo hizo y no en lo que tú haces?</em></p>
-
-<h3>Pregunta 2</h3>
-<p>Este estudio dice que las buenas noticias solo tienen sentido cuando entiendes el diagnóstico, porque sin saber que estás enfermo, la cura es irrelevante. Muchas personas han crecido en la iglesia escuchando el evangelio sin nunca haber confrontado genuinamente el peso de su propio pecado y su incapacidad de salvarse a sí mismas.</p>
-<p><em>¿Has tenido alguna vez un momento real de "no puedo salvarme", no como una declaración teológica con la que estás de acuerdo sino como una realidad vivida que sentiste de verdad? Si no lo has tenido, ¿qué te impide sentarte honestamente con esa verdad? Y si lo has tenido, ¿cómo ha moldeado ese momento la manera en que te relacionas con el evangelio ahora?</em></p>
-
-<h3>Pregunta 3</h3>
-<p>El evangelio debe ser recibido por fe y también vivido por fe cada día, no solo en el momento de la conversión. D.A. Carson dice que es una noticia que debe ser proclamada. Pero no puedes proclamar lo que no has internalizado.</p>
-<p><em>Piensa en las personas de tu vida inmediata, familia, amigos, compañeros de trabajo, que nunca han escuchado una presentación clara del evangelio. ¿Cuál es el obstáculo honesto que te impide compartirlo con ellas? ¿Es que no estás completamente convencido de que sea verdad, que no sabes cómo explicarlo, o que tienes miedo de la reacción? Nombrar el obstáculo real es el primer paso para removerlo.</em></p>
-    `,
-    devocional: `
-<p>Estos no son sugerencias opcionales. Son un sistema simple que puedes añadir a tu semana comenzando hoy.</p>
-
-<h3>Día 1 — Examen honesto</h3>
-<p>Responde la pregunta de Lloyd-Jones por escrito. No en voz alta ni en tu cabeza, sino por escrito: <em>"¿Soy cristiano? ¿Cómo lo sé?"</em> Escribe tu respuesta honesta. Si tu respuesta involucra algo que tú haces, dedica 15 minutos a leer Romanos 3:21-26 lentamente y pregúntate qué dice ese texto sobre quién realiza la obra de la justificación.</p>
-
-<h3>Día 2 — Estudia el diagnóstico</h3>
-<p>Lee Romanos 1:18 hasta 3:20 en una sola sesión. Este es el argumento de Pablo de que todo ser humano está sin excusa ante Dios. Léelo como si nunca lo hubieras leído antes. ¿Qué dice sobre tu condición aparte del evangelio? Escribe una sola oración resumiendo lo que encontraste.</p>
-
-<h3>Día 3 — Estudia la solución</h3>
-<p>Lee Romanos 3:21 hasta 5:21 en una sola sesión, el mismo Pablo presentando ahora el evangelio como la respuesta al diagnóstico. Presta atención a lo que el texto dice que tú debes hacer y a lo que Cristo ya hizo. Anota la diferencia.</p>
-
-<h3>Día 4 — Investiga una pregunta</h3>
-<p>Elige la pregunta sobre Jesús que más te inquieta: su resurrección, su existencia histórica, la confiabilidad de los evangelios, lo que sea. Dedica 30 minutos a leer una fuente seria sobre esa pregunta. No evites la pregunta, porque el evangelio pide fe honesta, no fe ciega.</p>
-
-<h3>Día 5 — Identifica a una persona</h3>
-<p>Piensa en una persona de tu vida que no tiene una comprensión clara del evangelio. No tienes que hablar con ella esta semana, pero escribe su nombre. Ora por ella específicamente por nombre durante cinco minutos. Y pregúntate honestamente: ¿cuál es la única cosa que me impide comenzar una conversación con esta persona sobre lo que estoy aprendiendo?</p>
-
-<h3>Día 6 — Revisa y comparte</h3>
-<p>Revisa tus notas de la semana. Escribe un párrafo, con tus propias palabras y sin usar vocabulario religioso, explicando qué es el evangelio y por qué importa. Si no puedes explicarlo de manera sencilla, todavía no lo has internalizado completamente. Si puedes, envíale ese párrafo a alguien esta semana.</p>
-
-<h3>Día 7 — Descansa y recibe</h3>
-<p>El evangelio no es una lista de tareas. Toma un día simplemente para recibir. Lee Efesios 1:3-14 lentamente y deja que penetre en ti que cada bendición espiritual descrita allí ya es tuya en Cristo, no porque lo que tú hiciste, sino porque lo que él hizo.</p>
-    `,
+    lectura: [
+      {
+        "titulo": "Hay una pregunta que nadie debería contestar mal",
+        "html": "<p>Imagina que llevas años trabajando en una empresa. Conoces los procesos, sabes quiénes son tus compañeros, has estado en cientos de reuniones. Un día alguien nuevo llega y te pregunta: \"¿A qué se dedica esta empresa?\" Y tú... no sabes qué responder.</p>\n<p>Eso no debería pasar, pero pasa más de lo que creemos y no solo en empresas, sino en la iglesia.</p>\n<p>Martyn Lloyd-Jones, un gran pastor y predicador del siglo XX, tenía una pregunta de diagnóstico que hacía a las personas para saber si entendían el evangelio. Era simple: <em>\"¿Eres cristiano?\"</em> solo eso.</p>\n<p>Y la respuesta revelaba todo.</p>\n<p>La mayoría respondía algo como: <em>\"Trato de serlo.\"</em> Y esa respuesta, aunque honesta y humilde, demostraba que no habían entendido el evangelio, porque el evangelio no es algo que tú haces sino algo que alguien hizo por ti.</p>\n<p>Alguien puede llevar años en la iglesia, haber escuchado cientos de sermones, conocer los libros de la Biblia de memoria, y aún así tener una comprensión deforme de lo más fundamental. Pablo lo advirtió con urgencia a las iglesias de Galacia:</p>\n<blockquote>\"Estoy maravillado de que tan pronto os hayáis alejado del que os llamó por la gracia de Cristo, para seguir un evangelio diferente. No que haya otro, sino que hay algunos que os perturban y quieren pervertir el evangelio de Cristo.\" <em>Gálatas 1:6-7</em></blockquote>\n<p>No es que existan evangelios alternos, es que existe el evangelio y distorsiones de él. Entonces vale la pena preguntarse: ¿Estoy creyendo el verdadero evangelio?</p>"
+      },
+      {
+        "titulo": "La palabra que cambió el mundo",
+        "html": "<p><em>Evangelio</em> no era originalmente una palabra religiosa. En el mundo griego, <em>euangelion</em> significaba simplemente <em>buenas noticias</em>, el anuncio de algo grande que había ocurrido, victorias militares, nacimientos de reyes, proclamaciones de paz. Era el tipo de noticia que hacía que la gente saliera a las calles.</p>\n<p>Cuando los ángeles anunciaron el nacimiento de Jesús, usaron exactamente esa palabra:</p>\n<blockquote>\"Pero el ángel les dijo: No temáis; porque he aquí os doy nuevas de gran gozo, que será para todo el pueblo: que os ha nacido hoy, en la ciudad de David, un Salvador, que es CRISTO el Señor.\" <em>Lucas 2:10-11</em></blockquote>\n<p>Y aquí está la primera pregunta que vale la pena hacerse: ¿cuándo fue la última vez que el evangelio te sonó como una noticia extraordinaria? No como una doctrina que conoces, no como una religión que practicas, sino como una noticia que cambia todo.</p>\n<p>Porque si no te suena así, puede ser por una razón importante y vamos a llegar a eso en un momento.</p>"
+      },
+      {
+        "titulo": "El problema con las buenas noticias",
+        "html": "<p>Aquí está el asunto: las buenas noticias solo son buenas si entiendes el problema que resuelven.</p>\n<p>Tim Keller lo ilustraba así: imagina que tu casa se está incendiando, estás atrapado adentro, el humo te ciega, no puedes salir a segundos de morir y de repente un vecino entra, arriesga su vida, te saca, pero en el proceso muere. En ese momento entiendes perfectamente lo que hizo, entiendes el sacrificio, el amor, el costo.</p>\n<p>Ahora imagina la misma escena, tu casa se está incendiando, pero tú estás afuera, a salvo y de la nada tu vecino entra a tu casa y muere. Estarías desconcertado, no tiene sentido, ¿por qué entró? No tenía porque hacerlo, fue innecesario.</p>\n<p>La diferencia no está en la muerte del vecino, en ambos casos muere, pero en uno de esos ejemplos lo hizo para salvarte.</p>\n<p><em>\"Si alguien te dice: encontramos la cura. Solo serían buenas noticias si sabes que estás enfermo.\"</em></p>\n<p>El evangelio funciona igual, solo cobra sentido cuando entiendes que estás en un camino cuyo fin es la muerte eterna, que no puedes hacer nada para cambiar eso por tu cuenta, y que necesitas un Salvador. Hasta que no llegues a ese punto, hasta que no digas <em>\"no puedo salvarme\"</em>, el evangelio va a sonar como información interesante pero no urgente.</p>\n<p>Este es el punto que todas las religiones del mundo ignoran: todas tienen en común que te dicen qué hacer para llegar a Dios. Reglas, mandamientos, filosofías, iluminación. El cristianismo es radicalmente diferente. No es acerca de lo que tú haces para llegar a Dios, es acerca de lo que Dios hizo para que tú pudieras llegar a Él.</p>\n<p>Pablo lo resume así:</p>\n<blockquote>\"Porque no me avergüenzo del evangelio, porque es poder de Dios para salvación a todo aquel que cree; al judío primeramente, y también al griego.\" <em>Romanos 1:16</em></blockquote>\n<p>No es información sobre Dios, es poder de Dios. Cuando el evangelio es comunicado y creído, algo ocurre, una persona recibe salvación.</p>"
+      },
+      {
+        "titulo": "¿Qué haces con las noticias?",
+        "html": "<p>Entonces llegamos a la pregunta práctica: si el evangelio son noticias, ¿qué se supone que debes hacer con ellas?</p>\n<p>D.A. Carson, uno de los teólogos evangélicos más respetados del mundo, hace una observación que parece obvia pero que lo cambia todo: <em>\"Porque el evangelio son noticias, buenas noticias, deben de ser proclamadas. Eso es lo que se hace con las noticias. No son éticas para ser debatidas, ni principios que deben ser admirados, ni tampoco un sistema de teología que tiene que ser estructurado y sistematizado. Son noticias, buenas noticias, por ende deben de ser proclamadas.\"</em></p>\n<p>Las noticias se reciben y se comparten. No se obedecen como mandamientos, al menos no en su primera instancia. Primero las escuchas, determinas si son ciertas, y respondes a ellas.</p>\n<p>Y la respuesta que el evangelio pide es fe:</p>\n<blockquote>\"Mas a todos los que le recibieron, a los que creen en su nombre, les dio potestad de ser hechos hijos de Dios.\" <em>Juan 1:12</em></blockquote>\n<blockquote>\"Que si confesares con tu boca que Jesús es el Señor, y creyeres en tu corazón que Dios le levantó de los muertos, serás salvo.\" <em>Romanos 10:9</em></blockquote>\n<p>Recibir es creer. La respuesta a las buenas noticias es solamente recibir, creer, tener fe.</p>\n<p>Pero aquí viene algo que muchos no esperan: el evangelio no es solo el punto de partida de la vida cristiana. No es el ABC que aprendes y luego dejas atrás para cosas más avanzadas. Pablo dice en Romanos 1:17:</p>\n<blockquote>\"Porque en el evangelio la justicia de Dios se revela por fe y para fe, como está escrito: Mas el justo por la fe vivirá.\" <em>Romanos 1:17</em></blockquote>\n<p>El justo vive por fe desde el principio hasta el final. El evangelio es la A, la Z y todo lo que hay en medio. Se recibe por fe y se vive por fe.</p>\n<p>Como alguien que recibió la cura de una enfermedad terminal: no solo recibe la noticia con alivio y sigue igual, toma el tratamiento. Hay un antes y un después real, verificable, en su vida. Así opera el evangelio, salva y transforma.</p>"
+      },
+      {
+        "titulo": "Una última pregunta",
+        "html": "<p>Jesús advirtió algo inquietante:</p>\n<blockquote>\"No todo el que me dice: Señor, Señor, entrará en el reino de los cielos, sino el que hace la voluntad de mi Padre que está en los cielos. Muchos me dirán en aquel día: Señor, Señor, ¿no profetizamos en tu nombre, y en tu nombre echamos fuera demonios, y en tu nombre hicimos muchos milagros? Y entonces les declararé: Nunca os conocí; apartaos de mí, hacedores de maldad.\" <em>Mateo 7:21-23</em></blockquote>\n<p>Es posible estar dentro de la iglesia, participar activamente, hacer cosas en el nombre de Jesús y no haber creído el verdadero evangelio.</p>\n<p>La pregunta no es si lo has escuchado. Es si lo has entendido, si lo has recibido, y si lo estás viviendo.</p>"
+      }
+    ],
+    versiculos: [
+      "Romanos 1:16-17, 10:9",
+      "Gálatas 1:6-7",
+      "Juan 1:12, 3:16",
+      "Marcos 1:14-15",
+      "Mateo 7:21-23",
+      "Lucas 2:10-11"
+    ],
+    preguntas: [
+      "Lloyd-Jones preguntaba <em>\"¿Eres cristiano?\"</em> para diagnosticar si alguien entendía el evangelio. ¿Cómo responderías tú esa pregunta hoy, y qué dice tu respuesta sobre cómo entiendes el evangelio?",
+      "La clase distingue entre \"lo que nosotros hacemos para llegar a Dios\" y \"lo que Dios hizo para que lleguemos a Él.\" ¿En qué áreas de tu vida cristiana todavía operas como si fuera lo primero?",
+      "Si el evangelio debe ser proclamado porque su naturaleza es la de una noticia, ¿cuándo fue la última vez que lo compartiste con alguien fuera de la iglesia, y qué te detuvo o te impulsó a hacerlo?"
+    ],
+    declaraciones: [
+      "El evangelio es la proclamación de un evento histórico, la vida, muerte y resurrección de Jesucristo, mediante el cual Dios ofrece salvación a toda persona que cree.",
+      "El evangelio no es lo que el ser humano hace para llegar a Dios, sino lo que Dios hizo para que el ser humano pudiera llegar a Él.",
+      "El evangelio sólo tiene sentido para quien reconoce su pecado, su incapacidad de salvarse, y su necesidad de un Salvador.",
+      "El evangelio se recibe por fe, creer es recibir. No se obedece como mandamiento en su primera instancia, sino que se recibe como noticia.",
+      "El evangelio no es el punto de partida de la vida cristiana que luego se supera, es el fundamento permanente desde el cual se vive toda la vida cristiana.",
+      "El evangelio, cuando es verdaderamente recibido, produce transformación, hay un antes y un después verificable en la vida del creyente.",
+      "El evangelio debe ser proclamado porque su naturaleza como noticia exige comunicación, las noticias se anuncian, no se guardan.",
+      "Existe un solo evangelio verdadero. Todo mensaje que añada condiciones humanas a la obra de Cristo o que reste la necesidad del arrepentimiento y la fe es una distorsión del evangelio."
+    ],
   },
   {
     slug: 'estudio-2',
@@ -435,460 +324,122 @@ export const LECCIONES: Leccion[] = [
     slug: 'estudio-3',
     numero: 3,
     modulo: 'fundamento',
-    titulo: '¿Cómo recibimos el evangelio? Parte I',
+    titulo: "¿Cómo recibimos el evangelio? Arrepentimiento",
     tags: ['evangelio', 'arrepentimiento', 'fe', 'humildad'],
     fecha: '2026-10-19',
-    resumen: 'Entender que el evangelio se recibe por medio del arrepentimiento y la fe, descubrir qué es el verdadero arrepentimiento y por qué las buenas noticias solo son buenas para quien sabe que las necesita.',
-    contenido: `
-<p style="font-style:italic;color:var(--text-muted);border-left:3px solid var(--border);padding:10px 16px;margin-bottom:32px"><strong>Propósito:</strong> Entender cómo se recibe el evangelio, por medio del arrepentimiento y la fe, y descubrir qué es el verdadero arrepentimiento, para que las buenas noticias dejen de ofendernos y se conviertan en buenas noticias para nosotros.</p>
-
-<h2>El problema: buenas noticias que ofenden</h2>
-
-<p>Hay una pregunta con la que vamos a comenzar. Guárdala, porque volveremos a ella al final:</p>
-
-<p><strong>¿Son las buenas noticias realmente buenas noticias para ti?</strong></p>
-
-<p>Parece una pregunta extraña. Si son buenas noticias, ¿cómo no van a serlo? Pero mira lo que ocurrió el día que Jesús predicó en su propio pueblo:</p>
-
-<blockquote>"Vino a Nazaret, donde se había criado; y en el día de reposo entró en la sinagoga, conforme a su costumbre, y se levantó a leer. Y se le dio el libro del profeta Isaías; y habiendo abierto el libro, halló el lugar donde estaba escrito: El Espíritu del Señor está sobre mí, Por cuanto me ha ungido para dar buenas nuevas a los pobres; Me ha enviado a sanar a los quebrantados de corazón; A pregonar libertad a los cautivos, Y vista a los ciegos; A poner en libertad a los oprimidos; A predicar el año agradable del Señor. Y enrollando el libro, lo dio al ministro, y se sentó; y los ojos de todos en la sinagoga estaban fijos en él. Y comenzó a decirles: Hoy se ha cumplido esta Escritura delante de vosotros." <em>Lucas 4:16-21</em></blockquote>
-
-<p>Al principio, todos estaban encantados. Pero pocos minutos después, esas mismas personas estaban tan llenas de ira que lo sacaron de la ciudad para despeñarlo desde un monte. La misma gente que se maravilló de sus palabras quiso matarlo. ¿Qué pasó en medio?</p>
-
-<p>Antes de responder, recordemos dónde estamos. En los estudios anteriores vimos qué es el evangelio. Cuando Jesús dice que fue ungido para dar <em>buenas nuevas</em>, usa la palabra griega <em>euangelízo</em>, anunciar buenas noticias. El evangelio son las buenas noticias que comunican el plan de salvación de Dios al mundo: Jesús vino a salvarnos.</p>
-
-<p>También vimos qué no es el evangelio. No es una religión de obras: no es legalismo, religiosidad ni moralismo. Y tampoco es una vida sin reglas: no es relativismo, antinomianismo ni irreligiosidad. El evangelio no es algo que nosotros hacemos, sino algo que fue hecho por nosotros.</p>
-
-<p>Ahora la pregunta es otra: si el evangelio es algo que fue hecho por nosotros, <strong>¿cómo lo recibimos?</strong></p>
-
-<h2>¿Cómo recibimos el evangelio? Arrepentimiento y fe</h2>
-
-<p>¿Qué haces con una noticia? La escuchas y respondes a ella. Lo primero es preguntarte si es cierta. Y la respuesta es sí, lo que Jesús hizo es verdad. Entonces la crees. Eso es la fe.</p>
-
-<blockquote>"Mas a todos los que le recibieron, a los que creen en su nombre, les dio potestad de ser hechos hijos de Dios." <em>Juan 1:12</em></blockquote>
-<blockquote>"Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna." <em>Juan 3:16</em></blockquote>
-<blockquote>"Que si confesares con tu boca que Jesús es el Señor, y creyeres en tu corazón que Dios le levantó de los muertos, serás salvo." <em>Romanos 10:9</em></blockquote>
-<blockquote>"Porque en el evangelio la justicia de Dios se revela por fe y para fe, como está escrito: Mas el justo por la fe vivirá." <em>Romanos 1:17</em></blockquote>
-
-<p>Fe es creer, confiar, descansar. Es recibir lo que Cristo ya hizo, apoyar todo tu peso sobre él.</p>
-
-<p>Pero, ¿y el arrepentimiento? Muchas veces hablamos de la fe como si fuera lo único, pero cuando Jesús comenzó a predicar, nunca separó las dos cosas:</p>
-
-<blockquote>"Jesús vino a Galilea predicando el evangelio del reino de Dios, diciendo: El tiempo se ha cumplido, y el reino de Dios se ha acercado; arrepentíos, y creed en el evangelio." <em>Marcos 1:14-15</em></blockquote>
-
-<p>El arrepentimiento y la fe van juntos. Son dos lados de la misma respuesta al evangelio.</p>
-
-<p><strong>Hasta que no haya arrepentimiento, no puede haber verdadera fe.</strong></p>
-
-<h2>Nazaret: los que no creyeron</h2>
-
-<p>Lucas 4 nos muestra a un grupo de personas que no creyeron. No tuvieron fe. Y no solo eso, hasta quisieron matar a Jesús. ¿Por qué no creyeron? Porque no se arrepintieron.</p>
-
-<p>Mira el contexto. Esto ocurrió en Nazaret, el pueblo donde Jesús se crió. Lo conocían. Lo habían visto crecer. Y al principio, les gustó lo que leyó y cómo lo explicó:</p>
-
-<blockquote>"Y todos daban buen testimonio de él, y estaban maravillados de las palabras de gracia que salían de su boca, y decían: ¿No es este el hijo de José?" <em>Lucas 4:22</em></blockquote>
-
-<p>Estaban dispuestos a creer. Entonces, ¿por qué no creyeron? Porque Jesús les explicó bien el evangelio, y eso los ofendió:</p>
-
-<blockquote>"Él les dijo: Sin duda me diréis este refrán: Médico, cúrate a ti mismo; de tantas cosas que hemos oído que se han hecho en Capernaum, haz también aquí en tu tierra. Y añadió: De cierto os digo, que ningún profeta es acepto en su propia tierra. Y en verdad os digo que muchas viudas había en Israel en los días de Elías, cuando el cielo fue cerrado por tres años y seis meses, y hubo una gran hambre en toda la tierra; pero a ninguna de ellas fue enviado Elías, sino a una mujer viuda en Sarepta de los Estados Sidón. Y muchos leprosos había en Israel en tiempo del profeta Eliseo; pero ninguno de ellos fue limpiado, sino Naamán el sirio. Al oír estas cosas, todos en la sinagoga se llenaron de ira; y levantándose, le echaron fuera de la ciudad, y le llevaron hasta la cumbre del monte sobre el cual estaba edificada la ciudad de ellos, para despeñarle. Mas él pasó por en medio de ellos, y se fue." <em>Lucas 4:23-30</em></blockquote>
-
-<p><strong>Las buenas noticias son buenas solo para quien sabe que está en malas noticias.</strong></p>
-
-<h2>Buenas noticias para quien sabe que las necesita</h2>
-
-<p>Si no reconoces tu condición, el evangelio te ofende. Vuelve a leer lo que Jesús leyó, pero esta vez pregúntate a quién está dirigido cada anuncio.</p>
-
-<p><em>"Me ha ungido para dar buenas nuevas a los pobres."</em> Si te crees rico, no son buenas noticias para ti.</p>
-
-<p><em>"Me ha enviado a sanar a los quebrantados de corazón."</em> Si crees que tu corazón no está roto, no son buenas noticias para ti.</p>
-
-<p><em>"A pregonar libertad a los cautivos."</em> Si crees que eres libre, no son buenas noticias para ti.</p>
-
-<p><em>"Y vista a los ciegos."</em> Si crees que puedes ver, no son buenas noticias para ti.</p>
-
-<p><em>"A poner en libertad a los oprimidos; a predicar el año agradable del Señor."</em> Es un año agradable solo para los que saben que no han vivido buenos años.</p>
-
-<p><strong>Esa es la esencia del arrepentimiento: reconocer que el anuncio es para ti, porque tú eres el pobre, el quebrantado, el cautivo y el ciego.</strong></p>
-
-<h2>¿Qué es el arrepentimiento?</h2>
-
-<p>Para muchos, la palabra arrepentimiento tiene una connotación negativa. Pensamos en sentirnos mal, culpables, condenados. Eso es parte, pero no es la historia completa.</p>
-
-<p>Mira la palabra que Jesús usó cuando dijo "arrepentíos". En griego es <em>metanoéo</em>, pensar diferente o después, reconsiderar. Arrepentimiento es pensar diferente después de experimentar algo, reconsiderar la manera en la que pensamos. Es renovar la mente. Es la manera en la que cambiamos.</p>
-
-<p>Entonces, ¿qué no es el arrepentimiento? Sentirnos mal sin renovar la mente. Puedes llorar, sentir culpa y prometer que no lo vas a volver a hacer, y aun así no haberte arrepentido. El verdadero arrepentimiento es renovar la mente.</p>
-
-<p>¿Y en qué renovamos nuestra mente específicamente? En reconocer nuestra condición delante de Dios: somos pobres, pecadores que necesitan urgentemente un Salvador.</p>
-
-<p>Eso es exactamente lo que Nazaret no reconoció. Se creían ricos, gente de bien, clase media espiritual. Y aquí está lo sorprendente: Jesús supo que no habían entendido su mensaje precisamente porque el mensaje les gustó. Por eso no se quedó en el aplauso. Fue como si les dijera: <em>"Definamos quién es el pobre. Ningún profeta es acepto en su propia tierra. ¿Recuerdan a la viuda y a Naamán?"</em></p>
-
-<blockquote>"Bienaventurados los pobres en espíritu, porque de ellos es el reino de los cielos." <em>Mateo 5:3</em></blockquote>
-
-<p>La palabra que Jesús usa para pobre es <em>ptōchós</em>, pobre, mendigo. No alguien con poco, sino alguien que no tiene nada y depende por completo de lo que otro le dé.</p>
-
-<p>La viuda de Sarepta y Naamán el sirio eran pobres espirituales. Ninguno tenía lo que se necesita para llegar a Dios. Eran gentiles, excluidos de las promesas de Dios, paganos, pecadores. Y precisamente a ellos fue enviada la gracia. Con estos dos ejemplos Jesús estaba diciendo: <em>"Yo soy buenas noticias para el que sabe que me necesita."</em></p>
-
-<p>Mira cómo se ve esto en el hijo pródigo:</p>
-
-<blockquote>"Y volviendo en sí, dijo: ¡Cuántos jornaleros en casa de mi padre tienen abundancia de pan, y yo aquí perezco de hambre! Me levantaré e iré a mi padre, y le diré: Padre, he pecado contra el cielo y contra ti. Ya no soy digno de ser llamado tu hijo; hazme como a uno de tus jornaleros." <em>Lucas 15:17-19</em></blockquote>
-
-<p><em>"Volviendo en sí."</em> Eso es <em>metanoéo</em>. Pensó diferente después de experimentar el hambre. Se arrepintió.</p>
-
-<p><strong>No todos los perdidos reciben gracia, solo los que reconocen su condición de pecado.</strong></p>
-
-<h2>¿Quién no se arrepiente?</h2>
-
-<p>El orgulloso. El más grande impedimento para llegar a Dios no son nuestros pecados, sino la confianza en nuestra propia justicia. Es la negación de nuestra condición y de nuestra necesidad de salvación. Un corazón no arrepentido es un corazón orgulloso.</p>
-
-<p>Por eso Nazaret se llenó de ira. No porque Jesús les hablara de pecado, sino porque les dijo que ellos también eran pobres, tan necesitados como una viuda pagana y un leproso extranjero.</p>
-
-<p><strong>El arrepentimiento es el acto de humildad que inicia la fe.</strong></p>
-
-<h2>¿Cómo me puedo arrepentir?</h2>
-
-<p>Si el arrepentimiento es tan importante, la pregunta práctica es cómo se ve. La historia del hijo pródigo nos da tres pasos.</p>
-
-<h3>Paso 1: Reconoce tu condición</h3>
-
-<p>Eres un pecador, culpable, pobre espiritual. Esto es más difícil de lo que parece, porque la mayoría pensamos que estamos bien como estamos. El rey David pecó gravemente con Betsabé y contra Urías, y aun así estaba ciego a su propio pecado, hasta que el profeta Natán le contó la historia de un hombre rico que le robó la única oveja a un pobre. David se indignó contra ese hombre, sin darse cuenta de que estaba hablando de sí mismo.</p>
-
-<blockquote>"Entonces dijo Natán a David: Tú eres aquel hombre." <em>2 Samuel 12:7</em></blockquote>
-
-<p>Además, este es un mensaje opuesto a la cultura. El arrepentimiento dice: <em>si quieres cambiar, tienes que reconocer lo que está mal en ti, tienes pecado.</em> El mundo dice: <em>no dejes que nadie te diga lo que tienes que hacer, eres perfecto así como eres, no necesitas cambiar, necesitas aceptarte y tener amor propio, y si alguien te dice lo contrario es porque no te ama, porque no te acepta.</em></p>
-
-<p>El arrepentimiento nos lleva a aceptar la verdad sobre nosotros. No somos perfectos. Hay pecado en nosotros, y nos está dañando a nosotros y a otros. Es nuestra condición humana.</p>
-
-<p>Agustín de Hipona cuenta que cuando tenía dieciséis años robó unas peras con sus amigos. Años después se preguntó por qué lo hizo. No tenía hambre, ni siquiera le gustaban esas peras, y terminaron tirándolas. Su conclusión fue honesta y terrible: <em>"Mi placer estaba en hacer algo que era prohibido."</em> Eso es el pecado en el corazón humano. Y eso es lo que el hijo pródigo reconoció cuando dijo: <em>"Ya no soy digno de ser llamado tu hijo."</em></p>
-
-<p><strong>Reconocer tu condición es dejar de pensar que estás bien como estás.</strong></p>
-
-<h3>Paso 2: Confiesa tu pecado</h3>
-
-<p><em>"Padre, he pecado contra el cielo y contra ti."</em> Confesar es reconocer y tomar responsabilidad. Es pedir perdón sin excusas. Mira cómo lo hace David cuando por fin ve su pecado:</p>
-
-<blockquote>"Lávame más y más de mi maldad, Y límpiame de mi pecado. Porque yo reconozco mis rebeliones, Y mi pecado está siempre delante de mí." <em>Salmo 51:2-3</em></blockquote>
-
-<p>Fíjate en las palabras: <em>mi</em> maldad, <em>mi</em> pecado, <em>yo</em> reconozco. Tomar responsabilidad tiene algunas trampas que vale la pena nombrar.</p>
-
-<p>Tomar responsabilidad no es minimizar la ofensa: <em>"No es para tanto, fue sin querer, por todo se ofenden."</em></p>
-
-<p>Tomar responsabilidad no es relativizar la ofensa: <em>"Es normal hacer esto, todos lo hacen."</em></p>
-
-<p>Tomar responsabilidad no es justificar la ofensa: <em>"Tengo necesidades y lo hice por necesidad, es que tú no entiendes lo que he vivido, no es fácil ser yo."</em></p>
-
-<p>Tomar responsabilidad es aceptar las consecuencias. El hijo pródigo dice: <em>"Hazme como a uno de tus jornaleros."</em> Está pidiendo misericordia, pero al mismo tiempo está dispuesto a trabajar. Es como decir: <em>"Sí, soy culpable, y acepto las consecuencias de mis acciones."</em> Ese es un corazón que está encaminado a cambiar.</p>
-
-<p><strong>Confesar nuestro pecado es admitir lo que está mal en nosotros y tomar responsabilidad de nuestras acciones.</strong></p>
-
-<h3>Paso 3: Renuncia al pecado detrás del pecado</h3>
-
-<p>Vuelve a leer la confesión del hijo: <em>"Padre, he pecado contra el cielo y contra ti."</em> Primero contra el cielo. David dice algo todavía más fuerte:</p>
-
-<blockquote>"Contra ti, contra ti solo he pecado, Y he hecho lo malo delante de tus ojos." <em>Salmo 51:4</em></blockquote>
-
-<p>¿Acaso David no pecó también contra Urías y contra Betsabé? Claro que sí. Pero David entendió algo más profundo. Como dijo Martín Lutero: <em>"No podemos pecar contra otros si al mismo tiempo no estamos pecando en contra de Dios."</em></p>
-
-<p>Piensa en la mentira. Si miento, es para obtener un beneficio para mí. En ese momento me amo a mí mismo más que a Dios. Ese es el verdadero pecado detrás de cada pecado: no amamos a Dios más que a otras cosas. No pecamos solamente contra su ley, pecamos contra él.</p>
-
-<p>Por eso muchas veces nuestro arrepentimiento es falso. Nos "arrepentimos" por las consecuencias, pero no por la relación que estamos dañando. Nos duele que nos descubrieron, que perdimos algo, que alguien se alejó. Nos arrepentimos por nosotros. Pero el pecado es, antes que todo, una ofensa en contra de Dios.</p>
-
-<p><strong>Renunciamos al pecado detrás del pecado cuando reconocemos que la ofensa es en contra de Dios.</strong></p>
-
-<h2>El arrepentimiento nos lleva al amor del Padre</h2>
-
-<p>Entender el evangelio nos lleva al verdadero arrepentimiento, y el verdadero arrepentimiento nos lleva a la verdadera fe. Pero no te equivoques: el hijo no experimentó el evangelio cuando se arrepintió, sino cuando vio el amor del Padre.</p>
-
-<blockquote>"Y levantándose, vino a su padre. Y cuando aún estaba lejos, lo vio su padre, y fue movido a misericordia, y corrió, y se echó sobre su cuello, y le besó." <em>Lucas 15:20</em></blockquote>
-
-<p><strong>No es acerca de nuestro arrepentimiento. Es acerca del amor del Padre.</strong></p>
-
-<h2>Lo que Jesús no leyó</h2>
-
-<p>Hay un detalle en Nazaret que es fácil pasar por alto. Jesús no leyó el texto completo, y lo hizo a propósito:</p>
-
-<blockquote>"A predicar el año agradable del Señor. Y enrollando el libro, lo dio al ministro, y se sentó; y los ojos de todos en la sinagoga estaban fijos en él." <em>Lucas 4:19-20</em></blockquote>
-
-<p>Se detuvo a mitad de la frase. Lo que faltaba era esto:</p>
-
-<blockquote>"A proclamar el año de la buena voluntad de Jehová, y el día de venganza del Dios nuestro." <em>Isaías 61:2</em></blockquote>
-
-<p>Jesús enrolló el libro antes de leer "el día de venganza". Es como si dijera: <em>"No he venido a tomar venganza, aún."</em> El día de la venganza vendrá. Habrá juicio al final de los tiempos, y Jesús regresará y traerá juicio sobre las naciones. Pero hoy estamos en la temporada de la gracia, de las buenas nuevas.</p>
-
-<p>¿Y por qué puede haber una temporada de gracia? Ese es el evangelio: Jesús vino a recibir la venganza de Dios sobre sí mismo. Hizo un intercambio sustituto en la cruz por nosotros. Recibió el juicio de Dios para poder darnos gracia, para que estas sean buenas nuevas para nosotros.</p>
-
-<h2>Antes de terminar: responde la pregunta</h2>
-
-<p>Al comienzo te pedimos que guardaras una pregunta. Aquí está de nuevo:</p>
-
-<p><strong>¿Son las buenas noticias realmente buenas noticias para ti?</strong></p>
-
-<p>Si te crees rico, sano, libre y con buena vista, el evangelio te va a parecer bonito por un momento, como a Nazaret, y después te va a ofender. Pero si hoy reconoces que eres el pobre, el quebrantado, el cautivo y el ciego, entonces Jesús es exactamente la noticia que necesitas.</p>
-
-<p>Todavía estamos en el año agradable del Señor. Vuelve en ti, reconoce tu condición, confiesa tu pecado, renuncia al pecado detrás del pecado, y corre a los brazos del Padre que ya viene corriendo hacia ti.</p>
-
-<p><strong>El evangelio es buenas noticias para el que sabe que lo necesita.</strong></p>
-    `,
+    resumen: "El arrepentimiento es inseparable de la fe para recibir el evangelio. Qué no es, sus tres movimientos reales, y por qué lleva al amor del Padre.",
     autor: 'Stevan Marroquin',
     youtubeUrl: 'https://www.youtube.com/watch?v=kKS_lBXht5M',
     spotifyUrl: 'https://open.spotify.com/episode/7gaFKt5M9XI4oPLc8IWdPI',
-    resumenClase: `
-<p>El evangelio es algo que fue hecho por nosotros, y se recibe por medio del arrepentimiento y la fe. Jesús nunca separó las dos cosas: "arrepentíos, y creed en el evangelio." En Nazaret, la misma gente que se maravilló de sus palabras quiso matarlo, porque nunca reconoció que el mensaje era para ellos.</p>
-
-<p><strong>1. Buenas noticias para los pobres.</strong> Las buenas noticias solo son buenas para quien sabe que está en malas noticias. Jesús vino para los pobres, los quebrantados, los cautivos y los ciegos. Si no reconoces tu condición, el evangelio te ofende. El mayor impedimento para llegar a Dios es la confianza en nuestra propia justicia.</p>
-
-<p><strong>2. Qué es el arrepentimiento.</strong> La palabra griega <em>metanoéo</em> significa pensar diferente, reconsiderar, renovar la mente. No es solo sentirse mal, es reconocer nuestra condición delante de Dios: somos pobres, pecadores que necesitan urgentemente un Salvador. Es el acto de humildad que inicia la fe.</p>
-
-<p><strong>3. Cómo arrepentirnos.</strong> Como el hijo pródigo, reconocemos nuestra condición, confesamos nuestro pecado tomando responsabilidad sin minimizarlo, relativizarlo ni justificarlo, y renunciamos al pecado detrás del pecado, reconociendo que toda ofensa es primero contra Dios.</p>
-
-<p>Pero el hijo no experimentó el evangelio cuando se arrepintió, sino cuando vio el amor del Padre. Jesús dejó de leer antes del "día de venganza" porque vino a recibir esa venganza sobre sí mismo en la cruz. Hoy estamos en la temporada de la gracia.</p>
-    `,
-    guiaLider: `
-<p>Estas preguntas buscan que cada persona se vea a sí misma en Nazaret y en el hijo pródigo, no que señale a otros. Dale espacio al grupo para responder con honestidad.</p>
-
-<h3>Pregunta 1</h3>
-<p>La gente de Nazaret se maravilló de las palabras de Jesús, y minutos después quiso matarlo. Jesús supo que no habían entendido su mensaje precisamente porque les gustó. Las buenas noticias solo son buenas para quien sabe que está en malas noticias.</p>
-<p><em>¿En qué área de tu vida te consideras "rico", alguien que está bien y no necesita mucho de Dios? ¿Cuándo fue la última vez que el evangelio te incomodó en lugar de solo agradarte, y qué revela eso sobre cómo te ves a ti mismo?</em></p>
-
-<h3>Pregunta 2</h3>
-<p>El arrepentimiento no es solo sentirse mal, es <em>metanoéo</em>, renovar la mente. Y confesar es tomar responsabilidad sin minimizar ("no es para tanto"), relativizar ("todos lo hacen") ni justificar ("no entiendes lo que he vivido").</p>
-<p><em>¿Cuál de estas tres excusas usas con más frecuencia cuando fallas? Piensa en un pecado concreto de tu vida: ¿te has sentido mal por él sin realmente cambiar tu manera de pensar? ¿Qué significaría tomar responsabilidad completa, incluyendo las consecuencias?</em></p>
-
-<h3>Pregunta 3</h3>
-<p>Muchas veces nos "arrepentimos" por las consecuencias y no por la relación que dañamos. David dijo: "Contra ti, contra ti solo he pecado." Detrás de cada pecado está el pecado de amar algo más que a Dios. Y al final, el hijo no experimentó el evangelio cuando se arrepintió, sino cuando vio al Padre correr hacia él.</p>
-<p><em>Piensa en la última vez que te arrepentiste de algo. ¿Te dolió más lo que perdiste o el daño a tu relación con Dios? ¿Qué cosa estabas amando más que a él en ese momento? ¿Cómo cambia tu manera de arrepentirte saber que el Padre ya viene corriendo hacia ti?</em></p>
-    `,
-    devocional: `
-<p>Esta semana vas a recorrer el camino del hijo pródigo, de volver en ti a los brazos del Padre. Cada día tiene una sola tarea concreta.</p>
-
-<h3>Día 1: Lee lo que pasó en Nazaret</h3>
-<p>Lee Lucas 4:14-30 en una sola sesión, despacio. Marca el momento exacto en que la admiración se convierte en ira. Luego escribe una oración respondiendo: ¿qué dijo Jesús que los ofendió tanto, y por qué crees que les dolió?</p>
-
-<h3>Día 2: ¿Para quién son las buenas noticias?</h3>
-<p>Lee Lucas 4:18-19 y escribe las cinco descripciones: pobres, quebrantados de corazón, cautivos, ciegos, oprimidos. Junto a cada una, escribe con honestidad un área concreta de tu vida en la que esa descripción es verdad de ti. Si te cuesta encontrarla, pregúntate si te estás viendo como rico.</p>
-
-<h3>Día 3: Reconoce tu condición</h3>
-<p>Lee 2 Samuel 12:1-13. David se indignó contra el hombre de la historia sin ver que era él mismo. Pídele a Dios que te muestre un pecado al que te has vuelto ciego. Escríbelo sin adornos, con la misma claridad con la que Natán le habló a David: "Tú eres aquel hombre."</p>
-
-<h3>Día 4: Confiesa sin excusas</h3>
-<p>Lee el Salmo 51 completo. Toma el pecado que escribiste ayer y redacta una confesión a Dios usando las palabras "mi" y "yo", como David. Revisa lo que escribiste: si encuentras alguna frase que minimiza, relativiza o justifica, táchala y vuelve a escribirla.</p>
-
-<h3>Día 5: Encuentra el pecado detrás del pecado</h3>
-<p>Mira de nuevo ese pecado y pregúntate: ¿qué estaba amando más que a Dios cuando lo hice? Comodidad, aprobación, control, placer, mi imagen. Escribe una oración nombrándolo. Luego lee Lucas 15:11-19 y fíjate que el hijo dice primero "contra el cielo" y después "contra ti".</p>
-
-<h3>Día 6: Mira al Padre</h3>
-<p>Lee Lucas 15:20-24. Lee el versículo 20 tres veces y fíjate en cada verbo del padre: lo vio, fue movido a misericordia, corrió, se echó sobre su cuello, le besó. Escribe un párrafo sobre lo que significa que tu arrepentimiento no es lo que te salva, sino el amor del Padre que corre hacia ti. Ora dándole gracias por nombre por la gracia que recibiste.</p>
-
-<h3>Día 7: Descansa en la temporada de gracia</h3>
-<p>Lee Romanos 8:1-4 y 8:31-39 lentamente, sin prisa y sin tareas. Jesús enrolló el libro antes del día de venganza porque él iba a recibir esa venganza en tu lugar. Deja que penetre en ti la primera frase: "Ninguna condenación hay para los que están en Cristo Jesús." Hoy simplemente descansa en eso.</p>
-    `,
+    lectura: [
+      {
+        "titulo": "El problema con el falso arrepentimiento",
+        "html": "<p>¿Has notado, que en la mayoría de casos de infidelidad, la persona que engaña se \"arrepiente\" y pide perdón usualmente solo por que la atraparon, y no necesariamente porque se dio cuenta que estaba dañando a la otra persona y lo que estaba haciendo estaba mal?</p>\n<p>Confiesan su error porque fueron descubiertos, pero casi nunca confiesan su error cuando aún no han sido descubiertos.</p>\n<p>Eso no es arrepentimiento.</p>\n<p>Eso es un falso arrepentimiento, en esencia es un arrepentimiento egoísta, porque es sentirse mal únicamente por las consecuencias negativas que se están experimentando, te arrepientes solo porque es inconveniente para ti, pero cuando aún no tenías consecuencias, no te <em>\"arrepientes\"</em>.</p>\n<blockquote>\"Diciendo: El tiempo se ha cumplido, y el reino de Dios se ha acercado; arrepentíos, y creed en el evangelio.\" <em>Marcos 1:15</em></blockquote>\n<p>El arrepentimiento es un componente indispensable para recibir el evangelio, inseparable de la fe, si queremos entender cómo se recibe el evangelio, tenemos que entender qué es verdadero arrepentimiento.</p>"
+      },
+      {
+        "titulo": "El día que el evangelio ofendió a su audiencia",
+        "html": "<p>Jesús volvía a su ciudad natal, ya era conocido, su fama se había extendido. Se levantó a leer en la sinagoga y eligió Isaías 61: <em>buenas noticias para los pobres, libertad para los cautivos, vista para los ciegos.</em> La gente reaccionó bien.</p>\n<blockquote>\"Y todos daban buen testimonio de él, y estaban maravillados de las palabras de gracia que salían de su boca, y decían: ¿No es este el hijo de José?\" <em>Lucas 4:22</em></blockquote>\n<p>Parecía ir bien, hasta que Jesús siguió hablando.</p>\n<p>Les recordó dos historias del Antiguo Testamento: Elías fue enviado no a las viudas de Israel, sino a una viuda gentil en Sarepta. Eliseo sanó no a los leprosos de Israel, sino a Naamán el sirio. Y al oír esto, el texto dice algo sorprendente:</p>\n<blockquote>\"Al oír estas cosas, todos en la sinagoga se llenaron de ira; y levantándose, le echaron fuera de la ciudad, y le llevaron hasta la cumbre del monte sobre el cual estaba edificada la ciudad de ellos, para despeñarle.\" <em>Lucas 4:28-29</em></blockquote>\n<p>¿Qué pasó? ¿Cómo se pasa de admiración a intento de asesinato en unos minutos?</p>\n<p>Jesús sabía que no habían entendido el mensaje, precisamente porque les había gustado. Cuando el evangelio se escucha como algo que ya tenemos, como confirmación de nuestra posición, no ha llegado todavía. Jesús les estaba diciendo: <em>las buenas noticias son buenas para el que sabe que está en malas noticias.</em></p>\n<p>Lee de nuevo las líneas de Isaías que Jesús leyó: <em>buenas noticias para los pobres, sanidad para los quebrantados de corazón, libertad para los cautivos, vista para los ciegos.</em></p>\n<p>¿Qué pasa si no te crees pobre? No son buenas noticias. ¿Qué pasa si no crees que tu corazón está roto? No son buenas noticias. ¿Y si crees que ya puedes ver? La oferta de visión te parece un insulto.</p>\n<p>Nazaret escuchó el evangelio y se sintió excluida, porque nadie en esa sinagoga estaba dispuesto a ser el pobre, el ciego, el cautivo.</p>\n<p>Esa disposición tiene un nombre: arrepentimiento.</p>"
+      },
+      {
+        "titulo": "Lo que arrepentimiento no significa",
+        "html": "<p>La palabra carga una connotación casi exclusivamente emocional, sentirse mal, culpable, condenado, llanto, remordimiento, vergüenza.</p>\n<p>Todo eso puede ser parte del proceso, pero no es la definición completa.</p>\n<p>La palabra raíz en griego es <em>metanoia</em>, literalmente, pensar diferente, pensar después, reconsiderar, renovar la mente. No es un estado de ánimo sino un cambio de perspectiva sobre la realidad. Es lo que le pasó al hijo pródigo cuando <em>\"volvió en sí\"</em>: no que sintió más culpa, sino que vio con claridad lo que era cierto desde antes, que estaba pereciendo de hambre mientras en casa de su padre había abundancia.</p>\n<p><strong>El verdadero arrepentimiento es cambiar de opinión sobre ti mismo delante de Dios.</strong></p>\n<p>Y eso tiene tres movimientos concretos.</p>"
+      },
+      {
+        "titulo": "Tres movimientos del arrepentimiento real",
+        "html": "<h3>Primero: reconocer tu condición</h3>\n<p>El rey David pasó meses sin ver su pecado después de cometer adulterio y ordenar un asesinato. Necesitó que el profeta Natán lo confrontara.</p>\n<p>La mayoría de nosotros vivimos en ese estado, convencidos de que estamos bien como estamos. El mensaje de la cultura lo refuerza: <em>no dejes que nadie te diga lo que tienes que hacer, eres perfecto tal como eres, si alguien señala lo que está mal en ti es porque no te ama.</em> El arrepentimiento dice exactamente lo contrario: hay algo real que está mal en ti, está dañando a otros y te está dañando a ti, y verlo con claridad es el primer paso para que algo cambie.</p>\n<p>San Agustín lo entendió, haciendo retrospección de su vida cuenta que a los 16 años robó unas peras con sus amigos, lo extraño fue que no tenía hambre y no le gustaban las peras, de hecho las tiraron. Años después se preguntó por qué lo había hecho y su conclusión fue: <em>\"mi placer estaba en hacer algo que era prohibido.\"</em></p>\n<p>No fue por necesidad, fue por la satisfacción misma de la transgresión.</p>\n<h3>Segundo: confesar y tomar responsabilidad</h3>\n<p>El hijo pródigo ensayó su discurso de regreso:</p>\n<blockquote>\"Me levantaré e iré a mi padre, y le diré: Padre, he pecado contra el cielo y contra ti. Ya no soy digno de ser llamado tu hijo; hazme como a uno de tus jornaleros.\" <em>Lucas 15:18-19</em></blockquote>\n<p>No fue a negociar ni a explicar, fue a confesar, a pedir misericordia.</p>\n<p>Tomar responsabilidad no es minimizar: <em>\"no es para tanto, fue sin querer.\"</em> No es relativizar: <em>\"es normal, todos lo hacen.\"</em> No es justificar: <em>\"es que tú no entiendes lo que he vivido.\"</em> Es decir: sí, soy culpable, acepto las consecuencias.</p>\n<p>Ese es un corazón que se está moviendo hacia el cambio.</p>\n<h3>Tercero: renunciar al pecado detrás del pecado</h3>\n<p>Aquí es donde el arrepentimiento se profundiza. Cuando David escribe el Salmo 51, dice algo que parece extraño: <em>\"Contra ti, contra ti solo he pecado.\"</em> ¿Y Urías? ¿Y Betsabé? ¿No pecó también contra ellos?</p>\n<p>Lutero lo explicaba así (parafraseando): <em>no podemos pecar contra otros sin que al mismo tiempo estemos pecando contra Dios.</em></p>\n<p>Cuando miento, en última instancia es porque me amo a mí mismo más de lo que amo a Dios. El pecado visible, la mentira, el robo, el adulterio, es la expresión de un pecado más profundo: que Dios no ocupa el lugar central en mi vida.</p>\n<p>Nos <em>\"arrepentimos\"</em> frecuentemente de las consecuencias, no de la relación que estamos rompiendo. Eso es arrepentimiento por nosotros mismos, no arrepentimiento real. El arrepentimiento genuino reconoce que la ofensa es primariamente contra Dios.</p>"
+      },
+      {
+        "titulo": "Por qué el arrepentimiento lleva al evangelio y no al revés",
+        "html": "<p>Aquí está el giro que cambia todo: el hijo pródigo no experimentó el evangelio cuando se arrepintió. Lo experimentó cuando vio al padre corriendo hacia él.</p>\n<p>El arrepentimiento lo puso en movimiento, pero lo que lo transformó fue ver el amor del Padre.</p>\n<p><strong>El evangelio no es acerca de tu arrepentimiento, es acerca del amor del Padre.</strong></p>\n<p>Y hay un detalle en Lucas 4 que casi siempre se nos pasa: Jesús leyó Isaías 61 hasta cierto punto, <em>\"a predicar el año agradable del Señor\"</em>, y cerró el libro. Lo que faltaba en el texto era: <em>\"y el día de venganza del Dios nuestro\"</em> (Isaías 61:2).</p>\n<p>Lo omitió a propósito.</p>\n<p>Estamos en la temporada de gracia y fe. El día del juicio vendrá, Jesús regresará y traerá juicio sobre las naciones. Pero aún no. Jesús vino primero a recibir ese juicio sobre sí mismo. Hizo el cambio sustituto en la cruz: tomó la venganza que nos correspondía para poder darnos gracia.</p>\n<p>Por eso son buenas noticias. Pero solo para el que sabe que las necesita, solo para los que se arrepienten y creen.</p>"
+      }
+    ],
+    versiculos: [
+      "Lucas 4:14-30",
+      "Marcos 1:14-15",
+      "Juan 1:12",
+      "Juan 3:16",
+      "Romanos 10:9",
+      "Romanos 1:17",
+      "Mateo 5:3",
+      "Salmo 51:1-4",
+      "Lucas 15:17-19",
+      "Isaías 61:1-2"
+    ],
+    preguntas: [
+      "Jesús dijo que las buenas noticias son para los pobres, los quebrantados, los cautivos, los ciegos. ¿En cuál de esas categorías te reconoces hoy y cuál te cuesta más admitir?",
+      "La clase distingue tres formas de no tomar responsabilidad: minimizar, relativizar, justificar. ¿Cuál de las tres es tu patrón más frecuente con Dios y con otros?",
+      "El hijo pródigo experimentó el evangelio no cuando se arrepintió, sino cuando vio al padre corriendo hacia él. ¿Qué dice eso sobre dónde está el peso del evangelio, en lo que tú haces o en lo que el Padre hace?"
+    ],
+    declaraciones: [
+      "El arrepentimiento (<em>metanoia</em>) es condición epistémica necesaria para la fe salvífica, no consecuencia de ella.",
+      "La fe salvífica y el arrepentimiento son inseparables pero distinguibles: el arrepentimiento es el acto de humildad que habilita la fe.",
+      "La gracia se recibe únicamente por quienes reconocen su pobreza espiritual, la autosuficiencia percibida es impedimento estructural para recibirla.",
+      "El pecado en su raíz no es transgresión de ley sino ruptura relacional: es no amar a Dios sobre todas las cosas.",
+      "El arrepentimiento genuino incluye tres componentes: reconocimiento de condición, confesión con toma de responsabilidad, y renuncia al pecado detrás del pecado.",
+      "El remordimiento emocional sin renovación de mente no constituye arrepentimiento bíblico.",
+      "La sustitución penal es la base del evangelio: Cristo recibió el juicio que correspondía al pecador para que la gracia fuera posible.",
+      "La temporada presente es de gracia y fe; el juicio escatológico está diferido pero es cierto.",
+      "El orgullo espiritual, confianza en la propia justicia, es el mayor impedimento para la fe, mayor que el pecado manifiesto."
+    ],
   },
   {
     slug: 'estudio-4',
     numero: 4,
     modulo: 'fundamento',
-    titulo: '¿Cómo recibimos el evangelio? Parte II',
+    titulo: "¿Cómo recibimos el evangelio? Fe",
     tags: ['evangelio', 'fe', 'creer', 'salvación'],
     fecha: '2026-10-20',
-    resumen: 'Entender qué es la fe bíblica y qué significa creer en Jesús, para dejar de mirarnos a nosotros mismos y poner toda nuestra confianza en la obra de Cristo.',
-    contenido: `
-<p style="font-style:italic;color:var(--text-muted);border-left:3px solid var(--border);padding:10px 16px;margin-bottom:32px"><strong>Propósito:</strong> Entender qué es la fe bíblica, qué significa creer en Jesús y por qué el arrepentimiento y la fe son inseparables, para que sepas exactamente en quién está puesta tu confianza para salvación.</p>
-
-<h2>El problema: ¿puede ser tan fácil?</h2>
-
-<p>Hay una pregunta con la que vamos a comenzar. No la respondas todavía, guárdala para el final:</p>
-
-<p><strong>¿En dónde tienes puesta tu fe?</strong></p>
-
-<p>Recordemos dónde estamos. El evangelio son buenas noticias: las buenas noticias que comunican el plan de salvación de Dios al mundo, Jesús. Y si son buenas noticias, el evangelio no es algo que nosotros hacemos, sino algo que fue hecho por nosotros. No es una escalera que subimos para llegar a Dios.</p>
-
-<p>Entonces, ¿cómo recibimos el evangelio? Jesús mismo lo respondió desde el primer día de su ministerio:</p>
-
-<blockquote>"Después que Juan fue encarcelado, Jesús vino a Galilea predicando el evangelio del reino de Dios, diciendo: El tiempo se ha cumplido, y el reino de Dios se ha acercado; arrepentíos, y creed en el evangelio." <em>Marcos 1:14-15</em></blockquote>
-
-<p>Si esas noticias son verdaderas, la respuesta correcta es creerlas. Y creer en las noticias es tener fe.</p>
-
-<p>Pero aquí aparece la tensión. ¿Cómo es posible que sea tan fácil? Algo en nosotros se resiste. El corazón religioso siempre quiere convertir el evangelio en una tarea: hacer más, esforzarnos más, cambiar primero, ser merecedores. Nos parece que algo tan grande no puede recibirse simplemente creyendo.</p>
-
-<p>Pero el evangelio dice lo contrario: Jesús ya hizo la obra, solo tenemos que creer, tener fe.</p>
-
-<p>En el estudio anterior vimos la primera mitad de la respuesta: el arrepentimiento. Arrepentirse, <em>metanoéo</em>, es pensar diferente, reconsiderar. Es lo que hizo el hijo pródigo: volvió en sí, reconoció su necesidad, fue al padre, pidió perdón, estaba dispuesto a cambiar, y llegó implorando misericordia y gracia. Ahora vamos a ver la otra mitad: ¿qué es la fe, y qué significa tener fe en Jesús?</p>
-
-<h2>¿Qué es fe?</h2>
-
-<p>Lo primero que hay que aclarar es que creer y tener fe es lo mismo. En el Nuevo Testamento son dos formas de la misma palabra.</p>
-
-<p>Fe viene del griego <em>pistis</em>, convicción, seguridad, certeza en algo o en alguien, persuasión. Creer viene del griego <em>pisteuō</em>, pensar que algo es cierto, estar persuadido, dar crédito, colocar o dar confianza total, estar seguro de algo, convencido de algo.</p>
-
-<p>Cuando Jesús dice <em>"creed en el evangelio"</em>, está usando esa palabra. Tener fe, creer, es estar seguro de algo. Es tener convicción de que algo es cierto.</p>
-
-<h3>Una palabra desprestigiada</h3>
-
-<p>El problema es que en nuestro idioma de todos los días la palabra ha perdido su fuerza. Cuando alguien te pregunta si va a llover y respondes <em>"yo creo que sí"</em>, lo que en realidad estás diciendo es que no estás seguro. El término está desprestigiado: hoy creer denota duda.</p>
-
-<p>Y no solo duda, también ignorancia. Para muchos, la fe es sinónimo de no saber. Karl Marx lo dijo así: <em>"La religión es el opio del pueblo."</em> Marx argumentaba que la religión era una ilusión creada para consolar a las personas en medio de la injusticia social. Más recientemente, Richard Dawkins escribió en su libro <em>The God Delusion</em>: <em>"La fe es la gran excusa para evitar la necesidad de pensar y evaluar evidencias."</em> Para él, la ciencia ha reemplazado la necesidad de la fe.</p>
-
-<p>Pero eso no es lo que la Biblia quiere decir con fe. La fe bíblica no es duda ni ignorancia, es certeza.</p>
-
-<h3>Todos tenemos fe</h3>
-
-<p>Aquí está lo interesante: nadie vive sin fe. Mira cómo describe National Geographic el origen del universo:</p>
-
-<p><em>"Como ocurre con muchos otros misterios del cosmos, los científicos no pueden saber con exactitud el modo en que el universo evolucionó tras el Big Bang. Muchos creen que, a medida que transcurría el tiempo y la materia se enfriaba, comenzaron a formarse tipos de átomos más diversos, y que estos finalmente se condensaron en las estrellas y galaxias de nuestro universo presente."</em> National Geographic, 2010, actualizado en 2024.</p>
-
-<p>Fíjate en la palabra: <em>creen</em>. Los ateos también tienen fe. Tienen fe en que el universo se creó a sí mismo, en que la materia surgió de la nada, y en que todo evolucionó a través de billones de años hasta formar el ecosistema perfecto que permite que la vida exista. Incluso el físico teórico Andrei Linde, profesor de física en Stanford, reconoce: <em>"Nuestra comprensión de la realidad no es completa, la realidad existe independientemente de nosotros."</em></p>
-
-<p><strong>Todos tenemos fe en algo. Todos tenemos fe y vivimos por fe.</strong></p>
-
-<h3>La fe cristiana no es credulidad ciega</h3>
-
-<p>Entonces la pregunta no es si tienes fe, sino en qué la tienes puesta. Y la fe cristiana no es credulidad ciega. No es apagar el cerebro. Es responder a la persona histórica de Cristo.</p>
-
-<p>La fe bíblica no es creer sin evidencia. Es confiar en una persona real y en un evento histórico: la muerte y resurrección de Cristo.</p>
-
-<p><strong>La pregunta no es si tienes fe. La pregunta es: ¿en dónde tienes puesta tu fe?</strong></p>
-
-<h2>¿Qué significa tener fe en Jesús?</h2>
-
-<p>Etimológicamente ya lo vimos: tener fe es estar convencido, estar seguro, confiar. Pero, ¿qué significa bíblicamente tener fe en Jesús? Para responder, Juan nos presenta a un hombre que tenía una opinión muy alta de Jesús, y aun así no creía en él:</p>
-
-<blockquote>"Había un hombre de los fariseos que se llamaba Nicodemo, un principal entre los judíos. Este vino a Jesús de noche, y le dijo: Rabí, sabemos que has venido de Dios como maestro; porque nadie puede hacer estas señales que tú haces, si no está Dios con él." <em>Juan 3:1-2</em></blockquote>
-
-<p>Nicodemo es un fariseo, un líder religioso, y está confundido acerca de quién es Jesús. No niega que Jesús sea alguien importante, alguien diferente. Cree que es un gran maestro enviado por Dios. Pero eso no es creer en Jesús. Y Jesús, en lugar de aceptar el halago, le enseña lo que significa creer:</p>
-
-<blockquote>"Nadie subió al cielo, sino el que descendió del cielo; el Hijo del Hombre, que está en el cielo. Y como Moisés levantó la serpiente en el desierto, así es necesario que el Hijo del Hombre sea levantado, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna. Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna. Porque no envió Dios a su Hijo al mundo para condenar al mundo, sino para que el mundo sea salvo por él. El que en él cree, no es condenado; pero el que no cree, ya ha sido condenado, porque no ha creído en el nombre del unigénito Hijo de Dios." <em>Juan 3:13-18</em></blockquote>
-
-<p>Cuenta cuántas veces aparece la palabra: cree, cree, cree, no cree, no ha creído. En este pasaje Jesús nos muestra dos cosas que significa creer en él.</p>
-
-<h3>1. Creer que Jesús es el Hijo de Dios encarnado que vino a salvarnos</h3>
-
-<p>Mira de nuevo las palabras que Jesús usa para hablar de sí mismo:</p>
-
-<blockquote>"Nadie subió al cielo, sino el que descendió del cielo; el Hijo del Hombre, que está en el cielo... Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna. Porque no envió Dios a su Hijo al mundo para condenar al mundo, sino para que el mundo sea salvo por él." <em>Juan 3:13, 16-17</em></blockquote>
-
-<p>Jesús <em>descendió</em> del cielo. Fue <em>dado</em>, enviado por Dios para salvar. Es el <em>Hijo unigénito</em>, el Hijo de Dios, Dios mismo. Nicodemo creía que Jesús era solo un gran maestro. Jesús le dice que es mucho más que eso: es Dios hecho hombre, que vino a salvarnos a través de su sacrificio y su resurrección.</p>
-
-<p>Por eso hay maneras de creer en Jesús que no son fe en Jesús. Creer que fue un gran maestro moral, un gran hombre o un revolucionario, pero no Dios, no es fe en Jesús. Creer que fue un profeta, pero no Dios, como enseña el Islam, no es fe en Jesús. Creer que fue un ser creado y no el Dios eterno, como enseñan los Testigos de Jehová y los mormones, no es fe en Jesús. Y creer que nunca existió realmente, que es un mito o un arquetipo, como dice la nueva era, tampoco lo es.</p>
-
-<p><strong>Creer en Jesús es creer que Jesús es el Hijo de Dios encarnado que vino a salvarnos a través de su sacrificio y resurrección.</strong></p>
-
-<h3>2. Confiar en su obra redentora para salvación</h3>
-
-<p>Ahora mira la ilustración que Jesús escogió para explicarle a Nicodemo lo que significa creer:</p>
-
-<blockquote>"Y como Moisés levantó la serpiente en el desierto, así es necesario que el Hijo del Hombre sea levantado, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna." <em>Juan 3:14-15</em></blockquote>
-
-<p>Nicodemo, como maestro de Israel, conocía bien la historia. Ocurrió cuando el pueblo salió del monte Hor:</p>
-
-<blockquote>"Después partieron del monte de Hor, camino del Mar Rojo, para rodear la tierra de Edom; y se desanimó el pueblo por el camino. Y habló el pueblo contra Dios y contra Moisés: ¿Por qué nos hiciste subir de Egipto para que muramos en este desierto? Pues no hay pan ni agua, y nuestra alma tiene fastidio de este pan tan liviano. Y Jehová envió entre el pueblo serpientes ardientes, que mordían al pueblo; y murió mucho pueblo de Israel." <em>Números 21:4-6</em></blockquote>
-
-<blockquote>"Entonces el pueblo vino a Moisés y dijo: Hemos pecado por haber hablado contra Jehová, y contra ti; ruega a Jehová que quite de nosotros estas serpientes. Y Moisés oró por el pueblo. Y Jehová dijo a Moisés: Hazte una serpiente ardiente, y ponla sobre un asta; y cualquiera que fuere mordido y mirare a ella, vivirá. Y Moisés hizo una serpiente de bronce, y la puso sobre un asta; y cuando alguna serpiente mordía a alguno, miraba a la serpiente de bronce, y vivía." <em>Números 21:7-9</em></blockquote>
-
-<p>Los comentaristas señalan que en esta imagen la serpiente representa el pecado, y el bronce se asocia con el juicio, porque es un metal que se trabaja con fuego. La serpiente de bronce es el pecado juzgado.</p>
-
-<p>Eso es exactamente lo que ocurrió en la cruz:</p>
-
-<blockquote>"Al que no conoció pecado, por nosotros lo hizo pecado, para que nosotros fuésemos hechos justicia de Dios en él." <em>2 Corintios 5:21</em></blockquote>
-
-<p>Jesús tomó nuestro pecado y fue juzgado por nosotros. Así como Moisés levantó la serpiente en el desierto, Jesús fue levantado en la cruz. Y así como el israelita mordido solo tenía que mirar a la serpiente para vivir, nosotros solo tenemos que mirar a Jesús, a su obra, y creer en él para ser salvos.</p>
-
-<p>Entonces, ¿qué no es tener fe en Jesús? Confiar en nuestras obras para salvación. Vernos a nosotros mismos y no a él. Para los israelitas debió parecer tonto que la cura fuera solo voltear a ver algo. Pero en la historia les tocó hacer eso, porque no había otra salvación. Fíjate que antes de mirar, reconocieron: <em>"Hemos pecado por haber hablado contra Jehová, y contra ti."</em> Cuando te estás muriendo y no tienes opción, crees.</p>
-
-<p><strong>Creer en Jesús es confiar en su obra redentora para salvación: dejar de mirarte a ti y mirarlo a él.</strong></p>
-
-<h2>¿En dónde tienes puesta tu fe?</h2>
-
-<p>Dios hace la misma invitación a toda la humanidad:</p>
-
-<blockquote>"Mirad a mí, y sed salvos, todos los términos de la tierra, porque yo soy Dios, y no hay más." <em>Isaías 45:22</em></blockquote>
-
-<p>Entonces la pregunta es personal: ¿a qué volteas a ver para que te salve? Lo que miras en los momentos de aflicción, en eso confías. Puede ser tu esfuerzo, tu dinero, tu reputación, tu religiosidad o tu propia bondad.</p>
-
-<p>Y antes de responder, recuerda lo que Jesús le dijo a Nicodemo:</p>
-
-<blockquote>"Porque no envió Dios a su Hijo al mundo para condenar al mundo, sino para que el mundo sea salvo por él. El que en él cree, no es condenado; pero el que no cree, ya ha sido condenado, porque no ha creído en el nombre del unigénito Hijo de Dios." <em>Juan 3:17-18</em></blockquote>
-
-<p>Fíjate que no dice <em>"será condenado"</em>, sino <em>"ya ha sido condenado"</em>. Ya fuiste mordido. Ya estás condenado. Jesús no vino a condenarte, vino a salvarte de una condenación en la que ya estabas. No creer en Jesús es quedarse en condenación, porque es confiar en nuestras propias obras o en algún otro salvador, y nadie más puede salvar.</p>
-
-<blockquote>"Y en ningún otro hay salvación; porque no hay otro nombre bajo el cielo, dado a los hombres, en que podamos ser salvos." <em>Hechos 4:12</em></blockquote>
-
-<p><strong>Solo hay una serpiente levantada en el desierto, y solo hay un nombre que salva.</strong></p>
-
-<h2>¿Cómo recibimos el evangelio? Arrepentimiento y fe</h2>
-
-<p>Ahora podemos ver la respuesta completa a la pregunta de estos dos estudios. Jesús dijo: <em>"arrepentíos, y creed en el evangelio."</em> El arrepentimiento y la fe son inseparables.</p>
-
-<p>En el desierto, arrepentimiento es reconocer que fuimos mordidos y que vamos a morir. Fe es mirar a la serpiente de bronce.</p>
-
-<p>En la historia del hijo pródigo, arrepentirse es volver en sí, cambiar de dirección, reconocer nuestra condición y pedir perdón. Fe es ver al Padre y abrazarlo.</p>
-
-<p><strong>Arrepentirse es soltar; creer es aferrarse a Cristo.</strong></p>
-
-<h2>Antes de terminar: responde la pregunta</h2>
-
-<p>Al comienzo te pedimos que guardaras una pregunta. Aquí está de nuevo:</p>
-
-<p><strong>¿En dónde tienes puesta tu fe?</strong></p>
-
-<p>Ya sabes que todos tenemos fe. La pregunta es hacia dónde estás mirando. Piensa en el último momento de aflicción que viviste. ¿A qué volteaste a ver primero?</p>
-
-<p>Si tu respuesta es tu esfuerzo, tu historial o cualquier cosa que tú haces, estás mirando la mordida en lugar de mirar la serpiente levantada. Si tu respuesta es un Jesús que fue solo un gran maestro, estás donde estaba Nicodemo esa noche.</p>
-
-<p>Pero si has reconocido que fuiste mordido, y has dejado de mirarte a ti para mirar a Cristo, el Hijo de Dios levantado en la cruz por tu pecado, entonces ya no estás condenado. Tienes vida eterna.</p>
-
-<p><strong>Mira a Cristo y vive.</strong></p>
-    `,
+    resumen: "Todos tienen fe, la pregunta es en qué está puesta. Qué significa creer en Jesús según su conversación con Nicodemo, y por qué arrepentirse es soltar y creer es aferrarse.",
     autor: 'Stevan Marroquin',
     youtubeUrl: 'https://www.youtube.com/watch?v=rO4S7JMImYA',
     spotifyUrl: 'https://open.spotify.com/episode/5DqEc2ls7R7CY9s40IJkbJ',
-    resumenClase: `
-<p>El evangelio se recibe por medio del arrepentimiento y la fe. En el estudio anterior vimos el arrepentimiento, reconocer nuestra condición y volver en sí. En este estudio vemos la fe: qué es, en quién se pone y por qué no se puede separar del arrepentimiento.</p>
-
-<p><strong>1. Qué es la fe.</strong> Creer y tener fe es lo mismo: <em>pistis</em> y <em>pisteuō</em> hablan de convicción, certeza y confianza total. Aunque hoy la palabra se asocia con duda o ignorancia, todos tenemos fe en algo, incluso los ateos. La fe cristiana no es credulidad ciega, es responder a una persona real y a un evento histórico: la muerte y resurrección de Cristo.</p>
-
-<p><strong>2. Quién es Jesús.</strong> Nicodemo creía que Jesús era un gran maestro enviado por Dios, pero eso no es fe en Jesús. Creer en Jesús es creer que es el Hijo de Dios encarnado, que descendió del cielo para salvarnos por medio de su sacrificio y su resurrección. No basta con verlo como maestro, profeta, ser creado o mito.</p>
-
-<p><strong>3. Qué hizo Jesús.</strong> Como la serpiente de bronce en el desierto, Jesús fue levantado en la cruz, cargando nuestro pecado y recibiendo el juicio por nosotros. El que fue mordido solo tenía que mirar para vivir. Creer en Jesús es dejar de confiar en nuestras obras y confiar en su obra redentora, porque no hay otro nombre en que podamos ser salvos.</p>
-
-<p>El arrepentimiento y la fe son inseparables. Arrepentirse es reconocer que fuimos mordidos; creer es mirar a la serpiente levantada. Arrepentirse es soltar; creer es aferrarse a Cristo.</p>
-    `,
-    guiaLider: `
-<p>Estas preguntas buscan que cada persona identifique honestamente en dónde tiene puesta su fe, no que gane un debate. Dale espacio al grupo para responder sin prisa.</p>
-
-<h3>Pregunta 1</h3>
-<p>Este estudio dice que todos tenemos fe y vivimos por fe, y que la pregunta no es si creemos, sino en qué. También dice que lo que miras en los momentos de aflicción es aquello en lo que realmente confías.</p>
-<p><em>Piensa en la última vez que enfrentaste una crisis real: un problema de salud, de dinero, de familia. ¿Qué fue lo primero a lo que volteaste a ver? ¿Qué dice eso sobre dónde está puesta tu fe en la práctica, no solo en lo que dices creer?</em></p>
-
-<h3>Pregunta 2</h3>
-<p>Nicodemo tenía una opinión muy alta de Jesús. Lo llamaba Rabí, maestro venido de Dios. Pero Jesús le mostró que eso no era creer en él. Mucha gente hoy admira a Jesús como maestro moral, profeta o ejemplo, sin creer que es el Hijo de Dios que vino a salvarlos.</p>
-<p><em>¿Alguna vez trataste a Jesús más como un buen maestro que como tu Salvador? ¿Qué diferencia práctica hay entre admirar a Jesús y confiar en él para tu salvación? ¿Cómo se nota esa diferencia en la manera de orar, de enfrentar la culpa o de hablar de él con otros?</em></p>
-
-<h3>Pregunta 3</h3>
-<p>A los israelitas debió parecerles tonto que la cura para la mordida fuera solo mirar una serpiente de bronce. El corazón religioso siempre quiere convertir el evangelio en tarea: hacer más, esforzarse más, cambiar primero para ser merecedor.</p>
-<p><em>¿Qué parte de ti se resiste a que la salvación sea tan sencilla como mirar a Cristo y creer? ¿Qué cosa estás tratando de agregar al evangelio para sentirte merecedor? Si arrepentirse es soltar y creer es aferrarse a Cristo, ¿qué necesitas soltar esta semana?</em></p>
-    `,
-    devocional: `
-<p>Esta semana vas a hacer lo que hicieron los israelitas en el desierto: dejar de mirarte a ti y mirar a Cristo. Cada día tiene una sola tarea concreta.</p>
-
-<h3>Día 1: Examen honesto</h3>
-<p>Responde por escrito la pregunta del estudio: <em>"¿En dónde tengo puesta mi fe?"</em> Después haz una lista de las tres cosas a las que más volteas a ver cuando estás angustiado. Sé honesto. Termina leyendo Isaías 45:22 y pregúntate qué hay en tu lista que esté ocupando el lugar que solo le corresponde a Dios.</p>
-
-<h3>Día 2: Siéntate con Nicodemo</h3>
-<p>Lee Juan 3:1-21 completo en una sola sesión. Divide una hoja en dos columnas: en una escribe lo que Nicodemo creía de Jesús, en la otra lo que Jesús dice de sí mismo. Anota la diferencia y pregúntate en cuál columna has vivido tú.</p>
-
-<h3>Día 3: Mira la serpiente</h3>
-<p>Lee Números 21:4-9 despacio. Luego lee 2 Corintios 5:21. Escribe con tus propias palabras cómo la serpiente de bronce apunta a lo que Jesús hizo en la cruz. Termina orando: reconoce delante de Dios que tú también fuiste mordido, y dale gracias porque Cristo fue juzgado en tu lugar.</p>
-
-<h3>Día 4: ¿Quién es Jesús?</h3>
-<p>Lee Juan 1:1-18 y Juan 20:30-31. Subraya cada frase que dice quién es Jesús. Después repasa las cuatro maneras equivocadas de ver a Jesús del estudio: maestro moral, profeta, ser creado, mito. ¿Qué responde Juan a cada una?</p>
-
-<h3>Día 5: Investiga una pregunta</h3>
-<p>La fe cristiana no es credulidad ciega, responde a un evento histórico. Dedica 30 minutos a leer una fuente seria sobre la evidencia histórica de la resurrección de Jesús. Escribe la pregunta que más te inquietaba antes de empezar y lo que encontraste. La fe bíblica no le teme a las preguntas.</p>
-
-<h3>Día 6: Suelta y aférrate</h3>
-<p>Lee Hechos 4:12. Arrepentirse es soltar; creer es aferrarse a Cristo. Escribe una cosa en la que has estado confiando para sentirte aceptado delante de Dios y que necesitas soltar. Luego escribe una oración entregándola y aferrándote a Cristo. Si tienes a alguien de confianza en tu grupo, compártele lo que escribiste.</p>
-
-<h3>Día 7: Descansa en Cristo</h3>
-<p>Lee Colosenses 1:12-20 lentamente. Es el retrato de aquel a quien estás mirando: la imagen del Dios invisible, el primogénito de toda creación, en quien todas las cosas subsisten, el que hizo la paz mediante la sangre de su cruz. No tienes que hacer nada más hoy. Solo mira a Cristo, y descansa en que él es suficiente.</p>
-    `,
+    lectura: [
+      {
+        "titulo": "Todos tienen fe. Incluso los que dicen no tenerla",
+        "html": "<p>Richard Dawkins, uno de los ateos más conocidos del mundo, escribió: <em>\"La fe es la gran excusa para evitar la necesidad de pensar y evaluar evidencias.\"</em> Para él, la fe es lo opuesto al pensamiento. Es lo que hacen las personas que no quieren razonar.</p>\n<p>Pero hay un problema con esa definición.</p>\n<p>La revista National Geographic, al explicar el origen del universo, usa esta frase: <em>\"Muchos creen que, a medida que transcurría el tiempo y la materia se enfriaba, comenzaron a formarse tipos de átomos más diversos.\"</em> Muchos <em>creen</em>, no <em>\"muchos han demostrado\"</em>, no <em>\"muchos han verificado\"</em>, creen.</p>\n<p>Andrei Linde, físico teórico de Stanford, lo admite con honestidad científica: <em>\"Nuestra comprensión de la realidad no es completa. La realidad existe independientemente de nosotros.\"</em></p>\n<p>Todos operamos con compromisos que no podemos verificar completamente. Los ateos tienen fe en que el universo se creó a sí mismo, en que la materia surgió de la nada, en que billones de años de procesos no dirigidos produjeron el ecosistema preciso que permite que la vida exista. Eso no es conocimiento demostrado. Es fe.</p>\n<p><strong>La pregunta no es si tienes fe. La pregunta es en qué está puesta tu fe.</strong></p>"
+      },
+      {
+        "titulo": "Por qué esto importa para el evangelio",
+        "html": "<p>Jesús le enseñó a un hombre religioso, educado y bien intencionado qué significa realmente creer.</p>\n<p>Nicodemo era fariseo, conocía las Escrituras mejor que casi cualquier persona de su época, no era escéptico. Creía que Jesús era real, que sus milagros eran reales, que venía de Dios. Le dijo directamente:</p>\n<blockquote>\"Este vino a Jesús de noche, y le dijo: Rabí, sabemos que has venido de Dios como maestro; porque nadie puede hacer estas señales que tú haces, si no está Dios con él.\" <em>Juan 3:2</em></blockquote>\n<p>Suena bien, suena a fe.</p>\n<p>Pero Jesús le respondió como si Nicodemo no hubiera entendido nada todavía.</p>\n<p>¿Por qué? Porque Nicodemo tenía una fe incompleta, creía en Jesús como maestro enviado por Dios, pero no como el Hijo de Dios encarnado que vino a morir por él. Y esa diferencia lo es todo.</p>"
+      },
+      {
+        "titulo": "Creer en Jesús tiene contenido específico",
+        "html": "<p>Jesús le explica a Nicodemo dos cosas sobre lo que significa creer en Él.</p>\n<h3>Primero: creer que Jesús es quien dice ser</h3>\n<blockquote>\"Nadie subió al cielo, sino el que descendió del cielo; el Hijo del Hombre, que está en el cielo.\" <em>Juan 3:13</em></blockquote>\n<p>Descendió, fue enviado, es el Hijo unigénito de Dios. No solamente un gran maestro moral. No un profeta más. No un ser creado. No un arquetipo espiritual. Dios mismo, encarnado.</p>\n<p>Nicodemo creía en Jesús el maestro. Jesús le estaba diciendo que eso no es suficiente.</p>\n<p>Y aquí está la pregunta que el texto deja flotando: si creer que Jesús era un gran maestro no es suficiente, ¿qué exactamente es lo que hace a la fe salvífica diferente?</p>\n<h3>Segundo: confiar en su obra, no en la propia</h3>\n<p>Jesús le da a Nicodemo una imagen del Antiguo Testamento que él conocería bien. En el desierto, el pueblo de Israel fue atacado por serpientes venenosas. La gente moría, se arrepintieron y pidieron a Moisés que intercediera por ellos delante de Dios, Moisés oró, y Dios le dijo que hiciera una serpiente de bronce y la levantara sobre un asta. Fue una instrucción simple:</p>\n<blockquote>\"Y Jehová dijo a Moisés: Hazte una serpiente ardiente, y ponla sobre un asta; y cualquiera que fuere mordido y mirare a ella, vivirá.\" <em>Números 21:8</em></blockquote>\n<p>No había que hacer nada más, no había que ganárselo, no había que ser suficientemente bueno. Solo mirar.</p>\n<p>Los comentaristas señalan que la serpiente de bronce representa el pecado juzgado, el bronce se trabaja con fuego, es una imagen del juicio, y es una imagen de lo que Jesús hizo por nosotros.</p>\n<p>Pablo lo confirma siglos después:</p>\n<blockquote>\"Al que no conoció pecado, por nosotros lo hizo pecado, para que nosotros fuésemos hechos justicia de Dios en él.\" <em>2 Corintios 5:21</em></blockquote>\n<p>Cristo tomó nuestro pecado y fue juzgado en nuestro lugar.</p>\n<p>Luego Jesús dice:</p>\n<blockquote>\"Y como Moisés levantó la serpiente en el desierto, así es necesario que el Hijo del Hombre sea levantado.\" <em>Juan 3:14</em></blockquote>\n<p>La imagen es idéntica. La serpiente fue levantada en un asta, Jesús fue levantado en una cruz. Los israelitas estaban muriendo por la mordida de una serpiente, nosotros estamos condenados por el pecado. La instrucción es la misma: mira, confía, no en tus obras, en Él.</p>"
+      },
+      {
+        "titulo": "La mordida ya ocurrió",
+        "html": "<p>Aquí está lo que Juan 3 dice que casi nunca se escucha completo:</p>\n<blockquote>\"El que en él cree, no es condenado; pero el que no cree, ya ha sido condenado, porque no ha creído en el nombre del unigénito Hijo de Dios.\" <em>Juan 3:18</em></blockquote>\n<p>Ya, tiempo presente.</p>\n<p>No es que si no crees vas a ser condenado por no haber creído, ya estás condenado, porque ya fuiste mordido, el veneno ya está. La condición de pecado no es algo que va a suceder si no te portas bien, es tu condición actual.</p>\n<p>Los israelitas en el desierto no tenían tiempo de ganarse la salvación, estaban muriendo. Y cuando estás muriendo y no tienes opción, crees, volteas a ver porque no hay otra alternativa.</p>\n<p>Eso es lo que Jesús está diciéndole a Nicodemo y a nosotros: <em>\"Ya fuiste mordido. Ya estás condenado. No hay otra salvación disponible. Mira a Cristo.\"</em></p>\n<blockquote>\"Y en ningún otro hay salvación; porque no hay otro nombre bajo el cielo, dado a los hombres, en que podamos ser salvos.\" <em>Hechos 4:12</em></blockquote>"
+      },
+      {
+        "titulo": "Arrepentimiento y fe: dos movimientos, una misma respuesta",
+        "html": "<p>La lectura anterior habló del arrepentimiento, esta habla de la fe. Pero son inseparables, son dos movimientos del mismo acto.</p>\n<p>Arrepentirse es volver en sí, como el hijo pródigo, reconocer la mordida, soltar la ilusión de que puedes salvarte a ti mismo.</p>\n<p>Creer es voltear a ver la serpiente de bronce, ver al Padre corriendo hacia ti, aferrarte a Cristo.</p>\n<p><strong>Arrepentirse es soltar, creer es aferrarse.</strong></p>\n<blockquote>\"Mirad a mí, y sed salvos, todos los términos de la tierra, porque yo soy Dios, y no hay más.\" <em>Isaías 45:22</em></blockquote>\n<p>Lo que volteas a ver en tus momentos de mayor aflicción, eso es en lo que realmente confías. No lo que dices que crees. Lo que buscas cuando sientes al veneno haciendo efecto.</p>\n<p>¿A qué volteas a ver?</p>"
+      }
+    ],
+    versiculos: [
+      "Marcos 1:14-15",
+      "Juan 3:1-18",
+      "Números 21:7-9",
+      "2 Corintios 5:21",
+      "Hechos 4:12",
+      "Isaías 45:22",
+      "Romanos 10:9-10",
+      "Hebreos 11:1-6"
+    ],
+    preguntas: [
+      "La clase argumenta que todos tienen fe, incluso los que rechazan la fe religiosa. ¿En qué has puesto tu fe fuera de Dios y cómo ha funcionado en tus momentos de mayor crisis?",
+      "Nicodemo creía que Jesús era un gran maestro enviado por Dios, pero eso no era suficiente. ¿Qué diferencia hay entre admirar a Jesús y confiar en Jesús y cuál de las dos describe mejor tu relación con Él hoy?",
+      "La imagen de la serpiente de bronce es simple: mira y vive. No hay nada que hacer, solo mirar. ¿Qué te cuesta más, soltar el intento de ganarte la salvación, o simplemente mirar y confiar en que la obra de Cristo es suficiente?"
+    ],
+    declaraciones: [
+      "La fe salvífica (<em>pistis</em>) no es credulidad irracional sino convicción fundamentada en un evento histórico verificable: la encarnación, muerte y resurrección de Cristo.",
+      "La fe bíblica tiene objeto específico e irremplazable: la persona de Jesucristo como Hijo de Dios encarnado, no meramente como maestro moral, profeta o arquetipo.",
+      "La fe y el arrepentimiento son inseparables: el arrepentimiento es el movimiento de soltar, la fe es el movimiento de aferrarse.",
+      "La justificación es por fe sola en Cristo, confiar en obras propias para salvación es una forma de incredulidad, no de fe insuficiente.",
+      "La expiación sustituta es el fundamento objetivo de la fe: Cristo tomó el pecado y recibió el juicio que correspondía al pecador (2 Corintios 5:21).",
+      "La condenación no es consecuencia futura del rechazo, es el estado presente de quien no ha creído (Juan 3:18: \"ya ha sido condenado\").",
+      "La exclusividad soteriológica de Cristo es afirmación doctrinal, no cultural: no hay salvación en ningún otro nombre (Hechos 4:12).",
+      "La fe universal es una realidad antropológica: todo ser humano deposita confianza en algo, la pregunta no es si se tiene fe sino en qué está puesta."
+    ],
   },
   {
     slug: 'estudio-5',
