@@ -4,8 +4,15 @@ import Image from 'next/image'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Discipulado BOL',
-  description: 'Material de discipulado — estudios, devocionales y guías para líderes. Bread of Life Guatemala.',
+  title: { default: 'Discipulado BOL', template: '%s | Discipulado BOL' },
+  description: 'Material de discipulado para conocer el evangelio, profundizar en Cristo y crecer en comunidad. Bread of Life Guatemala.',
+  metadataBase: new URL('https://discipulado.breadoflife.com.gt'),
+  openGraph: {
+    siteName: 'Discipulado BOL',
+    locale: 'es_GT',
+    type: 'website',
+  },
+  alternates: { canonical: '/' },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

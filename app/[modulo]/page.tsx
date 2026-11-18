@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { MODULOS, getLeccionesPorModulo } from '@/lib/content'
@@ -5,6 +6,28 @@ import type { ModuloId } from '@/lib/content'
 
 export function generateStaticParams() {
   return MODULOS.map((m) => ({ modulo: m.slug }))
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ modulo: string }>
+}): Promise<Metadata> {
+  const { modulo: moduloSlug } = await params
+  const mod = MODULOS.find((m) => m.slug === moduloSlug)
+  if (!mod) return {}
+  return {
+    title: `${mod.nombre} — Discipulado BOL`,
+    description: mod.descripcion,
+    openGraph: {
+      title: `${mod.nombre} — Discipulado BOL`,
+      description: mod.descripcion,
+      url: `https://discipulado.breadoflife.com.gt/${mod.slug}`,
+      siteName: 'Discipulado BOL',
+      locale: 'es_GT',
+      type: 'website',
+    },
+  }
 }
 
 export default async function ModuloPage({ params }: { params: Promise<{ modulo: string }> }) {

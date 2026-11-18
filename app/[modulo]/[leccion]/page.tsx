@@ -1,7 +1,37 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { MODULOS, getLeccion, getLeccionesPorModulo } from '@/lib/content'
 import type { ModuloId } from '@/lib/content'
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ modulo: string; leccion: string }>
+}): Promise<Metadata> {
+  const { modulo: moduloSlug, leccion: leccionSlug } = await params
+  const mod = MODULOS.find((m) => m.slug === moduloSlug)
+  if (!mod) return {}
+  const leccion = getLeccion(mod.id as ModuloId, leccionSlug)
+  if (!leccion) return {}
+  const url = `https://discipulado.breadoflife.com.gt/${mod.slug}/${leccion.slug}`
+  return {
+    title: `${leccion.titulo} — ${mod.nombre} | Discipulado BOL`,
+    description: leccion.resumen,
+    authors: leccion.autor ? [{ name: leccion.autor }] : undefined,
+    openGraph: {
+      title: leccion.titulo,
+      description: leccion.resumen,
+      url,
+      siteName: 'Discipulado BOL',
+      locale: 'es_GT',
+      type: 'article',
+      publishedTime: leccion.fecha,
+      authors: leccion.autor ? [leccion.autor] : undefined,
+    },
+    alternates: { canonical: url },
+  }
+}
 
 export function generateStaticParams() {
   const params: { modulo: string; leccion: string }[] = []
@@ -33,8 +63,36 @@ export default async function LeccionPage({
   const leccion = getLeccion(mod.id as ModuloId, leccionSlug)
   if (!leccion) notFound()
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: leccion.titulo,
+    description: leccion.resumen,
+    datePublished: leccion.fecha,
+    author: leccion.autor
+      ? { '@type': 'Person', name: leccion.autor }
+      : { '@type': 'Organization', name: 'Bread of Life Guatemala' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Bread of Life Guatemala',
+      url: 'https://discipulado.breadoflife.com.gt',
+    },
+    inLanguage: 'es',
+    url: `https://discipulado.breadoflife.com.gt/${mod.slug}/${leccion.slug}`,
+    isPartOf: {
+      '@type': 'Course',
+      name: mod.nombre,
+      description: mod.descripcion,
+      provider: { '@type': 'Organization', name: 'Bread of Life Guatemala' },
+    },
+  }
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="lesson-wrap">
 
         {/* Header */}
