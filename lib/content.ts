@@ -433,6 +433,7 @@ export const LECCIONES: Leccion[] = [
       'La identidad en Cristo como fundamento de la receptividad a la corrección: quien tiene su identidad en Cristo puede recibir crítica sin que constituya una amenaza existencial. La defensividad ante la corrección revela identidad basada en el desempeño, no en la gracia.',
       'La predicación del evangelio a uno mismo como disciplina central: la transformación cristiana requiere exposición deliberada y repetida a las verdades del evangelio, no esfuerzo moral directo. El creyente aplica al presente lo que ya es verdad en Cristo.',
     ],
+    youtubeUrl: 'https://www.youtube.com/watch?v=vqhilBs7TG8&list=PLtRs2tryJr9jPta1bEpIMkZTVJYGIfOTn&index=3',
   },
 ]
 
