@@ -434,6 +434,7 @@ export const LECCIONES: Leccion[] = [
       'La predicación del evangelio a uno mismo como disciplina central: la transformación cristiana requiere exposición deliberada y repetida a las verdades del evangelio, no esfuerzo moral directo. El creyente aplica al presente lo que ya es verdad en Cristo.',
     ],
     youtubeUrl: 'https://www.youtube.com/watch?v=vqhilBs7TG8&list=PLtRs2tryJr9jPta1bEpIMkZTVJYGIfOTn&index=3',
+    spotifyUrl: 'https://open.spotify.com/episode/3YJuH0uENV3icwIAqBdD22?si=ba70576eec844db9',
   },
 ]
 
