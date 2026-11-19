@@ -436,6 +436,69 @@ export const LECCIONES: Leccion[] = [
     youtubeUrl: 'https://www.youtube.com/watch?v=vqhilBs7TG8&list=PLtRs2tryJr9jPta1bEpIMkZTVJYGIfOTn&index=3',
     spotifyUrl: 'https://open.spotify.com/episode/3YJuH0uENV3icwIAqBdD22?si=ba70576eec844db9',
   },
+  {
+    slug: 'estudio-8',
+    numero: 8,
+    modulo: 'fundamento',
+    titulo: 'Frente al espejo del evangelio',
+    tags: ['evangelio', 'justificación', 'individualismo', 'misión'],
+    fecha: '2026-11-19',
+    resumen: 'El evangelio no solo confronta nuestra moralidad, confronta la brújula que usamos para definirla. El hombre no se encuentra a sí mismo mirándose al espejo, sino mirando a la Cruz.',
+    lectura: [
+      {
+        titulo: 'El problema con ser buena persona',
+        html: '<p>Hay una frase que casi todo el mundo ha dicho o escuchado: <em>"No necesito una religión para ser buena persona."</em></p>\n<p>Suena razonable, incluso noble. ¿Quién podría estar en contra de ser buena persona?</p>\n<p>Pero hay algo que esa frase asume sin decirlo: que tú puedes definir qué es "bueno", que tu corazón es una brújula confiable, y que con suficiente esfuerzo puedes llegar a donde necesitas estar.</p>\n<p>Esas tres suposiciones son exactamente lo que el evangelio cuestiona.</p>',
+      },
+      {
+        titulo: 'El banco que no acepta pagos mínimos',
+        html: '<p>Imagina que tienes una deuda con un banco. No una deuda normal, una deuda tan grande que no existe ningún plan de pagos que te alcance en vida. Cada mes puedes hacer el pago mínimo, pero la deuda sigue creciendo. No importa cuánto te esfuerces, el número no baja lo suficiente.</p>\n<p>Eso es lo que la Biblia llama la condición moral del ser humano frente a un Dios perfectamente justo.</p>\n<blockquote>"Por cuanto todos pecaron, y están destituidos de la gloria de Dios, siendo justificados gratuitamente por su gracia, mediante la redención que es en Cristo Jesús." <em>Romanos 3:23 RV60</em></blockquote>\n<p>La palabra clave es "gratuitamente". No como resultado de pagos acumulados, no como recompensa por el esfuerzo, sino como un regalo.</p>\n<p>Vivimos en una cultura que cree profundamente que ser suficientemente buena persona alcanza. Que si la balanza inclina hacia el lado correcto, estamos bien. Pero el estándar del Dios Santo Creador del universo es tan alto, que todos hemos caído de esa gloria. Tenemos una deuda que nadie puede pagar y, por la gracia de Dios, alguien ya la pagó completa.</p>\n<p>La justicia que Dios demanda no se produce, se recibe.</p>',
+      },
+      {
+        titulo: 'El problema más profundo: ¿en qué brújula confías?',
+        html: '<p>Hay una capa más profunda que la moral.</p>\n<p>La cultura moderna no solo nos dice que podemos ser buenos por nosotros mismos, también nos dice que podemos <em>conocernos</em> por nosotros mismos. "Sigue tu corazón." "Todo está dentro de ti." "Haz lo que te haga feliz."</p>\n<p>Este mensaje aparece en canciones, publicidad, redes sociales. Y tiene algo en común: coloca al individuo como la máxima autoridad. Ya no miramos hacia afuera para encontrar dirección, sino hacia adentro, como si dentro de nosotros estuvieran todas las respuestas.</p>\n<p>El profeta Jeremías llegó antes que cualquier red social, y dejó escrito algo incómodo:</p>\n<blockquote>"Engañoso es el corazón más que todas las cosas, y perverso; ¿quién lo conocerá?" <em>Jeremías 17:9 RV60</em></blockquote>\n<p>El corazón al que la cultura nos dice que sigamos es precisamente el que necesita ser redimido.</p>\n<p>Agustín de Hipona tenía una frase para esto: <em>incurvatus in se</em>, encorvado hacia adentro. Una vida vivida para sí misma, mirándose al espejo en lugar de mirar hacia afuera. Lutero retomó el concepto siglos después. No porque fueran pesimistas, sino porque habían leído bien la Biblia y habían visto bien la historia humana.</p>\n<p>Este no es un problema nuevo.</p>',
+      },
+      {
+        titulo: 'La tentación más antigua',
+        html: '<p>En Génesis 3, la serpiente no le dijo a Eva: "deja de creer en Dios". Le dijo algo mucho más sutil: <em>"serán como Dios, con el conocimiento del bien y del mal"</em> (Gn. 3:5).</p>\n<p>No era una invitación al ateísmo, era una invitación a la auto deificación, a reemplazar a Dios como la autoridad que define qué es bueno y qué es malo.</p>\n<p>Y eso es exactamente lo que el individualismo moderno hace. No niega necesariamente a Dios, lo reemplaza. Construye la identidad sobre lo que uno hace, siente o logra. Y eso produce un resultado predecible: si basas tu identidad en lo que haces, ¿qué pasa cuando fallas? Si la basas en lo que sientes, ¿qué pasa cuando tus emociones cambian?</p>\n<p>El individualismo promete libertad y entrega agotamiento. Porque si tú defines tu verdad, también cargas con el peso de sostenerla, defenderla y vivir a la altura de ella.</p>\n<p>El evangelio propone algo completamente diferente: quitarte esa carga. No para dejarte vacío, sino para darte algo más estable que tú mismo: un Padre, una familia, y una justicia que no depende de tu estado de ánimo ni de tu historial.</p>\n<p><em>"En Cristo, finalmente puedes ser quien fuiste creado para ser."</em></p>',
+      },
+      {
+        titulo: 'Lo que sigue cuando recibes eso',
+        html: '<p>Algo pasa cuando una persona deja de vivir encorvada hacia sí misma. Empieza a vivir hacia afuera.</p>\n<blockquote>"Y por todos murió, para que los que viven, ya no vivan para sí, sino para aquel que murió y resucitó por ellos." <em>2 Corintios 5:15 RV60</em></blockquote>\n<blockquote>"Así que, somos embajadores en nombre de Cristo, como si Dios rogase por medio de nosotros; os rogamos en nombre de Cristo: Reconciliaos con Dios." <em>2 Corintios 5:20 RV60</em></blockquote>\n<p>Un embajador no habla su propio mensaje, no representa sus opiniones, representa al Rey.</p>\n<p>Hay una imagen que describe bien esto: <em>"somos mendigos que le decimos a otros mendigos dónde encontrar pan."</em> No hay orgullo espiritual posible en esa postura. No estamos compartiendo el evangelio desde la superioridad sino desde la gracia, porque nosotros también recibimos algo que no merecíamos.</p>\n<blockquote>"¿Cómo, pues, invocarán a aquel en el cual no han creído? ¿Y cómo creerán en aquel de quien no han oído? ¿Y cómo oirán sin haber quien les predique?" <em>Romanos 10:14 RV60</em></blockquote>\n<p>Si la iglesia no toma la responsabilidad de compartirlo, muchos no escucharán. No por falta de interés, sino por falta de mensajeros.</p>',
+      },
+      {
+        titulo: 'La cruz como espejo real',
+        html: '<p>La cultura dice: encuéntrate a ti mismo mirándote al espejo.</p>\n<p>El evangelio dice: el hombre no se encuentra a sí mismo mirándose al espejo, sino mirando a la Cruz.</p>\n<p>Porque en la Cruz pasan tres cosas al mismo tiempo: ves con claridad lo que eres (la realidad del pecado), ves con claridad quién es Dios (la realidad de la gracia), y encuentras lo que nunca hubieras construido por ti mismo, una identidad que no se rompe cuando fallas.</p>\n<p>El evangelio no es un peso más en los hombros. Es el que quita el peso que ya traías.</p>',
+      },
+    ],
+    versiculos: [
+      'Romanos 3:21-24',
+      'Jeremías 17:9',
+      'Génesis 3:4-5',
+      '2 Corintios 5:15, 20-21',
+      'Romanos 1:16, 10:14',
+    ],
+    preguntas: [
+      '¿Alguna vez has intentado cambiar algo de ti mismo a pura fuerza de voluntad? ¿Cómo terminó? ¿Qué dice eso sobre la diferencia entre corregir comportamientos y recibir una justicia que viene de afuera?',
+      'El estudio describe el individualismo como "el eco del Edén", la tentación de ser nuestra propia autoridad moral. ¿En qué área de tu vida sientes que todavía estás más inclinado a seguir tu propio criterio que a confiar en Dios?',
+      'Si somos "mendigos que le decimos a otros mendigos dónde encontrar pan", ¿qué cambia en cómo compartes el evangelio? ¿Qué hace más difícil o más fácil compartirlo desde esa postura?',
+    ],
+    declaraciones: [
+      'El ser humano es moralmente incapaz de producir la justicia que Dios demanda (depravación total).',
+      'El corazón humano es intrínsecamente engañoso y perverso (Jer. 17:9), incapaz de ser fuente confiable de verdad moral o espiritual.',
+      'El pecado no es primariamente comportamental sino estructural: es una orientación del ser hacia sí mismo (incurvatus in se).',
+      'La justicia de Dios es imputada, no infundida, declarada sobre el creyente por gracia mediante fe, no producida por esfuerzo moral.',
+      'La justificación es forense: Dios declara al pecador justo sobre la base de la obra perfecta de Cristo, no sobre la base del mérito del individuo.',
+      'La justificación no mejora la moral humana, la reemplaza con una justicia ajena (iustitia aliena).',
+      'El individualismo es la expresión contemporánea del pecado original: la pretensión de autonomía moral y ontológica frente a Dios.',
+      'La tentación del Edén no fue el ateísmo sino la auto deificación: reemplazar a Dios como autoridad definitoria del bien y el mal.',
+      'La identidad construida sobre logros, emociones o autopercepción es ontológicamente inestable porque está fundada en la criatura en lugar del Creador.',
+      'El creyente es enviado como embajador (2 Co. 5:20): no porta su propio mensaje sino el del Rey.',
+      'La evangelización no es proselitismo moralista sino proclamación de la única respuesta al problema ontológico del ser humano.',
+      'Compartir el evangelio no es opcional para quien lo ha recibido; el silencio es en sí mismo una postura teológica.',
+    ],
+    youtubeUrl: 'https://www.youtube.com/watch?v=AiD-wE7JUi0&list=PLtRs2tryJr9jPta1bEpIMkZTVJYGIfOTn&index=2',
+    spotifyUrl: 'https://open.spotify.com/episode/03ZpxFmsowdplu9ebCEzl8?si=3PrveU76Ts6DSewjAr2UaQ',
+  },
 ]
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
